@@ -1,5 +1,0 @@
-{
-  "sourceSha": "11e0b466157b5d0f78f312eb04374c9b8d591450",
-  "customAndNotesBeforeRetry": "",
-  "remoteRefs": "11e0b466157b5d0f78f312eb04374c9b8d591450\tHEAD\n11e0b466157b5d0f78f312eb04374c9b8d591450\trefs/heads/main\n08edc55bd2f5002cfb2eac334888ddd4c46a2d43\trefs/notes/semantic-release-0-workspace\n89e62aed39a6adb3c5fd91113d9f3e7e5ceb6ed8\trefs/notes/semantic-release-workspace\n08edc55bd2f5002cfb2eac334888ddd4c46a2d43\trefs/notes/semantic-release-workspace-v1.0.0\na5485aa45110c978faa8d1e5a8e4da06ebc0d8b6\trefs/semantic-release-workspace/artifacts/11e0b466157b5d0f78f312eb04374c9b8d591450/ce2d414f8a44d714dd09a89f89bbe861bd2ed4239ab3b44a4b4482dd5a718327\na5485aa45110c978faa8d1e5a8e4da06ebc0d8b6\trefs/semantic-release-workspace/artifacts/11e0b466157b5d0f78f312eb04374c9b8d591450/ea858e31123d5d530b1ef1c3582a35d81f9f01f46daca9de630b53fa37896446\n7b076d96efa4c154a5dd3c8ab86a271030713c28\trefs/semantic-release-workspace/prepared/11e0b466157b5d0f78f312eb04374c9b8d591450\n7b076d96efa4c154a5dd3c8ab86a271030713c28\trefs/tags/cargo/fixture-core@1.1.0\n11e0b466157b5d0f78f312eb04374c9b8d591450\trefs/tags/workspace-v1.0.0\n"
-}

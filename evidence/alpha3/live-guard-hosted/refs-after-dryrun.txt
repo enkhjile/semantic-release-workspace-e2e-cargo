@@ -1,5 +1,0 @@
-1f45112c7780363a0edf2a24a8abbdffc8e48d9a	HEAD
-fd374c40fdbe4ccf29c346eca5fe1656e57cc596	refs/heads/acceptance/alpha3
-d55358a490e3006bbdd192b2dcc7076167254659	refs/heads/alpha
-1452d281faec526927ef9c2587c5f6e2359c14a3	refs/heads/alpha3-live
-1f45112c7780363a0edf2a24a8abbdffc8e48d9a	refs/heads/main

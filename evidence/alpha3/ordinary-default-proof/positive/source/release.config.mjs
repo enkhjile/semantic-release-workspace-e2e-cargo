@@ -1,2 +1,0 @@
-const plugin='semantic-release-workspace';
-export default {repositoryUrl:"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/.scratch/alpha3/ordinary-default-positive-SaNGOC/remote.git",branches:['main','next',{name:'alpha',prerelease:true},{name:'preview',prerelease:'rc'}],tagFormat:'workspace-v${version}',plugins:[[plugin,{"cargo":{"trustedPublishing":true},"changelog":true}]]};

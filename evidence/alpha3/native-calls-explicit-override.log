@@ -1,4 +1,0 @@
-generate-lockfile
-publish --dry-run --registry fixture -p fixture-core
-package --allow-dirty --registry fixture --target-dir /var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-8zeotD/target
-metadata --no-deps --format-version 1

@@ -1,8 +1,0 @@
-warning: manifest has no documentation, homepage or repository
-  |
-  = note: see https://doc.rust-lang.org/cargo/reference/manifest.html#package-metadata for more info
-   Packaging native-explicit-default-probe v0.1.0 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/.scratch/native-explicit-crates-io)
-error: failed to prepare local package for uploading
-
-Caused by:
-  registry index was not found in any configuration: `crates-io`

@@ -1,9 +1,0 @@
-[package]
-name="enkhjile-srw-e2e-adapter"
-version="0.1.0"
-edition="2021"
-license="MIT"
-description="Disposable semantic-release consumer acceptance fixture"
-
-[dependencies]
-enkhjile-srw-e2e-core.workspace=true
