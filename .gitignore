@@ -1,9 +1,0 @@
-node_modules/
-target/
-.scratch/
-.env*
-evidence/ref-backups/bundles/
-evidence/ref-backups/exports/
-
-# Generated live-cycle proof stays outside tracked source.
-evidence/live-alpha7/
