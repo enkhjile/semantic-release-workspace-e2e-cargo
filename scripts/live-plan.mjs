@@ -1,2 +1,0 @@
-import assert from 'node:assert/strict';
-export function parsePlan(output){const key=output.indexOf('"schemaVersion": 1');assert.ok(key>=0,'missing dry-run plan');for(let start=output.lastIndexOf('{',key);start>=0;start=output.lastIndexOf('{',start-1)){for(let end=start+1;end<output.length;end++)if(output[end]==='}')try{const value=JSON.parse(output.slice(start,end+1));if(value.schemaVersion===1&&Array.isArray(value.packages))return value;}catch{}if(start===0)break;}throw Error('unparseable dry-run workspace plan');}
