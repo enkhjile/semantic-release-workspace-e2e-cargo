@@ -1,1 +1,0 @@
-export default {branches: ['main', {name: 'alpha', prerelease: 'alpha', channel: 'alpha'}], tagFormat: 'workspace-v${version}', plugins: [['semantic-release-workspace', {publish: true, changelog: true, cargo: {trustedPublishing: true}}], './scripts/alpha10-retry.mjs', ['@semantic-release/github', {successComment: false, failComment: false, failTitle: false}]]};
