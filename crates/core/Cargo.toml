@@ -1,6 +1,6 @@
 [package]
 name = "enkhjile-srw-e2e-core"
-version.workspace = true
+version = "0.4.0"
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
