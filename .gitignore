@@ -1,6 +1,0 @@
-node_modules/
-target/
-.scratch/
-.env*
-/vendor/shared-version-candidate.tgz
-/evidence/
