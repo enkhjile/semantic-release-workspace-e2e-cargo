@@ -1,5 +1,0 @@
-PASS synthetic-oidc-rejectExchange
-PASS synthetic-oidc-rejectRevoke
-PASS synthetic-oidc-success-cleanup
-PASS synthetic-oidc-invalid-audience
-{"total":4,"pass":4,"fail":0}
