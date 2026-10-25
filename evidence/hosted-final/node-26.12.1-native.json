@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-10-25T13:51:31.710Z",
+  "node": "v26.12.1",
+  "results": [
+    {
+      "name": "native-publish-consume-runtime",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "downstream": true,
+      "sourceRestored": true,
+      "preparedManifest": "[package]\nname=\"fixture-adapter\"\nversion=\"1.1.0\"\nedition=\"2021\"\nlicense=\"MIT\"\ndescription=\"Disposable semantic-release consumer acceptance fixture\"\n\n[dependencies]\nfixture-core={path=\"../core\",version=\"1.0.0\"}\n"
+    }
+  ]
+}

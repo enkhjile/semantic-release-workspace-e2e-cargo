@@ -1,0 +1,215 @@
+{
+  "generatedAt": "2026-10-25T14:00:18.166Z",
+  "node": "v24.22.1",
+  "results": [
+    {
+      "name": "package-name-cli-loading-1",
+      "status": "FAIL",
+      "ms": 476,
+      "error": "AssertionError [ERR_ASSERTION]: [2:00:06 PM] [semantic-release] › ℹ  Running semantic-release version 25.0.9\n[2:00:06 PM] [semantic-release] › ✘  An error occurred while running semantic-release: Error [ERR_PACKAGE_PATH_NOT_EXPORTED]: No \"exports\" main defined in /home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/package.json\n    at exportsNotFound (node:internal/modules/esm/resolve:315:10)\n    at packageExportsResolve (node:internal/modules/esm/resolve:606:13)\n    at resolveExports (node:internal/modules/cjs/loader:754:36)\n    at Module._findPath (node:internal/modules/cjs/loader:821:31)\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1557:27)\n    at resolveFileName (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/resolve-from/index.js:29:39)\n    at resolveFrom (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/resolve-from/index.js:43:9)\n    at module.exports (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/resolve-from/index.js:46:47)\n    at loadPlugin (file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release/lib/plugins/utils.js:59:54)\n    at file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release/lib/plugins/index.js:18:43 {\n  code: 'ERR_PACKAGE_PATH_NOT_EXPORTED'\n}\nError [ERR_PACKAGE_PATH_NOT_EXPORTED]: No \"exports\" main defined in /home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/package.json\n\u001b[90m    at exportsNotFound (node:internal/modules/esm/resolve:315:10)\u001b[39m\n\u001b[90m    at packageExportsResolve (node:internal/modules/esm/resolve:606:13)\u001b[39m\n\u001b[90m    at resolveExports (node:internal/modules/cjs/loader:754:36)\u001b[39m\n\u001b[90m    at Module._findPath (node:internal/modules/cjs/loader:821:31)\u001b[39m\n\u001b[90m    at Module._resolveFilename (node:internal/modules/cjs/loader:1557:27)\u001b[39m\n    at resolveFileName (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/\u001b[4mresolve-from\u001b[24m/index.js:29:39)\n    at resolveFrom (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/\u001b[4mresolve-from\u001b[24m/index.js:43:9)\n    at module.exports (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/\u001b[4mresolve-from\u001b[24m/index.js:46:47)\n    at loadPlugin (file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/\u001b[4msemantic-release\u001b[24m/lib/plugins/utils.js:59:54)\n    at file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/\u001b[4msemantic-release\u001b[24m/lib/plugins/index.js:18:43 {\n  code: \u001b[32m'ERR_PACKAGE_PATH_NOT_EXPORTED'\u001b[39m\n}\n\n1 !== 0\n\n    at file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/scripts/acceptance.mjs:26:368\n    at async scenario (file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/scripts/acceptance.mjs:22:70)\n    at async file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/scripts/acceptance.mjs:26:55"
+    },
+    {
+      "name": "package-name-cli-loading-2",
+      "status": "FAIL",
+      "ms": 465,
+      "error": "AssertionError [ERR_ASSERTION]: [2:00:06 PM] [semantic-release] › ℹ  Running semantic-release version 25.0.9\n[2:00:06 PM] [semantic-release] › ✘  An error occurred while running semantic-release: Error [ERR_PACKAGE_PATH_NOT_EXPORTED]: No \"exports\" main defined in /home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/package.json\n    at exportsNotFound (node:internal/modules/esm/resolve:315:10)\n    at packageExportsResolve (node:internal/modules/esm/resolve:606:13)\n    at resolveExports (node:internal/modules/cjs/loader:754:36)\n    at Module._findPath (node:internal/modules/cjs/loader:821:31)\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1557:27)\n    at resolveFileName (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/resolve-from/index.js:29:39)\n    at resolveFrom (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/resolve-from/index.js:43:9)\n    at module.exports (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/resolve-from/index.js:46:47)\n    at loadPlugin (file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release/lib/plugins/utils.js:59:54)\n    at file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release/lib/plugins/index.js:18:43 {\n  code: 'ERR_PACKAGE_PATH_NOT_EXPORTED'\n}\nError [ERR_PACKAGE_PATH_NOT_EXPORTED]: No \"exports\" main defined in /home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/package.json\n\u001b[90m    at exportsNotFound (node:internal/modules/esm/resolve:315:10)\u001b[39m\n\u001b[90m    at packageExportsResolve (node:internal/modules/esm/resolve:606:13)\u001b[39m\n\u001b[90m    at resolveExports (node:internal/modules/cjs/loader:754:36)\u001b[39m\n\u001b[90m    at Module._findPath (node:internal/modules/cjs/loader:821:31)\u001b[39m\n\u001b[90m    at Module._resolveFilename (node:internal/modules/cjs/loader:1557:27)\u001b[39m\n    at resolveFileName (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/\u001b[4mresolve-from\u001b[24m/index.js:29:39)\n    at resolveFrom (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/\u001b[4mresolve-from\u001b[24m/index.js:43:9)\n    at module.exports (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/\u001b[4mresolve-from\u001b[24m/index.js:46:47)\n    at loadPlugin (file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/\u001b[4msemantic-release\u001b[24m/lib/plugins/utils.js:59:54)\n    at file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/\u001b[4msemantic-release\u001b[24m/lib/plugins/index.js:18:43 {\n  code: \u001b[32m'ERR_PACKAGE_PATH_NOT_EXPORTED'\u001b[39m\n}\n\n1 !== 0\n\n    at file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/scripts/acceptance.mjs:26:368\n    at async scenario (file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/scripts/acceptance.mjs:22:70)\n    at async file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/scripts/acceptance.mjs:26:55"
+    },
+    {
+      "name": "virtual-workspace",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 506,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "virtual-workspace.log"
+    },
+    {
+      "name": "default-members",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 524,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "default-members.log"
+    },
+    {
+      "name": "root-workspace",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 565,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeMembers": [
+        "fixture-core",
+        "fixture-root"
+      ],
+      "log": "root-workspace.log"
+    },
+    {
+      "name": "standalone-root",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 455,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeMembers": [
+        "fixture-root"
+      ],
+      "log": "standalone-root.log"
+    },
+    {
+      "name": "automatic-path-member",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 459,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "automatic-path-member.log"
+    },
+    {
+      "name": "literal-exclusion",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 548,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeMembers": [
+        "fixture-core"
+      ],
+      "log": "literal-exclusion.log"
+    },
+    {
+      "name": "explicit-member-wins",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 584,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "explicit-member-wins.log"
+    },
+    {
+      "name": "private-false",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 454,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "private-false.log"
+    },
+    {
+      "name": "private-empty",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 468,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "private-empty.log"
+    },
+    {
+      "name": "inherited-fields",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 457,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "inherited-fields.log"
+    },
+    {
+      "name": "duplicate-private-1",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 456,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeExit": 101,
+      "log": "duplicate-private-1.log"
+    },
+    {
+      "name": "duplicate-private-2",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 467,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeExit": 101,
+      "log": "duplicate-private-2.log"
+    },
+    {
+      "name": "nested-workspace-1",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 509,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeExit": 101,
+      "log": "nested-workspace-1.log"
+    },
+    {
+      "name": "nested-workspace-2",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 686,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeExit": 101,
+      "log": "nested-workspace-2.log"
+    },
+    {
+      "name": "missing-manifest-1",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 1133,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeExit": 101,
+      "log": "missing-manifest-1.log"
+    },
+    {
+      "name": "missing-manifest-2",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 625,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeExit": 101,
+      "log": "missing-manifest-2.log"
+    },
+    {
+      "name": "unsafe-member-1",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 1273,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeExit": 101,
+      "log": "unsafe-member-1.log"
+    },
+    {
+      "name": "unsafe-member-2",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "BLOCKED",
+      "ms": 1128,
+      "reason": "package-name CLI resolution fails before plugin hooks",
+      "nativeExit": 101,
+      "log": "unsafe-member-2.log"
+    },
+    {
+      "name": "native-core-adapter-build-test",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 176,
+      "output": "   Compiling fixture-core v1.0.0 (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/.scratch/native-graph-l2rHwa/work/crates/core)\n   Compiling fixture-adapter v1.0.0 (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/.scratch/native-graph-l2rHwa/work/crates/adapter)\n    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.10s\n     Running unittests src/lib.rs (target/debug/deps/fixture_adapter-87610a3f1b014ef4)\n\nrunning 1 test\ntest works ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n     Running unittests src/lib.rs (target/debug/deps/fixture_core-12abc7389b3e69a1)\n\nrunning 1 test\ntest works ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n   Doc-tests fixture_adapter\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n   Doc-tests fixture_core\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n"
+    }
+  ]
+}

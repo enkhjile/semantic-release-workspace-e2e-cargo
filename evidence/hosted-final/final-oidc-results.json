@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-10-25T13:58:33.539Z",
+  "node": "v24.22.1",
+  "results": [
+    {
+      "name": "synthetic-oidc-rejectExchange",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 8066,
+      "exit": 1,
+      "uploads": [],
+      "exchanges": 0,
+      "revocations": 0
+    },
+    {
+      "name": "synthetic-oidc-rejectRevoke",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 5240,
+      "exit": 1,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "exchanges": 1,
+      "revocations": 0
+    },
+    {
+      "name": "synthetic-oidc-success-cleanup",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 7755,
+      "syntheticOnly": true,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "exchangeCount": 1,
+      "revocationCount": 1
+    },
+    {
+      "name": "synthetic-oidc-invalid-audience",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 7089,
+      "zeroExchangeRequests": true,
+      "uploads": 0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+FAIL directory-move-shared-requirements The expression evaluated to a falsy value:
+
+  assert.ok(uploads.includes('cargo:fixture-core@2.0.0'))
+
+FAIL maintenance-major-bound enkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/cli.js:55:5) {
+  code: [32m'EINVALIDNEXTVERSION'[39m,
+  details: [32m'Based on the releases published on other branches, only versions within the range `>=1.0.0 <1.0.0` can be published from branch `1.x`.\n'[39m +
+    [32m'\n'[39m +
+    [32m'The following commit is responsible for the invalid release:\n'[39m +
+    [32m'- fix: backport core fix (f7d5ad0)\n'[39m +
+    [32m'\n'[39m +
+    [32m'This commit should be moved to a valid branch with [git merge](https://git-scm.com/docs/git-merge) or [git cherry-pick](https://git-scm.com/docs/git-cherry-pick) and removed from branch `1.x` with [git revert](https://git-scm.com/docs/git-revert) or [git reset](https://git-scm.com/docs/git-reset).\n'[39m +
+    [32m'\n'[39m +
+    [32m'A valid branch could be `main`.\n'[39m +
+    [32m'\n'[39m +
+    [32m'See the [workflow configuration documentation](https://semantic-release.org/foundation/workflow-configuration) for more details.'[39m,
+  semanticRelease: [33mtrue[39m
+}
+
+1 !== 0
+
+{"total":2,"pass":0,"fail":2}

@@ -1,0 +1,15 @@
+   Packaging fixture-core v1.1.0 (/tmp/workspace-cargo-FzmFGo/source)
+    Packaged 9 files, 2.0KiB (1.4KiB compressed)
+   Verifying fixture-core v1.1.0 (/tmp/workspace-cargo-FzmFGo/source)
+   Compiling fixture-core v1.1.0 (/tmp/workspace-cargo-FzmFGo/target/package/fixture-core-1.1.0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.04s
+   Packaging fixture-core v1.1.1 (/tmp/workspace-cargo-de6gGk/source/crates/core)
+    Packaged 6 files, 1.3KiB (1011B compressed)
+   Verifying fixture-core v1.1.1 (/tmp/workspace-cargo-de6gGk/source/crates/core)
+   Compiling fixture-core v1.1.1 (/tmp/workspace-cargo-de6gGk/target/package/fixture-core-1.1.1)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.04s
+   Packaging fixture-core v1.1.2 (/tmp/workspace-cargo-sMJqC5/source)
+    Packaged 9 files, 2.1KiB (1.5KiB compressed)
+   Verifying fixture-core v1.1.2 (/tmp/workspace-cargo-sMJqC5/source)
+   Compiling fixture-core v1.1.2 (/tmp/workspace-cargo-sMJqC5/target/package/fixture-core-1.1.2)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.04s

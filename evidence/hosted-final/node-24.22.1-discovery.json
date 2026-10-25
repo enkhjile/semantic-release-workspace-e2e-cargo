@@ -1,0 +1,185 @@
+{
+  "generatedAt": "2026-10-25T13:48:26.407Z",
+  "node": "v24.22.1",
+  "results": [
+    {
+      "name": "virtual-workspace",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 1175,
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "virtual-workspace.log"
+    },
+    {
+      "name": "default-members",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 1377,
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "default-members.log"
+    },
+    {
+      "name": "root-workspace",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 1131,
+      "nativeMembers": [
+        "fixture-core",
+        "fixture-root"
+      ],
+      "log": "root-workspace.log"
+    },
+    {
+      "name": "standalone-root",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 1326,
+      "nativeMembers": [
+        "fixture-root"
+      ],
+      "log": "standalone-root.log"
+    },
+    {
+      "name": "automatic-path-member",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 1525,
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "automatic-path-member.log"
+    },
+    {
+      "name": "literal-exclusion",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 1575,
+      "nativeMembers": [
+        "fixture-core"
+      ],
+      "log": "literal-exclusion.log"
+    },
+    {
+      "name": "explicit-member-wins",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 1381,
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "explicit-member-wins.log"
+    },
+    {
+      "name": "private-false",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 1271,
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "private-false.log"
+    },
+    {
+      "name": "private-empty",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 1291,
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "private-empty.log"
+    },
+    {
+      "name": "inherited-fields",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 1418,
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "inherited-fields.log"
+    },
+    {
+      "name": "duplicate-private-1",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 837,
+      "nativeExit": 101,
+      "log": "duplicate-private-1.log"
+    },
+    {
+      "name": "duplicate-private-2",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 822,
+      "nativeExit": 101,
+      "log": "duplicate-private-2.log"
+    },
+    {
+      "name": "nested-workspace-1",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 854,
+      "nativeExit": 101,
+      "log": "nested-workspace-1.log"
+    },
+    {
+      "name": "nested-workspace-2",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 961,
+      "nativeExit": 101,
+      "log": "nested-workspace-2.log"
+    },
+    {
+      "name": "missing-manifest-1",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 843,
+      "nativeExit": 101,
+      "log": "missing-manifest-1.log"
+    },
+    {
+      "name": "missing-manifest-2",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 835,
+      "nativeExit": 101,
+      "log": "missing-manifest-2.log"
+    },
+    {
+      "name": "unsafe-member-1",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 829,
+      "nativeExit": 101,
+      "log": "unsafe-member-1.log"
+    },
+    {
+      "name": "unsafe-member-2",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 1009,
+      "nativeExit": 101,
+      "log": "unsafe-member-2.log"
+    },
+    {
+      "name": "native-core-adapter-build-test",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "status": "PASS",
+      "ms": 1541,
+      "output": "   Compiling fixture-core v1.0.0 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/.scratch/native-graph-iiMBJD/work/crates/core)\n   Compiling fixture-adapter v1.0.0 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/.scratch/native-graph-iiMBJD/work/crates/adapter)\n    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.52s\n     Running unittests src/lib.rs (target/debug/deps/fixture_adapter-be9799431c69b5a0)\n\nrunning 1 test\ntest works ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n     Running unittests src/lib.rs (target/debug/deps/fixture_core-d69b921899c5e7ed)\n\nrunning 1 test\ntest works ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n   Doc-tests fixture_adapter\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n   Doc-tests fixture_core\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n"
+    }
+  ]
+}

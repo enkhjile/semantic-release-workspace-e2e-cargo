@@ -1,0 +1,53 @@
+{
+  "uploads": [],
+  "crates": {},
+  "exchangeCount": 0,
+  "revocationCount": 0,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "PUT",
+      "path": "/cargo/api/v1/crates/new",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    }
+  ]
+}

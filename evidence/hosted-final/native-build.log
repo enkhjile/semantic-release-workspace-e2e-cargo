@@ -1,0 +1,23 @@
+   Compiling fixture-core v1.0.0 (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/.scratch/build-RBI4A0/work/crates/core)
+   Compiling fixture-adapter v1.0.0 (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/.scratch/build-RBI4A0/work/crates/adapter)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.13s
+     Running unittests src/lib.rs (target/debug/deps/fixture_adapter-3a934b064282d187)
+     Running unittests src/lib.rs (target/debug/deps/fixture_core-12abc7389b3e69a1)
+   Doc-tests fixture_adapter
+   Doc-tests fixture_core
+   Packaging fixture-core v1.1.0 (/tmp/workspace-cargo-0tdQVb/source/crates/core)
+    Packaged 6 files, 1.4KiB (1.0KiB compressed)
+   Verifying fixture-core v1.1.0 (/tmp/workspace-cargo-0tdQVb/source/crates/core)
+   Compiling fixture-core v1.1.0 (/tmp/workspace-cargo-0tdQVb/target/package/fixture-core-1.1.0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.04s
+     Locking 1 package to highest compatible version
+    Updating fixture-core v1.0.0 (/tmp/workspace-cargo-W89euZ/source/crates/core) -> v1.1.0
+   Packaging fixture-adapter v1.1.0 (/tmp/workspace-cargo-W89euZ/source/crates/adapter)
+    Updating `fixture` index
+    Packaged 7 files, 1.8KiB (1.2KiB compressed)
+   Verifying fixture-adapter v1.1.0 (/tmp/workspace-cargo-W89euZ/source/crates/adapter)
+ Downloading crates ...
+  Downloaded fixture-core v1.1.0 (registry `fixture`)
+   Compiling fixture-core v1.1.0 (registry `fixture`)
+   Compiling fixture-adapter v1.1.0 (/tmp/workspace-cargo-W89euZ/target/package/fixture-adapter-1.1.0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.11s

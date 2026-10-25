@@ -1,0 +1,82 @@
+[2:01:41 PM] [semantic-release] › ℹ  Running semantic-release version 25.0.9
+[2:01:42 PM] [semantic-release] › ✔  Loaded plugin "verifyConditions" from "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] › ✔  Loaded plugin "analyzeCommits" from "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] › ✔  Loaded plugin "verifyRelease" from "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] › ✔  Loaded plugin "generateNotes" from "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] › ✔  Loaded plugin "prepare" from "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] › ✔  Loaded plugin "publish" from "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] › ✔  Loaded plugin "addChannel" from "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] › ✔  Loaded plugin "success" from "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] › ✔  Loaded plugin "fail" from "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] › ✔  Run automated release from branch main on repository /home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/.scratch/tag-reject-BtuR4T/remote.git
+[2:01:42 PM] [semantic-release] › ✔  Allowed to push to the Git repository
+[2:01:42 PM] [semantic-release] › ℹ  Start step "verifyConditions" of plugin "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Discovered 2 workspace packages (2 publishable).
+[2:01:42 PM] [semantic-release] › ✔  Completed step "verifyConditions" of plugin "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] › ℹ  No git tag version found on branch main
+[2:01:42 PM] [semantic-release] › ℹ  No previous release found, retrieving all commits
+[2:01:42 PM] [semantic-release] › ℹ  Found 1 commits since last release
+[2:01:42 PM] [semantic-release] › ℹ  Start step "analyzeCommits" of plugin "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analyzing commit: feat: establish real Cargo graph
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  The release type for the commit is minor
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analysis of 1 commits complete: minor release
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analyzing commit: feat: establish real Cargo graph
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  The release type for the commit is minor
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analysis of 1 commits complete: minor release
+[2:01:42 PM] [semantic-release] › ✔  Completed step "analyzeCommits" of plugin "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] › ℹ  There is no previous release, the next release version is 1.0.0
+[2:01:42 PM] [semantic-release] › ℹ  Start step "verifyRelease" of plugin "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analyzing commit: feat: establish real Cargo graph
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  The release type for the commit is minor
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analysis of 1 commits complete: minor release
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analyzing commit: feat: establish real Cargo graph
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  The release type for the commit is minor
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analysis of 1 commits complete: minor release
+[2:01:42 PM] [semantic-release] › ✔  Completed step "verifyRelease" of plugin "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] › ℹ  Start step "generateNotes" of plugin "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analyzing commit: feat: establish real Cargo graph
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  The release type for the commit is minor
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analysis of 1 commits complete: minor release
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analyzing commit: feat: establish real Cargo graph
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  The release type for the commit is minor
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analysis of 1 commits complete: minor release
+[2:01:42 PM] [semantic-release] › ✔  Completed step "generateNotes" of plugin "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] › ℹ  Start step "prepare" of plugin "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analyzing commit: feat: establish real Cargo graph
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  The release type for the commit is minor
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analysis of 1 commits complete: minor release
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analyzing commit: feat: establish real Cargo graph
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  The release type for the commit is minor
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analysis of 1 commits complete: minor release
+[2:01:42 PM] [semantic-release] › ✔  Completed step "prepare" of plugin "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] › ✔  Created tag workspace-v1.0.0
+[2:01:42 PM] [semantic-release] › ℹ  Start step "publish" of plugin "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analyzing commit: feat: establish real Cargo graph
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  The release type for the commit is minor
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analysis of 1 commits complete: minor release
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analyzing commit: feat: establish real Cargo graph
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  The release type for the commit is minor
+[2:01:42 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ℹ  Analysis of 1 commits complete: minor release
+[2:01:43 PM] [semantic-release] › ✘  Failed step "publish" of plugin "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:43 PM] [semantic-release] › ℹ  Start step "fail" of plugin "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:43 PM] [semantic-release] [/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs] › ✘  Workspace batch did not complete. Any pending journal is preserved for retry.
+[2:01:43 PM] [semantic-release] › ✔  Completed step "fail" of plugin "/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs"
+[2:01:43 PM] [semantic-release] › ✘  EWORKSPACEGIT Workspace Git operation failed: push.
+Check repository access, full history, and serialized release execution.
+
+SemanticReleaseError: Workspace Git operation failed: push.
+    at executeGit (file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release-workspace[24m/dist/index.mjs:162:9)
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at async git (file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release-workspace[24m/dist/index.mjs:145:10)
+    at async tags (file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release-workspace[24m/dist/index.mjs:2769:4)
+    at async publishPackages (file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release-workspace[24m/dist/index.mjs:2908:4)
+    at async publish (file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release-workspace[24m/dist/index.mjs:3103:3)
+    at async validator (file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/lib/plugins/normalize.js:36:24)
+    at async file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/lib/plugins/pipeline.js:38:36
+    at async file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/lib/plugins/pipeline.js:32:5
+    at async pluginsConfigAccumulator.<computed> [as publish] (file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/lib/plugins/index.js:87:11) {
+  code: [32m'EWORKSPACEGIT'[39m,
+  details: [32m'Check repository access, full history, and serialized release execution.'[39m,
+  semanticRelease: [33mtrue[39m,
+  pluginName: [32m'/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs'[39m
+}
