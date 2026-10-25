@@ -11,10 +11,10 @@ jobs:
   controlled:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7.1.0
         with:
           node-version: 24.22.1
           cache: npm
@@ -34,7 +34,7 @@ jobs:
       - name: Controlled Cargo lifecycle diagnostics
         if: always()
         run: node scripts/lifecycle.mjs
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
           name: cargo-evidence

@@ -1,0 +1,21 @@
+   Packaging fixture-core v1.1.0 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-364VB5/source/crates/core)
+    Packaged 6 files, 1.3KiB (1022B compressed)
+   Verifying fixture-core v1.1.0 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-364VB5/source/crates/core)
+   Compiling fixture-core v1.1.0 (/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-364VB5/target/package/fixture-core-1.1.0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.08s
+error: failed to get `fixture-core` as a dependency of package `fixture-adapter v1.1.0 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-q0VBNo/source/crates/adapter)`
+
+Caused by:
+  failed to load source for dependency `fixture-core`
+
+Caused by:
+  unable to update /private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-q0VBNo/source/crates/core
+
+Caused by:
+  failed to parse manifest at `/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-q0VBNo/source/crates/core/Cargo.toml`
+
+Caused by:
+  error inheriting `edition` from workspace root manifest's `workspace.package.edition`
+
+Caused by:
+  failed to find a workspace root

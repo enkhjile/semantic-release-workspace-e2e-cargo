@@ -287,6 +287,13 @@ const handler = async (req, res) => {
     const name = path.split('/').at(-1);
     const versions = state.cargo[name];
     if (!versions) return json({ error: 'not found' }, 404);
+    // Acceptance-only fault: two sparse-index misses after a successful upload.
+    if (controlValue === 'delay-index') {
+      state.indexDelays ??= {};
+      state.indexDelays[name] = (state.indexDelays[name] ?? 0) + 1;
+      writeFileSync(stateFile, JSON.stringify(state));
+      if (state.indexDelays[name] <= 2) return json({ error: 'index propagation pending' }, 404);
+    }
     res.writeHead(200, { 'content-type': 'text/plain' });
     return res.end(
       `${Object.entries(versions)

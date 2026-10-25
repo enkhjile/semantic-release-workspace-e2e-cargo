@@ -1,0 +1,177 @@
+{
+  "generatedAt": "2026-10-25T13:45:36.365Z",
+  "node": "v24.17.0",
+  "results": [
+    {
+      "name": "native-publish-consume-runtime",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "downstream": true,
+      "sourceRestored": true,
+      "preparedManifest": "[package]\nname=\"fixture-adapter\"\nversion=\"1.1.0\"\nedition=\"2021\"\nlicense=\"MIT\"\ndescription=\"Disposable semantic-release consumer acceptance fixture\"\n\n[dependencies]\nfixture-core={path=\"../core\",version=\"1.0.0\"}\n"
+    },
+    {
+      "name": "native-publish-consume-shared",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "downstream": true,
+      "sourceRestored": true,
+      "preparedManifest": "[package]\nname=\"fixture-adapter\"\nversion=\"1.1.0\"\nedition=\"2021\"\nlicense=\"MIT\"\ndescription=\"Disposable semantic-release consumer acceptance fixture\"\n\n[dependencies]\nfixture-core.workspace=true\n"
+    },
+    {
+      "name": "native-publish-consume-renamed",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "downstream": true,
+      "sourceRestored": true,
+      "preparedManifest": "[package]\nname=\"fixture-adapter\"\nversion=\"1.1.0\"\nedition=\"2021\"\nlicense=\"MIT\"\ndescription=\"Disposable semantic-release consumer acceptance fixture\"\n\n[dependencies]\nrenamed={package=\"fixture-core\",path=\"../core\",version=\"1.0.0\"}\n"
+    },
+    {
+      "name": "native-publish-consume-optional",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "downstream": true,
+      "sourceRestored": true,
+      "preparedManifest": "[package]\nname=\"fixture-adapter\"\nversion=\"1.1.0\"\nedition=\"2021\"\nlicense=\"MIT\"\ndescription=\"Disposable semantic-release consumer acceptance fixture\"\n\n[dependencies]\nfixture-core={path=\"../core\",version=\"1.0.0\",optional=true}\n[features]\ndefault=[\"dep:fixture-core\"]\n"
+    },
+    {
+      "name": "native-publish-consume-target",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "downstream": true,
+      "sourceRestored": true,
+      "preparedManifest": "[package]\nname=\"fixture-adapter\"\nversion=\"1.1.0\"\nedition=\"2021\"\nlicense=\"MIT\"\ndescription=\"Disposable semantic-release consumer acceptance fixture\"\n\n[target.'cfg(unix)'.dependencies]\nfixture-core={path=\"../core\",version=\"1.0.0\"}\n"
+    },
+    {
+      "name": "native-publish-consume-build",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "downstream": true,
+      "sourceRestored": true,
+      "preparedManifest": "[package]\nname=\"fixture-adapter\"\nversion=\"1.1.0\"\nedition=\"2021\"\nlicense=\"MIT\"\ndescription=\"Disposable semantic-release consumer acceptance fixture\"\n\n[build-dependencies]\nfixture-core={path=\"../core\",version=\"1.0.0\"}\n"
+    },
+    {
+      "name": "native-publish-consume-dev",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "downstream": true,
+      "sourceRestored": true,
+      "preparedManifest": "[package]\nname=\"fixture-adapter\"\nversion=\"1.1.0\"\nedition=\"2021\"\nlicense=\"MIT\"\ndescription=\"Disposable semantic-release consumer acceptance fixture\"\n\n[dev-dependencies]\nfixture-core={path=\"../core\",version=\"1.0.0\"}\n"
+    },
+    {
+      "name": "dry-run-no-change",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "zeroDryRunWrites": true,
+      "uploads": 2
+    },
+    {
+      "name": "private-crates-no-upload-or-tag",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0"
+      ],
+      "tags": "cargo/fixture-core@1.1.0\nworkspace-v1.0.0\n"
+    },
+    {
+      "name": "recovery-reject",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "initialExit": 1,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "freshClone": true
+    },
+    {
+      "name": "recovery-reject-second",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "initialExit": 1,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "freshClone": true
+    },
+    {
+      "name": "recovery-once-drop",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "reconciledWithinInvocation": true,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ]
+    },
+    {
+      "name": "alpha-twice-main",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0-alpha.1",
+        "cargo:fixture-adapter@1.1.0-alpha.1",
+        "cargo:fixture-core@1.1.0-alpha.2",
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ]
+    },
+    {
+      "name": "synthetic-oidc-rejectExchange",
+      "status": "FAIL",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 677,
+      "error": "AssertionError [ERR_ASSERTION]: [10:45:35 PM] [semantic-release] › ℹ  Running semantic-release version 25.0.9\n[10:45:35 PM] [semantic-release] › ✔  Loaded plugin \"verifyConditions\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:35 PM] [semantic-release] › ✔  Loaded plugin \"analyzeCommits\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:35 PM] [semantic-release] › ✔  Loaded plugin \"verifyRelease\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:35 PM] [semantic-release] › ✔  Loaded plugin \"generateNotes\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:35 PM] [semantic-release] › ✔  Loaded plugin \"prepare\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:35 PM] [semantic-release] › ✔  Loaded plugin \"publish\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:35 PM] [semantic-release] › ✔  Loaded plugin \"addChannel\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:35 PM] [semantic-release] › ✔  Loaded plugin \"success\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:35 PM] [semantic-release] › ✔  Loaded plugin \"fail\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:35 PM] [semantic-release] › ℹ  This test run was triggered on the branch undefined, while semantic-release is configured to only publish from main, therefore a new version won’t be published.\n\n    at file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/scripts/lifecycle.mjs:32:562\n    at async withFixture (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/scripts/lifecycle.mjs:23:104)\n    at async scenario (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/scripts/lifecycle.mjs:24:147)\n    at async file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/scripts/lifecycle.mjs:32:56"
+    },
+    {
+      "name": "synthetic-oidc-rejectRevoke",
+      "status": "FAIL",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 761,
+      "error": "AssertionError [ERR_ASSERTION]: [10:45:36 PM] [semantic-release] › ℹ  Running semantic-release version 25.0.9\n[10:45:36 PM] [semantic-release] › ✔  Loaded plugin \"verifyConditions\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:36 PM] [semantic-release] › ✔  Loaded plugin \"analyzeCommits\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:36 PM] [semantic-release] › ✔  Loaded plugin \"verifyRelease\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:36 PM] [semantic-release] › ✔  Loaded plugin \"generateNotes\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:36 PM] [semantic-release] › ✔  Loaded plugin \"prepare\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:36 PM] [semantic-release] › ✔  Loaded plugin \"publish\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:36 PM] [semantic-release] › ✔  Loaded plugin \"addChannel\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:36 PM] [semantic-release] › ✔  Loaded plugin \"success\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:36 PM] [semantic-release] › ✔  Loaded plugin \"fail\" from \"/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs\"\n[10:45:36 PM] [semantic-release] › ℹ  This test run was triggered on the branch undefined, while semantic-release is configured to only publish from main, therefore a new version won’t be published.\n\n    at file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/scripts/lifecycle.mjs:32:562\n    at async withFixture (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/scripts/lifecycle.mjs:23:104)\n    at async scenario (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/scripts/lifecycle.mjs:24:147)\n    at async file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/scripts/lifecycle.mjs:32:56"
+    }
+  ]
+}

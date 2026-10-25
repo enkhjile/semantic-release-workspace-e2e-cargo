@@ -1,0 +1,17 @@
+PASS synthetic-oidc-rejectExchange
+PASS synthetic-oidc-rejectRevoke
+PASS config-merge-home-default-local-unrelated
+PASS config-merge-home-index-local-provider
+PASS config-merge-local-override
+PASS cargo-cycle-rejection-1
+PASS cargo-cycle-rejection-2
+FAIL tag-push-rejection-recovery Expected values to be strictly equal:
+
+1 !== 2
+
+PASS pending-drift-registry
+PASS pending-drift-changelog
+PASS pending-drift-dirty-manifest
+PASS next-unchanged-package-main-promotion
+PASS synthetic-oidc-success-cleanup
+{"total":13,"pass":12,"fail":1}

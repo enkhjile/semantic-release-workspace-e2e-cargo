@@ -1,0 +1,36 @@
+PASS native-publish-consume-runtime
+PASS native-publish-consume-shared
+PASS native-publish-consume-renamed
+PASS native-publish-consume-optional
+PASS native-publish-consume-target
+PASS native-publish-consume-build
+PASS native-publish-consume-dev
+FAIL inherited-version-publish-and-source-edit-1 ile:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/lib/plugins/pipeline.js:38:36
+    at async file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/lib/plugins/pipeline.js:32:5
+    at async pluginsConfigAccumulator.<computed> [as publish] (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/lib/plugins/index.js:87:11) {
+  code: [32m'EWORKSPACEPUBLISH'[39m,
+  details: [90mundefined[39m,
+  semanticRelease: [33mtrue[39m,
+  pluginName: [32m'/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs'[39m
+}
+
+1 !== 0
+
+FAIL inherited-version-publish-and-source-edit-2 ile:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/lib/plugins/pipeline.js:38:36
+    at async file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/lib/plugins/pipeline.js:32:5
+    at async pluginsConfigAccumulator.<computed> [as publish] (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/lib/plugins/index.js:87:11) {
+  code: [32m'EWORKSPACEPUBLISH'[39m,
+  details: [90mundefined[39m,
+  semanticRelease: [33mtrue[39m,
+  pluginName: [32m'/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs'[39m
+}
+
+1 !== 0
+
+PASS fresh-shallow-clone-baseline
+PASS registry-allowlist-enforced
+PASS credential-safe-upload-redirect
+PASS synthetic-oidc-invalid-audience
+PASS delayed-sparse-index
+PASS explicit-registry-override-reads-writes
+{"total":15,"pass":13,"fail":2}

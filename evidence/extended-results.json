@@ -1,0 +1,130 @@
+{
+  "generatedAt": "2026-10-25T13:47:13.287Z",
+  "node": "v24.17.0",
+  "results": [
+    {
+      "name": "synthetic-oidc-rejectExchange",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "exit": 1,
+      "uploads": [],
+      "exchanges": 0,
+      "revocations": 0
+    },
+    {
+      "name": "synthetic-oidc-rejectRevoke",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "exit": 1,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "exchanges": 1,
+      "revocations": 0
+    },
+    {
+      "name": "config-merge-home-default-local-unrelated",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "nativeExit": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0"
+      ]
+    },
+    {
+      "name": "config-merge-home-index-local-provider",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "nativeExit": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0"
+      ]
+    },
+    {
+      "name": "config-merge-local-override",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "nativeExit": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0"
+      ]
+    },
+    {
+      "name": "cargo-cycle-rejection-1",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "nativeExit": 0,
+      "releaseExit": 1
+    },
+    {
+      "name": "cargo-cycle-rejection-2",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "nativeExit": 0,
+      "releaseExit": 1
+    },
+    {
+      "name": "tag-push-rejection-recovery",
+      "status": "FAIL",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 2811,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 2\n\n    at file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/scripts/lifecycle.mjs:36:388\n    at async withFixture (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/scripts/lifecycle.mjs:23:104)\n    at async scenario (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/scripts/lifecycle.mjs:24:250)\n    at async file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/scripts/lifecycle.mjs:36:1"
+    },
+    {
+      "name": "pending-drift-registry",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "uploads": 1,
+      "retryExit": 1,
+      "userBytesPreserved": true
+    },
+    {
+      "name": "pending-drift-changelog",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "uploads": 1,
+      "retryExit": 1,
+      "userBytesPreserved": true
+    },
+    {
+      "name": "pending-drift-dirty-manifest",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "uploads": 1,
+      "retryExit": 1,
+      "userBytesPreserved": true
+    },
+    {
+      "name": "next-unchanged-package-main-promotion",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "uploads": 3,
+      "reusedAllBytes": true
+    },
+    {
+      "name": "synthetic-oidc-success-cleanup",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "syntheticOnly": true,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "exchangeCount": 1,
+      "revocationCount": 1
+    }
+  ]
+}

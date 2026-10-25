@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-10-25T13:55:55.248Z",
+  "node": "v24.22.1",
+  "results": [
+    {
+      "name": "retained-state-missing-artifact",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 9365,
+      "retryExit": 1,
+      "uploads": 1,
+      "damagedRemoteRefs": 2
+    },
+    {
+      "name": "retained-state-swapped-artifact",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 9504,
+      "retryExit": 1,
+      "uploads": 1,
+      "damagedRemoteRefs": 2
+    },
+    {
+      "name": "retained-state-corrupt-artifact",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 9533,
+      "retryExit": 1,
+      "uploads": 1,
+      "damagedRemoteRefs": 2
+    },
+    {
+      "name": "foreign-registry-version-rejected",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 5235,
+      "zeroUploads": true,
+      "releaseExit": 1
+    }
+  ]
+}
