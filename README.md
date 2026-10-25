@@ -9,3 +9,5 @@ Run `npm ci --ignore-scripts`, `npm test`, `PUBLIC_ESM_RESOLUTION_WORKAROUND=1 n
 `evidence/` contains machine-readable results and CLI logs. The explicit Actions workflow preserves the normal setup failure while collecting diagnostics. `bootstrap/` contains reviewed minimal crates at 0.1.0; no public upload occurs through the controlled test workflow. The separately dispatched live workflow requires the `cargo-live` environment and per-crate trusted publishers.
 
 Public-write budget: two dedicated crates × one bootstrap plus one OIDC release = at most four crate-version uploads. The names are `enkhjile-srw-e2e-core` and `enkhjile-srw-e2e-adapter`. Publish bootstrap core before adapter; the adapter's registry requirement is `0.1.0`.
+
+The `alpha` live profile additionally carries `EXPLICIT_CARGO_METADATA_WORKAROUND`: per-crate version/edition/license/repository fields and an ordinary adapter path+version dependency. Canonical controlled inherited-manifest fixtures and their two FAIL results remain on `main`. This profile isolates live OIDC from that known packaging defect and does not clear either alpha.2 failure.
