@@ -2,3 +2,5 @@ node_modules/
 target/
 .scratch/
 .env*
+evidence/ref-backups/bundles/
+evidence/ref-backups/exports/
