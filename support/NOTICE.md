@@ -1,0 +1,1 @@
+The controlled registry server is test infrastructure copied from semantic-release-workspace test/fixtures/registry.mjs at alpha.2 source commit 17651aabde398006c098308f971d61cfec792350. Its MIT license is retained here. The plugin under test is installed independently from npm; no plugin implementation is imported from this workspace.

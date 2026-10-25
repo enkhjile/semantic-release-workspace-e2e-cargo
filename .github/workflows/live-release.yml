@@ -1,0 +1,30 @@
+name: Cargo live OIDC acceptance
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+  id-token: write
+concurrency:
+  group: workspace-release
+  cancel-in-progress: false
+jobs:
+  release:
+    if: github.ref == 'refs/heads/alpha'
+    runs-on: ubuntu-latest
+    environment: cargo-live
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.22.1
+          cache: npm
+      - run: npm install --global npm@12.2.1
+      - run: rustup toolchain install 1.99.1 --profile minimal
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: cargo test --workspace --locked
+      - name: Public ESM resolution diagnostic OIDC lane
+        run: npm exec -- semantic-release --extends ./release.oidc.config.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
