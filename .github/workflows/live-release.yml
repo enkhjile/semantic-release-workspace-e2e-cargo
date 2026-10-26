@@ -9,7 +9,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   release:
-    if: github.ref == 'refs/heads/alpha'
+    if: github.ref == 'refs/heads/alpha3-live'
     runs-on: ubuntu-latest
     environment: cargo-live
     steps:
