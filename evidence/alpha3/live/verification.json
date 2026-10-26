@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-10-26T03:20:05.439Z",
+  "nativeDownstreamExit": 0,
+  "crates": [
+    {
+      "name": "enkhjile-srw-e2e-core",
+      "version": "0.1.0",
+      "sha256": "27da3040a016bce6969e426922d5b69d33d1c938ac3f6f0e258e9150218c9d75",
+      "bytes": 987,
+      "trustpub": null
+    },
+    {
+      "name": "enkhjile-srw-e2e-adapter",
+      "version": "0.1.0",
+      "sha256": "e58e9cfb60d3b19e06e43a77355341f3968900c4bf6fa2b7fd3982756d115f39",
+      "bytes": 1132,
+      "trustpub": null
+    }
+  ]
+}

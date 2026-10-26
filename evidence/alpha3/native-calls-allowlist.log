@@ -1,0 +1,2 @@
+generate-lockfile
+publish --dry-run --registry fixture -p fixture-core

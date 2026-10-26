@@ -1,0 +1,11 @@
+    Updating crates.io index
+   Packaging enkhjile-srw-e2e-core v0.1.0 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/bootstrap/core)
+    Packaged 5 files, 1.5KiB (987B compressed)
+   Verifying enkhjile-srw-e2e-core v0.1.0 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/bootstrap/core)
+   Compiling enkhjile-srw-e2e-core v0.1.0 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/bootstrap/target/package/enkhjile-srw-e2e-core-0.1.0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.16s
+   Uploading enkhjile-srw-e2e-core v0.1.0 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/bootstrap/core)
+error: failed to publish enkhjile-srw-e2e-core v0.1.0 to registry at https://crates.io
+
+Caused by:
+  the remote server responded with an error (status 400 Bad Request): A verified email address is required to publish crates to crates.io. Visit https://crates.io/settings/profile to set and verify your email address.

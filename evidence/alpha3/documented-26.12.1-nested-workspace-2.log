@@ -1,0 +1,33 @@
+[12:14:57 PM] [semantic-release] › ℹ  Running semantic-release version 25.0.9
+[12:14:57 PM] [semantic-release] › ✔  Loaded plugin "verifyConditions" from "semantic-release-workspace"
+[12:14:57 PM] [semantic-release] › ✔  Loaded plugin "analyzeCommits" from "semantic-release-workspace"
+[12:14:57 PM] [semantic-release] › ✔  Loaded plugin "verifyRelease" from "semantic-release-workspace"
+[12:14:57 PM] [semantic-release] › ✔  Loaded plugin "generateNotes" from "semantic-release-workspace"
+[12:14:57 PM] [semantic-release] › ✔  Loaded plugin "prepare" from "semantic-release-workspace"
+[12:14:57 PM] [semantic-release] › ✔  Loaded plugin "publish" from "semantic-release-workspace"
+[12:14:57 PM] [semantic-release] › ✔  Loaded plugin "addChannel" from "semantic-release-workspace"
+[12:14:57 PM] [semantic-release] › ✔  Loaded plugin "success" from "semantic-release-workspace"
+[12:14:57 PM] [semantic-release] › ✔  Loaded plugin "fail" from "semantic-release-workspace"
+[12:14:57 PM] [semantic-release] › ⚠  Run automated release from branch main on repository /Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/.scratch/alpha3/nested-workspace-WhxAK9/remote.git in dry-run mode
+[12:14:57 PM] [semantic-release] › ✔  Allowed to push to the Git repository
+[12:14:57 PM] [semantic-release] › ℹ  Start step "verifyConditions" of plugin "semantic-release-workspace"
+[12:14:57 PM] [semantic-release] › ✘  Failed step "verifyConditions" of plugin "semantic-release-workspace"
+[12:14:57 PM] [semantic-release] › ⚠  Skip step "fail" of plugin "semantic-release-workspace" in dry-run mode
+[12:14:57 PM] [semantic-release] › ✘  EWORKSPACECONFIG Nested Cargo workspace cannot be a member: crates/core
+AggregateError: 
+    SemanticReleaseError: Nested Cargo workspace cannot be a member: crates/core
+        at cargoError (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs:579:8)
+        at discoverCargoWorkspaces (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs:691:56)
+        at async discoverWorkspaces (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs:850:16)
+        at async verifyConditions (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release-workspace/dist/index.mjs:3057:20)
+        at async validator (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release/lib/plugins/normalize.js:36:24)
+        at async file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release/lib/plugins/pipeline.js:38:36
+        at async file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release/lib/plugins/pipeline.js:32:5
+        at async pluginsConfigAccumulator.<computed> [as verifyConditions] (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release/lib/plugins/index.js:87:11)
+        at async run (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release/index.js:106:3)
+        at async Module.default (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release/index.js:278:22)
+    at file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/lib/plugins/pipeline.js:55:13
+    at async pluginsConfigAccumulator.<computed> [as verifyConditions] (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/lib/plugins/index.js:87:11)
+    at async run (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/index.js:106:3)
+    at async Module.default (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/index.js:278:22)
+    at async default (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/cli.js:55:5)

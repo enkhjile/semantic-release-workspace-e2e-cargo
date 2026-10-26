@@ -1,0 +1,11 @@
+    Updating crates.io index
+   Packaging enkhjile-srw-e2e-core v0.1.0 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/bootstrap/core)
+    Packaged 5 files, 1.5KiB (987B compressed)
+   Verifying enkhjile-srw-e2e-core v0.1.0 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/bootstrap/core)
+   Compiling enkhjile-srw-e2e-core v0.1.0 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/bootstrap/target/package/enkhjile-srw-e2e-core-0.1.0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.25s
+   Uploading enkhjile-srw-e2e-core v0.1.0 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/bootstrap/core)
+    Uploaded enkhjile-srw-e2e-core v0.1.0 to registry `crates-io`
+note: waiting for enkhjile-srw-e2e-core v0.1.0 to be available at registry `crates-io`
+help: you may press ctrl-c to skip waiting; the crate should be available shortly
+   Published enkhjile-srw-e2e-core v0.1.0 at registry `crates-io`

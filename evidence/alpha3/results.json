@@ -1,0 +1,199 @@
+{
+  "generatedAt": "2026-10-26T03:13:22.607Z",
+  "node": "v24.22.1",
+  "results": [
+    {
+      "name": "package-name-cli-loading-1",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 1930,
+      "log": "loading-proof-1.log"
+    },
+    {
+      "name": "package-name-cli-loading-2",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 1383,
+      "log": "loading-proof-2.log"
+    },
+    {
+      "name": "virtual-workspace",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 1530,
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "virtual-workspace.log"
+    },
+    {
+      "name": "default-members",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 1534,
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "default-members.log"
+    },
+    {
+      "name": "root-workspace",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 1469,
+      "nativeMembers": [
+        "fixture-core",
+        "fixture-root"
+      ],
+      "log": "root-workspace.log"
+    },
+    {
+      "name": "standalone-root",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 1416,
+      "nativeMembers": [
+        "fixture-root"
+      ],
+      "log": "standalone-root.log"
+    },
+    {
+      "name": "automatic-path-member",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 1469,
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "automatic-path-member.log"
+    },
+    {
+      "name": "literal-exclusion",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 1471,
+      "nativeMembers": [
+        "fixture-core"
+      ],
+      "log": "literal-exclusion.log"
+    },
+    {
+      "name": "explicit-member-wins",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 1494,
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "explicit-member-wins.log"
+    },
+    {
+      "name": "private-false",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 1509,
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "private-false.log"
+    },
+    {
+      "name": "private-empty",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 1531,
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "private-empty.log"
+    },
+    {
+      "name": "inherited-fields",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 1542,
+      "nativeMembers": [
+        "fixture-adapter",
+        "fixture-core"
+      ],
+      "log": "inherited-fields.log"
+    },
+    {
+      "name": "duplicate-private-1",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 978,
+      "nativeExit": 101,
+      "log": "duplicate-private-1.log"
+    },
+    {
+      "name": "duplicate-private-2",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 967,
+      "nativeExit": 101,
+      "log": "duplicate-private-2.log"
+    },
+    {
+      "name": "nested-workspace-1",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 968,
+      "nativeExit": 101,
+      "log": "nested-workspace-1.log"
+    },
+    {
+      "name": "nested-workspace-2",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 973,
+      "nativeExit": 101,
+      "log": "nested-workspace-2.log"
+    },
+    {
+      "name": "missing-manifest-1",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 936,
+      "nativeExit": 101,
+      "log": "missing-manifest-1.log"
+    },
+    {
+      "name": "missing-manifest-2",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 941,
+      "nativeExit": 101,
+      "log": "missing-manifest-2.log"
+    },
+    {
+      "name": "unsafe-member-1",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 924,
+      "nativeExit": 101,
+      "log": "unsafe-member-1.log"
+    },
+    {
+      "name": "unsafe-member-2",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 944,
+      "nativeExit": 101,
+      "log": "unsafe-member-2.log"
+    },
+    {
+      "name": "native-core-adapter-build-test",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "status": "PASS",
+      "ms": 1610,
+      "output": "   Compiling fixture-core v1.0.0 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/.scratch/alpha3/native-graph-ykW2mX/work/crates/core)\n   Compiling fixture-adapter v1.0.0 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/.scratch/alpha3/native-graph-ykW2mX/work/crates/adapter)\n    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.62s\n     Running unittests src/lib.rs (target/debug/deps/fixture_adapter-be9799431c69b5a0)\n\nrunning 1 test\ntest works ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n     Running unittests src/lib.rs (target/debug/deps/fixture_core-d69b921899c5e7ed)\n\nrunning 1 test\ntest works ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n   Doc-tests fixture_adapter\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n   Doc-tests fixture_core\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n"
+    }
+  ]
+}

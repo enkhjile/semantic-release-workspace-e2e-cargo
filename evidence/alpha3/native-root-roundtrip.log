@@ -1,0 +1,15 @@
+   Packaging fixture-core v1.1.0 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-iLaSsP/source)
+    Packaged 9 files, 2.0KiB (1.4KiB compressed)
+   Verifying fixture-core v1.1.0 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-iLaSsP/source)
+   Compiling fixture-core v1.1.0 (/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-iLaSsP/target/package/fixture-core-1.1.0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.09s
+   Packaging fixture-core v1.1.1 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-Yrp7Ad/source/crates/core)
+    Packaged 6 files, 1.3KiB (1011B compressed)
+   Verifying fixture-core v1.1.1 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-Yrp7Ad/source/crates/core)
+   Compiling fixture-core v1.1.1 (/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-Yrp7Ad/target/package/fixture-core-1.1.1)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.11s
+   Packaging fixture-core v1.1.2 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-YrMs0q/source)
+    Packaged 9 files, 2.1KiB (1.5KiB compressed)
+   Verifying fixture-core v1.1.2 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-YrMs0q/source)
+   Compiling fixture-core v1.1.2 (/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-YrMs0q/target/package/fixture-core-1.1.2)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.14s

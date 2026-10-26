@@ -1,0 +1,57 @@
+[12:15:06 PM] [semantic-release] › ℹ  Running semantic-release version 25.0.9
+[12:15:06 PM] [semantic-release] › ✔  Loaded plugin "verifyConditions" from "semantic-release-workspace"
+[12:15:06 PM] [semantic-release] › ✔  Loaded plugin "analyzeCommits" from "semantic-release-workspace"
+[12:15:06 PM] [semantic-release] › ✔  Loaded plugin "verifyRelease" from "semantic-release-workspace"
+[12:15:06 PM] [semantic-release] › ✔  Loaded plugin "generateNotes" from "semantic-release-workspace"
+[12:15:06 PM] [semantic-release] › ✔  Loaded plugin "prepare" from "semantic-release-workspace"
+[12:15:06 PM] [semantic-release] › ✔  Loaded plugin "publish" from "semantic-release-workspace"
+[12:15:06 PM] [semantic-release] › ✔  Loaded plugin "addChannel" from "semantic-release-workspace"
+[12:15:06 PM] [semantic-release] › ✔  Loaded plugin "success" from "semantic-release-workspace"
+[12:15:06 PM] [semantic-release] › ✔  Loaded plugin "fail" from "semantic-release-workspace"
+[12:15:06 PM] [semantic-release] › ✔  Run automated release from branch alpha on repository /Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/.scratch/alpha3/alpha-68YSQs/remote.git
+[12:15:06 PM] [semantic-release] › ✔  Allowed to push to the Git repository
+[12:15:06 PM] [semantic-release] › ℹ  Start step "verifyConditions" of plugin "semantic-release-workspace"
+[12:15:06 PM] [semantic-release] [semantic-release-workspace] › ℹ  Discovered 2 workspace packages (2 publishable).
+[12:15:06 PM] [semantic-release] › ✔  Completed step "verifyConditions" of plugin "semantic-release-workspace"
+[12:15:06 PM] [semantic-release] › ℹ  Found git tag workspace-v1.0.0-alpha.1 associated with version 1.0.0-alpha.1 on branch alpha
+[12:15:06 PM] [semantic-release] › ℹ  Found 1 commits since last release
+[12:15:06 PM] [semantic-release] › ℹ  Start step "analyzeCommits" of plugin "semantic-release-workspace"
+[12:15:07 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 0 commits complete: no release
+[12:15:07 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: fix: improve core alpha
+[12:15:07 PM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is patch
+[12:15:07 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 1 commits complete: patch release
+[12:15:07 PM] [semantic-release] › ✔  Completed step "analyzeCommits" of plugin "semantic-release-workspace"
+[12:15:07 PM] [semantic-release] › ℹ  The next release version is 1.0.0-alpha.2
+[12:15:07 PM] [semantic-release] › ℹ  Start step "verifyRelease" of plugin "semantic-release-workspace"
+[12:15:07 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 0 commits complete: no release
+[12:15:07 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: fix: improve core alpha
+[12:15:07 PM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is patch
+[12:15:07 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 1 commits complete: patch release
+[12:15:07 PM] [semantic-release] › ✔  Completed step "verifyRelease" of plugin "semantic-release-workspace"
+[12:15:07 PM] [semantic-release] › ℹ  Start step "generateNotes" of plugin "semantic-release-workspace"
+[12:15:07 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 0 commits complete: no release
+[12:15:07 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: fix: improve core alpha
+[12:15:07 PM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is patch
+[12:15:07 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 1 commits complete: patch release
+[12:15:07 PM] [semantic-release] › ✔  Completed step "generateNotes" of plugin "semantic-release-workspace"
+[12:15:07 PM] [semantic-release] › ℹ  Start step "prepare" of plugin "semantic-release-workspace"
+[12:15:07 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 0 commits complete: no release
+[12:15:07 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: fix: improve core alpha
+[12:15:07 PM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is patch
+[12:15:07 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 1 commits complete: patch release
+[12:15:08 PM] [semantic-release] › ✔  Completed step "prepare" of plugin "semantic-release-workspace"
+[12:15:08 PM] [semantic-release] › ✔  Created tag workspace-v1.0.0-alpha.2
+[12:15:08 PM] [semantic-release] › ℹ  Start step "publish" of plugin "semantic-release-workspace"
+[12:15:08 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 0 commits complete: no release
+[12:15:08 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: fix: improve core alpha
+[12:15:08 PM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is patch
+[12:15:08 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 1 commits complete: patch release
+[12:15:09 PM] [semantic-release] [semantic-release-workspace] › ℹ  Published cargo:fixture-core@1.1.0-alpha.2.
+[12:15:09 PM] [semantic-release] › ✔  Completed step "publish" of plugin "semantic-release-workspace"
+[12:15:09 PM] [semantic-release] › ℹ  Start step "success" of plugin "semantic-release-workspace"
+[12:15:09 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 0 commits complete: no release
+[12:15:09 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: fix: improve core alpha
+[12:15:09 PM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is patch
+[12:15:09 PM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 1 commits complete: patch release
+[12:15:10 PM] [semantic-release] › ✔  Completed step "success" of plugin "semantic-release-workspace"
+[12:15:10 PM] [semantic-release] › ✔  Published release 1.0.0-alpha.2 on alpha channel

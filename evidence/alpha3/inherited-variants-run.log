@@ -1,0 +1,8 @@
+PASS inherited-core-publish-consume-runtime
+PASS inherited-core-publish-consume-shared
+PASS inherited-core-publish-consume-renamed
+PASS inherited-core-publish-consume-optional
+PASS inherited-core-publish-consume-target
+PASS inherited-core-publish-consume-build
+PASS inherited-core-publish-consume-dev
+{"total":7,"pass":7,"fail":0}

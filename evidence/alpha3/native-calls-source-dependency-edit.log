@@ -1,0 +1,12 @@
+generate-lockfile
+package --allow-dirty --registry fixture --target-dir /var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-oXMAol/target
+metadata --no-deps --format-version 1
+package --allow-dirty --registry fixture --target-dir /var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-2sgSeU/target
+metadata --no-deps --format-version 1
+package --allow-dirty --registry fixture --target-dir /var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-zUKJ5r/target
+metadata --no-deps --format-version 1
+package --allow-dirty --registry fixture --target-dir /var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-8NN6ac/target
+metadata --no-deps --format-version 1
+generate-lockfile
+package --allow-dirty --registry fixture --target-dir /var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-zl526G/target
+metadata --no-deps --format-version 1

@@ -1,0 +1,3 @@
+    Updating crates.io index
+error: no token found, please run `cargo login`
+or use environment variable CARGO_REGISTRY_TOKEN

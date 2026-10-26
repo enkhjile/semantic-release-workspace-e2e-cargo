@@ -1,0 +1,9 @@
+{
+  "node": "v24.22.1",
+  "npm": "12.2.1",
+  "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "git": "git version 2.56.0",
+  "plugin": "1.0.0-alpha.3",
+  "semanticRelease": "25.0.9"
+}

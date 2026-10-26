@@ -1,0 +1,5 @@
+{
+  "sourceSha": "793eb66ca593294a0a10ffe2f8330fe689fe3cb3",
+  "customAndNotesBeforeRetry": "",
+  "remoteRefs": "793eb66ca593294a0a10ffe2f8330fe689fe3cb3\tHEAD\n793eb66ca593294a0a10ffe2f8330fe689fe3cb3\trefs/heads/main\na796fd43e9637325494160ff79d2215fb8bbc10b\trefs/notes/semantic-release-0-workspace\n83871d5dc7bc7c980fbeaa2aa5e1a495a84caa96\trefs/notes/semantic-release-workspace\na796fd43e9637325494160ff79d2215fb8bbc10b\trefs/notes/semantic-release-workspace-v1.0.0\nb2780c54b58ba85465eab51f6341f4960228cccb\trefs/semantic-release-workspace/prepared/793eb66ca593294a0a10ffe2f8330fe689fe3cb3\nb2780c54b58ba85465eab51f6341f4960228cccb\trefs/tags/cargo/fixture-core@1.1.0\n793eb66ca593294a0a10ffe2f8330fe689fe3cb3\trefs/tags/workspace-v1.0.0\n"
+}

@@ -1,0 +1,3 @@
+generate-lockfile
+package --allow-dirty --registry fixture --target-dir /var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-UnZPhL/target
+metadata --no-deps --format-version 1

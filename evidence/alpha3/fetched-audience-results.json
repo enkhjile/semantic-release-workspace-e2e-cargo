@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-10-26T03:12:41.756Z",
+  "node": "v24.22.1",
+  "results": [
+    {
+      "name": "synthetic-github-fetched-oidc-invalid-audience",
+      "status": "PASS",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "ms": 7799,
+      "syntheticOnly": true,
+      "releaseExit": 1,
+      "identityRequests": 1,
+      "exchangeRequests": 0,
+      "uploads": 0
+    }
+  ]
+}

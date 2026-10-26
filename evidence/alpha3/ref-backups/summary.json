@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-10-26T03:21:13.530983+00:00",
+  "operation": "ALPHA3_RETAINED_REMOTE_EXPORT",
+  "fixtureCount": 121,
+  "statusCounts": {
+    "PASS": 121
+  },
+  "bundleBytes": 713596,
+  "refOccurrences": 709,
+  "tagRefOccurrences": 173,
+  "notesRefOccurrences": 228,
+  "workspaceRefOccurrences": 181,
+  "preparedManifestExports": 384,
+  "noteExports": 252,
+  "unavailable": [],
+  "hostedHistoryUnavailable": [],
+  "limitations": [
+    "Raw alpha.3 bundles and exports are retained with the run evidence.",
+    "Local fixtures were exported in their retained final state, including deliberate fault damage. No pre-fault ref snapshot is invented.",
+    "Export covers refs and their reachable objects, not unreferenced dangling objects or reflogs."
+  ]
+}

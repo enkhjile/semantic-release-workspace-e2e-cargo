@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-10-26T03:11:29.573Z",
+  "node": "v24.22.1",
+  "results": [
+    {
+      "name": "inherited-version-publish-and-source-edit-1",
+      "status": "PASS",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "ms": 5820,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "rootFieldsPreserved": true
+    },
+    {
+      "name": "inherited-version-publish-and-source-edit-2",
+      "status": "PASS",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "ms": 5160,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "rootFieldsPreserved": true
+    }
+  ]
+}

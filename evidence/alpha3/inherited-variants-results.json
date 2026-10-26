@@ -1,0 +1,97 @@
+{
+  "generatedAt": "2026-10-26T03:17:40.883Z",
+  "node": "v24.22.1",
+  "results": [
+    {
+      "name": "inherited-core-publish-consume-runtime",
+      "status": "PASS",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "ms": 7140,
+      "nativeOriginalTestExit": 0,
+      "downloadedDownstreamExit": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "sourceRestored": true
+    },
+    {
+      "name": "inherited-core-publish-consume-shared",
+      "status": "PASS",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "ms": 8032,
+      "nativeOriginalTestExit": 0,
+      "downloadedDownstreamExit": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "sourceRestored": true
+    },
+    {
+      "name": "inherited-core-publish-consume-renamed",
+      "status": "PASS",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "ms": 7846,
+      "nativeOriginalTestExit": 0,
+      "downloadedDownstreamExit": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "sourceRestored": true
+    },
+    {
+      "name": "inherited-core-publish-consume-optional",
+      "status": "PASS",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "ms": 8187,
+      "nativeOriginalTestExit": 0,
+      "downloadedDownstreamExit": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "sourceRestored": true
+    },
+    {
+      "name": "inherited-core-publish-consume-target",
+      "status": "PASS",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "ms": 10886,
+      "nativeOriginalTestExit": 0,
+      "downloadedDownstreamExit": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "sourceRestored": true
+    },
+    {
+      "name": "inherited-core-publish-consume-build",
+      "status": "PASS",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "ms": 12625,
+      "nativeOriginalTestExit": 0,
+      "downloadedDownstreamExit": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "sourceRestored": true
+    },
+    {
+      "name": "inherited-core-publish-consume-dev",
+      "status": "PASS",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "ms": 12887,
+      "nativeOriginalTestExit": 0,
+      "downloadedDownstreamExit": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "sourceRestored": true
+    }
+  ]
+}

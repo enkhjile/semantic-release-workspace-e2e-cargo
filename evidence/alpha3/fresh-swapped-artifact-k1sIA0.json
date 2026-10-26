@@ -1,0 +1,5 @@
+{
+  "sourceSha": "2645f3abe384aa50a05b8e1d1894e282177e6d85",
+  "customAndNotesBeforeRetry": "",
+  "remoteRefs": "2645f3abe384aa50a05b8e1d1894e282177e6d85\tHEAD\n2645f3abe384aa50a05b8e1d1894e282177e6d85\trefs/heads/main\n8d6e852a165ff48f5694f3a01d5168765acb93b9\trefs/notes/semantic-release-0-workspace\n2c276017993ee1efccbc0066763a9be7fc436697\trefs/notes/semantic-release-workspace\n8d6e852a165ff48f5694f3a01d5168765acb93b9\trefs/notes/semantic-release-workspace-v1.0.0\ndaa5953fcf257e99c261d053f0ae49ad180a2f2b\trefs/semantic-release-workspace/artifacts/2645f3abe384aa50a05b8e1d1894e282177e6d85/ce2d414f8a44d714dd09a89f89bbe861bd2ed4239ab3b44a4b4482dd5a718327\nf7c619ae7d3fa2f3166213f1a98a03502ec630d6\trefs/semantic-release-workspace/artifacts/2645f3abe384aa50a05b8e1d1894e282177e6d85/ea858e31123d5d530b1ef1c3582a35d81f9f01f46daca9de630b53fa37896446\n172cc861f8d34e6b22612fe16ee7a5cf41247fd1\trefs/semantic-release-workspace/prepared/2645f3abe384aa50a05b8e1d1894e282177e6d85\n172cc861f8d34e6b22612fe16ee7a5cf41247fd1\trefs/tags/cargo/fixture-core@1.1.0\n2645f3abe384aa50a05b8e1d1894e282177e6d85\trefs/tags/workspace-v1.0.0\n"
+}
