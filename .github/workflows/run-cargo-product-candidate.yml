@@ -1,0 +1,18 @@
+name: Run alpha.4 Cargo candidate product check
+
+on:
+  workflow_dispatch:
+    inputs:
+      product_ref:
+        description: Exact reviewed product branch, tag, or commit to build, pack, and test without publishing
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  native-packaging:
+    uses: enkhjile/semantic-release-workspace-e2e-cargo/.github/workflows/candidate-product-cargo.yml@alpha4-live
+    with:
+      product_ref: ${{ inputs.product_ref }}
