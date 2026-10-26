@@ -31,6 +31,8 @@ jobs:
       - run: npm install --global npm@12.2.1
       - run: rustup toolchain install 1.99.1 --profile minimal
       - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Test fresh-clone credential boundary
+        run: node --test test/live-fresh-env-alpha4.test.mjs
       - run: cargo test --workspace --locked
       - name: Install native Cargo observation guard
         run: |

@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import {spawnSync} from 'node:child_process';
 import {join,resolve} from 'node:path';
+import {freshCloneCredentialBoundary,freshCloneEnvironment} from '../support/fresh-clone-env-alpha4.mjs';
 import {candidate,coreChecksum,git,inventory,protectedState,preserved,sha256} from './live-policy-alpha4.mjs';
 
 const root=resolve(import.meta.dirname,'..'),out=join(root,'evidence/alpha4/live');
@@ -14,16 +15,16 @@ assert.equal(clone.status,0,clone.stderr);
 assert.equal(git(fresh,'rev-parse','HEAD'),source);
 const initialCustomRefs=git(fresh,'for-each-ref','--format=%(refname)','refs/notes','refs/semantic-release-workspace');
 assert.equal(initialCustomRefs,'','ordinary clone must start without custom release refs');
-const env={...process.env,CI:'true',CARGO_HOME:join(fresh,'.scratch/cargo-home'),GIT_CONFIG_GLOBAL:'/dev/null',GIT_CONFIG_NOSYSTEM:'1'};
-// GITHUB_TOKEN is repository transport authorization, retained only for Git
-// verification/journal transport. No registry credential or CI identity survives.
-for(const key of Object.keys(env))if((/^GITHUB_/.test(key)&&key!=='GITHUB_TOKEN')||/TOKEN|SECRET|PASSWORD|ACTIONS_ID|GITLAB|CIRCLE|SIGSTORE/.test(key)&&key!=='GITHUB_TOKEN')delete env[key];
+const env=freshCloneEnvironment(process.env,{cargoHome:join(fresh,'.scratch/cargo-home'),npmUserconfig:join(fresh,'.scratch/empty.npmrc')});
+// semantic-release v25 needs this GitHub pair to format GITHUB_TOKEN as an
+// x-access-token Git URL. The sanitizer retains nothing else from GitHub and
+// removes every registry credential and OIDC identity input.
 await mkdir(env.CARGO_HOME,{recursive:true});
-env.npm_config_userconfig=join(fresh,'.scratch/empty.npmrc');
 await writeFile(env.npm_config_userconfig,'');
-const identityNames=Object.keys(env).filter(k=>/ACTIONS_ID|CRATES_IO_ID_TOKEN|GITHUB_ACTIONS|GITLAB_CI|NPM_ID_TOKEN|SIGSTORE_ID_TOKEN/.test(k));
-const publishingNames=Object.keys(env).filter(k=>/^(CARGO_.*TOKEN|NPM_TOKEN|NODE_AUTH_TOKEN)$/.test(k));
-assert.deepEqual(identityNames,[]);assert.deepEqual(publishingNames,[]);
+const {identityNames,publishingCredentialNames,repositoryTransportNames}=freshCloneCredentialBoundary(env);
+assert.deepEqual(identityNames,[]);assert.deepEqual(publishingCredentialNames,[]);
+assert.deepEqual(repositoryTransportNames,['GITHUB_ACTION','GITHUB_TOKEN']);
+assert.deepEqual(Object.keys(env).filter(k=>/^GITHUB_/.test(k)&&!repositoryTransportNames.includes(k)),[]);
 const install=execute('npm',['ci','--ignore-scripts','--no-audit','--no-fund'],fresh,env);
 await writeFile(join(out,'fresh-install.log'),install.stdout+install.stderr);assert.equal(install.status,0,install.stderr);
 const lock=JSON.parse(await readFile(join(fresh,'package-lock.json'),'utf8')).packages['node_modules/semantic-release-workspace'];
@@ -53,7 +54,7 @@ if(before.ownership.journalStatus==='complete')assert.equal(afterRefs,beforeRefs
 assert.deepEqual(await hashes(),beforeHashes);assert.equal(git(fresh,'status','--porcelain'),'');
 assert.deepEqual(await coreBytes(),beforeCore);
 const protection=preserved(fresh,beforeProtected,protectedState(fresh));
-const proof={status:'PASS',source,candidate,initialCustomRefs,customRefsImmediatelyBeforeCli,customRefsImmediatelyAfterCli,preCliOwnershipObserver:'original checkout',installVersion:lock.version,installIntegrity:lock.integrity,installedDistSha256:sha256(installed),completionExit:0,beforeJournalStatus:before.ownership.journalStatus,afterJournalStatus:after.ownership.journalStatus,allRemoteRefsUnchanged:beforeRefs===afterRefs,sourceFilesUnchanged:true,registryInventoryUnchanged:true,oldCoreBytesUnchanged:true,oldCoreSha256:coreChecksum,identityEnvironmentNames:identityNames,publishingCredentialEnvironmentNames:publishingNames,repositoryTransportCredentialPresent:Boolean(env.GITHUB_TOKEN),acceptedProvenance:after.accepted.trustpub_data,protectedState:protection};
+const proof={status:'PASS',source,candidate,initialCustomRefs,customRefsImmediatelyBeforeCli,customRefsImmediatelyAfterCli,preCliOwnershipObserver:'original checkout',installVersion:lock.version,installIntegrity:lock.integrity,installedDistSha256:sha256(installed),completionExit:0,beforeJournalStatus:before.ownership.journalStatus,afterJournalStatus:after.ownership.journalStatus,allRemoteRefsUnchanged:beforeRefs===afterRefs,sourceFilesUnchanged:true,registryInventoryUnchanged:true,oldCoreBytesUnchanged:true,oldCoreSha256:coreChecksum,identityEnvironmentNames:identityNames,publishingCredentialEnvironmentNames:publishingCredentialNames,repositoryTransportEnvironmentNames:repositoryTransportNames,acceptedProvenance:after.accepted.trustpub_data,protectedState:protection};
 await writeFile(join(out,'fresh-clone-verification.json'),JSON.stringify(proof,null,2));
 await writeFile(join(out,'fresh-refs-before.txt'),beforeRefs+'\n');await writeFile(join(out,'fresh-refs-after.txt'),afterRefs+'\n');
 await writeFile(join(out,'fresh-inventory-before.json'),JSON.stringify(registryView(before),null,2));await writeFile(join(out,'fresh-inventory-after.json'),JSON.stringify(registryView(after),null,2));
