@@ -1,6 +1,12 @@
 name: "Cargo candidate product: built-in crates.io packaging"
 
 on:
+  workflow_call:
+    inputs:
+      product_ref:
+        description: Exact reviewed product branch, tag, or commit to build, pack, and test without publishing
+        required: true
+        type: string
   workflow_dispatch:
     inputs:
       product_ref:
@@ -28,6 +34,8 @@ jobs:
       - name: Check out the locked alpha.4 consumer
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          repository: enkhjile/semantic-release-workspace-e2e-cargo
+          ref: alpha4-live
           fetch-depth: 0
           persist-credentials: false
       - name: Check out the requested product candidate
