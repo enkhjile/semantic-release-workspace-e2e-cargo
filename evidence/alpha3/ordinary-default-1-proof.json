@@ -1,0 +1,96 @@
+{
+  "nativeOriginalTestExit": 0,
+  "releaseExit": 1,
+  "ordinaryNodeAndCargoShareSameHome": true,
+  "nativeEnvironmentUnchangedByShim": true,
+  "nativeNamedCratesIoIndexConfigured": false,
+  "nativeMissingNamedIndex": true,
+  "localIdentityRequests": 0,
+  "localIdentityAlwaysReturns503NoJwt": true,
+  "publicIdentityExchangeRequests": 0,
+  "publicUploads": 0,
+  "controlledBaselineUploads": [
+    "cargo:enkhjile-srw-e2e-core@0.2.0-alpha.1",
+    "cargo:enkhjile-srw-e2e-adapter@0.2.0-alpha.1"
+  ],
+  "unchangedCoreCurrentVersion": "0.2.0-alpha.1",
+  "adapterCandidateVersion": "0.2.0-alpha.2",
+  "installedArtifact": "semantic-release-workspace@1.0.0-alpha.3",
+  "sourceHead": "0069c248211efa87e5ae6bc5b01e22d2085b038b",
+  "sourceWorktree": "/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/.scratch/alpha3/ordinary-default-1-AH0VOp/work",
+  "sourceRestored": true,
+  "cargoHome": "/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/.scratch/alpha3/ordinary-default-1-AH0VOp/ordinary-default-home",
+  "nativeHomeConfigPresent": false,
+  "nativeCredentialFilePresent": false,
+  "nativeLegacyCredentialFilePresent": false,
+  "cliArgv": [
+    "/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/artifacts/tools/node-v24.22.1-darwin-arm64/bin/node",
+    "/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/semantic-release/bin/semantic-release.js",
+    "--no-ci"
+  ],
+  "tooling": {
+    "node": "v24.22.1",
+    "npm": "12.2.1",
+    "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+    "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+    "git": "git version 2.56.0",
+    "plugin": "1.0.0-alpha.3",
+    "semanticRelease": "25.0.9"
+  },
+  "exactToolPaths": {
+    "node": "/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/artifacts/tools/node-v24.22.1-darwin-arm64/bin/node",
+    "npm": "/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/artifacts/tools/npm12-bin/npm",
+    "cargoWrapper": "/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/.scratch/alpha3/ordinary-default-1-AH0VOp/tools/cargo",
+    "nativeCargo": "/Users/enkhjilenkhbaatar/.cargo/bin/cargo",
+    "rustc": "/Users/enkhjilenkhbaatar/.cargo/bin/rustc",
+    "git": "/opt/homebrew/bin/git"
+  },
+  "snapshots": [
+    {
+      "path": "evidence/alpha3/ordinary-default-proof/1/source/Cargo.toml",
+      "sha256": "dc0a8d64dd1a76c21ecea34d3f55f7127be0e31b07b1459c16763c38beb54617",
+      "sourcePath": "Cargo.toml"
+    },
+    {
+      "path": "evidence/alpha3/ordinary-default-proof/1/source/Cargo.lock",
+      "sha256": "7a0b0f4b40ea9091e4a26207236bd4fca1707d259f738177ff99ec0e3eda4058",
+      "sourcePath": "Cargo.lock"
+    },
+    {
+      "path": "evidence/alpha3/ordinary-default-proof/1/source/release.config.mjs",
+      "sha256": "a84e8343492294adf79d1212fbd35c227dec9fc4e3719293f7423229891f2cad",
+      "sourcePath": "release.config.mjs"
+    },
+    {
+      "path": "evidence/alpha3/ordinary-default-proof/1/source/.cargo/config.toml",
+      "sha256": "0b5ae4b5c5f2e57d17e83ed6cf6e336bed289535f24bf67141e4f05b389989b3",
+      "sourcePath": ".cargo/config.toml"
+    },
+    {
+      "path": "evidence/alpha3/ordinary-default-proof/1/source/crates/core/Cargo.toml",
+      "sha256": "84911b4efde17a6513104422bbdde0af23af9fc72e9e90e4af907b979cae561f",
+      "sourcePath": "crates/core/Cargo.toml"
+    },
+    {
+      "path": "evidence/alpha3/ordinary-default-proof/1/source/crates/core/src/lib.rs",
+      "sha256": "94492dc86147105782476513bead20bb70bdf94eb0ecf64c2d462067b507b55c",
+      "sourcePath": "crates/core/src/lib.rs"
+    },
+    {
+      "path": "evidence/alpha3/ordinary-default-proof/1/source/crates/adapter/Cargo.toml",
+      "sha256": "04ec943a965b1a02e0299bf111a2e25aa28cfe930c1d985f9e8a94557a1b658e",
+      "sourcePath": "crates/adapter/Cargo.toml"
+    },
+    {
+      "path": "evidence/alpha3/ordinary-default-proof/1/source/crates/adapter/src/lib.rs",
+      "sha256": "504f6e6f14e7264dba5b72e36ffd55b0ef6abe7e50d719c7696c265f6bb573a6",
+      "sourcePath": "crates/adapter/src/lib.rs"
+    },
+    {
+      "path": "evidence/alpha3/ordinary-default-proof/1/cargo-wrapper.sh",
+      "sha256": "de7323caf81d7834f03d7ddf46fc41128fffee60f083882af46d70af4407316b"
+    }
+  ],
+  "cliLog": "evidence/alpha3/ordinary-default-1-public-package.log",
+  "nativeLog": "evidence/alpha3/native-ordinary-default-1.log"
+}

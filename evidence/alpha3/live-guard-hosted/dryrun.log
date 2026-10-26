@@ -1,0 +1,190 @@
+[3:35:32 AM] [semantic-release] › ℹ  Running semantic-release version 25.0.9
+[3:35:32 AM] [semantic-release] › ✔  Loaded plugin "verifyConditions" from "semantic-release-workspace"
+[3:35:32 AM] [semantic-release] › ✔  Loaded plugin "analyzeCommits" from "semantic-release-workspace"
+[3:35:32 AM] [semantic-release] › ✔  Loaded plugin "verifyRelease" from "semantic-release-workspace"
+[3:35:32 AM] [semantic-release] › ✔  Loaded plugin "generateNotes" from "semantic-release-workspace"
+[3:35:32 AM] [semantic-release] › ✔  Loaded plugin "prepare" from "semantic-release-workspace"
+[3:35:32 AM] [semantic-release] › ✔  Loaded plugin "publish" from "semantic-release-workspace"
+[3:35:32 AM] [semantic-release] › ✔  Loaded plugin "addChannel" from "semantic-release-workspace"
+[3:35:32 AM] [semantic-release] › ✔  Loaded plugin "success" from "semantic-release-workspace"
+[3:35:32 AM] [semantic-release] › ✔  Loaded plugin "fail" from "semantic-release-workspace"
+[3:35:33 AM] [semantic-release] › ✔  Allowed to push to the Git repository
+[3:35:33 AM] [semantic-release] › ℹ  Start step "verifyConditions" of plugin "semantic-release-workspace"
+[3:35:33 AM] [semantic-release] [semantic-release-workspace] › ℹ  Discovered 2 workspace packages (2 publishable).
+[3:35:34 AM] [semantic-release] › ✔  Completed step "verifyConditions" of plugin "semantic-release-workspace"
+[3:35:34 AM] [semantic-release] › ℹ  No git tag version found on branch alpha3-live
+[3:35:34 AM] [semantic-release] › ℹ  No previous release found, retrieving all commits
+[3:35:34 AM] [semantic-release] › ℹ  Found 8 commits since last release
+[3:35:34 AM] [semantic-release] › ℹ  Start step "analyzeCommits" of plugin "semantic-release-workspace"
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: verify alpha.3 inherited Cargo release through trusted publishing
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: isolate live Cargo OIDC with explicit manifest metadata
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: test: add exact alpha.2 Cargo consumer acceptance fixtures
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The commit should not trigger a release
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 3 commits complete: minor release
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: verify alpha.3 inherited Cargo release through trusted publishing
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: isolate live Cargo OIDC with explicit manifest metadata
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: test: add exact alpha.2 Cargo consumer acceptance fixtures
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The commit should not trigger a release
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 3 commits complete: minor release
+[3:35:34 AM] [semantic-release] › ✔  Completed step "analyzeCommits" of plugin "semantic-release-workspace"
+[3:35:34 AM] [semantic-release] › ℹ  There is no previous release, the next release version is 1.0.0-alpha.1
+[3:35:34 AM] [semantic-release] › ℹ  Start step "verifyRelease" of plugin "semantic-release-workspace"
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: verify alpha.3 inherited Cargo release through trusted publishing
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: isolate live Cargo OIDC with explicit manifest metadata
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: test: add exact alpha.2 Cargo consumer acceptance fixtures
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The commit should not trigger a release
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 3 commits complete: minor release
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: verify alpha.3 inherited Cargo release through trusted publishing
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: isolate live Cargo OIDC with explicit manifest metadata
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: test: add exact alpha.2 Cargo consumer acceptance fixtures
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The commit should not trigger a release
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 3 commits complete: minor release
+[3:35:34 AM] [semantic-release] › ✔  Completed step "verifyRelease" of plugin "semantic-release-workspace"
+[3:35:34 AM] [semantic-release] › ℹ  Start step "generateNotes" of plugin "semantic-release-workspace"
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: verify alpha.3 inherited Cargo release through trusted publishing
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: isolate live Cargo OIDC with explicit manifest metadata
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: test: add exact alpha.2 Cargo consumer acceptance fixtures
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The commit should not trigger a release
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 3 commits complete: minor release
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: verify alpha.3 inherited Cargo release through trusted publishing
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: isolate live Cargo OIDC with explicit manifest metadata
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: test: add exact alpha.2 Cargo consumer acceptance fixtures
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  The commit should not trigger a release
+[3:35:34 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 3 commits complete: minor release
+[3:35:34 AM] [semantic-release] › ✔  Completed step "generateNotes" of plugin "semantic-release-workspace"
+[3:35:34 AM] [semantic-release] › ✔  Published release 1.0.0-alpha.1 on alpha3-live channel
+[3:35:34 AM] [semantic-release] › ℹ  Release note for version 1.0.0-alpha.1:
+# Workspace release
+
+Branch: alpha3-live · Source date: 2026-10-26
+Cargo uses SemVer versions and Git channel alpha3-live; registries have no dist-tags.
+
+## cargo:enkhjile-srw-e2e-adapter@0.2.0-alpha.1 (mailto:enkhjile-srw-e2e-adapter@0.2.0-alpha.1)
+
+### Features
+
+    * isolate live Cargo OIDC with explicit manifest metadata 3f75216
+    * verify alpha.3 inherited Cargo release through trusted publishing a9646f9
+
+### Dependencies
+
+    * cargo:enkhjile-srw-e2e-core: 0.1.0 → 0.2.0-alpha.1 (published: 0.2.0-alpha.1).
+
+## cargo:enkhjile-srw-e2e-core@0.2.0-alpha.1 (mailto:enkhjile-srw-e2e-core@0.2.0-alpha.1)
+
+### Features
+
+    * isolate live Cargo OIDC with explicit manifest metadata 3f75216
+    * verify alpha.3 inherited Cargo release through trusted publishing a9646f9
+
+Changelogs: crates/adapter/CHANGELOG.md, crates/core/CHANGELOG.md
+
+<details>
+<summary>Workspace version plan</summary>
+
+# Workspace version plan
+
+    * cargo:enkhjile-srw-e2e-adapter: 0.1.0 → 0.2.0-alpha.1 (minor)
+    * cargo:enkhjile-srw-e2e-core: 0.1.0 → 0.2.0-alpha.1 (minor)
+
+Package versions, manifest edits and dependency-first publication order are frozen for this batch.
+
+    {
+      "release": {
+        "branch": "alpha3-live",
+        "type": "prerelease",
+        "channel": "alpha3-live",
+        "prerelease": "alpha"
+      },
+      "schemaVersion": 1,
+      "head": "1452d281faec526927ef9c2587c5f6e2359c14a3",
+      "baseHead": null,
+      "packages": [
+        {
+          "id": "cargo:enkhjile-srw-e2e-adapter",
+          "ecosystem": "cargo",
+          "name": "enkhjile-srw-e2e-adapter",
+          "path": "crates/adapter",
+          "private": false,
+          "currentVersion": "0.1.0",
+          "nextVersion": "0.2.0-alpha.1",
+          "type": "minor",
+          "commits": [
+            {
+              "hash": "a9646f988220b57fa861202e211aeb1044962ddd",
+              "message": "feat: verify alpha.3 inherited Cargo release through trusted publishing"
+            },
+            {
+              "hash": "3f75216ca58b43c3e3b565943786d9227a306b61",
+              "message": "feat: isolate live Cargo OIDC with explicit manifest metadata"
+            },
+            {
+              "hash": "ec904d35684fc434e8e0f6f1811ab2375b6f8979",
+              "message": "test: add exact alpha.2 Cargo consumer acceptance fixtures"
+            }
+          ],
+          "dependencyUpdates": [
+            {
+              "dependency": "cargo:enkhjile-srw-e2e-core",
+              "manifestPath": "Cargo.toml",
+              "field": [
+                "workspace",
+                "dependencies",
+                "enkhjile-srw-e2e-core",
+                "version"
+              ],
+              "from": "0.1.0",
+              "to": "0.2.0-alpha.1",
+              "publishedRange": "0.2.0-alpha.1"
+            }
+          ]
+        },
+        {
+          "id": "cargo:enkhjile-srw-e2e-core",
+          "ecosystem": "cargo",
+          "name": "enkhjile-srw-e2e-core",
+          "path": "crates/core",
+          "private": false,
+          "currentVersion": "0.1.0",
+          "nextVersion": "0.2.0-alpha.1",
+          "type": "minor",
+          "commits": [
+            {
+              "hash": "a9646f988220b57fa861202e211aeb1044962ddd",
+              "message": "feat: verify alpha.3 inherited Cargo release through trusted publishing"
+            },
+            {
+              "hash": "3f75216ca58b43c3e3b565943786d9227a306b61",
+              "message": "feat: isolate live Cargo OIDC with explicit manifest metadata"
+            },
+            {
+              "hash": "ec904d35684fc434e8e0f6f1811ab2375b6f8979",
+              "message": "test: add exact alpha.2 Cargo consumer acceptance fixtures"
+            }
+          ],
+          "dependencyUpdates": []
+        }
+      ],
+      "groups": [
+        [
+          "cargo:enkhjile-srw-e2e-core"
+        ],
+        [
+          "cargo:enkhjile-srw-e2e-adapter"
+        ]
+      ]
+    }
+
+</details>

@@ -1,0 +1,147 @@
+{
+  "uploads": [
+    "cargo:enkhjile-srw-e2e-core@0.2.0-alpha.1",
+    "cargo:enkhjile-srw-e2e-adapter@0.2.0-alpha.1"
+  ],
+  "crates": {
+    "enkhjile-srw-e2e-core": {
+      "0.2.0-alpha.1": {
+        "metadata": {
+          "name": "enkhjile-srw-e2e-core",
+          "vers": "0.2.0-alpha.1",
+          "deps": [],
+          "features": {},
+          "authors": [],
+          "description": "Disposable semantic-release consumer acceptance fixture",
+          "documentation": null,
+          "homepage": null,
+          "keywords": [],
+          "categories": [],
+          "license": "MIT",
+          "license_file": null,
+          "repository": null,
+          "links": null,
+          "rust_version": null,
+          "readme_file": null,
+          "readme": null
+        },
+        "sha256": "ab77004cf78b97fae7028b214f6c56c870abf62fcbe6b3bb075d1f9f28bd8cfd"
+      }
+    },
+    "enkhjile-srw-e2e-adapter": {
+      "0.2.0-alpha.1": {
+        "metadata": {
+          "name": "enkhjile-srw-e2e-adapter",
+          "vers": "0.2.0-alpha.1",
+          "deps": [
+            {
+              "name": "enkhjile-srw-e2e-core",
+              "version_req": "^0.2.0-alpha.1",
+              "features": [],
+              "optional": false,
+              "default_features": true,
+              "target": null,
+              "kind": "normal",
+              "registry": null,
+              "explicit_name_in_toml": null
+            }
+          ],
+          "features": {},
+          "authors": [],
+          "description": "Disposable semantic-release consumer acceptance fixture",
+          "documentation": null,
+          "homepage": null,
+          "keywords": [],
+          "categories": [],
+          "license": "MIT",
+          "license_file": null,
+          "repository": null,
+          "links": null,
+          "rust_version": null,
+          "readme_file": null,
+          "readme": null
+        },
+        "sha256": "311eedebbf65e4328ee4f4e2c672a4a591a7f8ba891f83b42b601fce3eb2ed25"
+      }
+    }
+  },
+  "exchangeCount": 0,
+  "revocationCount": 0,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/en/kh/enkhjile-srw-e2e-adapter",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/en/kh/enkhjile-srw-e2e-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/en/kh/enkhjile-srw-e2e-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "PUT",
+      "path": "/cargo/api/v1/crates/new",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/en/kh/enkhjile-srw-e2e-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/en/kh/enkhjile-srw-e2e-core",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/en/kh/enkhjile-srw-e2e-core",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/api/v1/crates/enkhjile-srw-e2e-core/0.2.0-alpha.1/download",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/en/kh/enkhjile-srw-e2e-adapter",
+      "authorizationPresent": true
+    },
+    {
+      "method": "PUT",
+      "path": "/cargo/api/v1/crates/new",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/en/kh/enkhjile-srw-e2e-adapter",
+      "authorizationPresent": true
+    }
+  ]
+}

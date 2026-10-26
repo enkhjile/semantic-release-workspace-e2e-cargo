@@ -2,20 +2,21 @@ Exported 25 of retained remotes
 Exported 50 of retained remotes
 Exported 75 of retained remotes
 Exported 100 of retained remotes
+Exported 125 of retained remotes
 {
-  "generatedAt": "2026-10-26T03:21:13.530983+00:00",
+  "generatedAt": "2026-10-26T03:51:12.425786+00:00",
   "operation": "ALPHA3_RETAINED_REMOTE_EXPORT",
-  "fixtureCount": 121,
+  "fixtureCount": 125,
   "statusCounts": {
-    "PASS": 121
+    "PASS": 125
   },
-  "bundleBytes": 713596,
-  "refOccurrences": 709,
-  "tagRefOccurrences": 173,
-  "notesRefOccurrences": 228,
-  "workspaceRefOccurrences": 181,
-  "preparedManifestExports": 384,
-  "noteExports": 252,
+  "bundleBytes": 755025,
+  "refOccurrences": 755,
+  "tagRefOccurrences": 186,
+  "notesRefOccurrences": 246,
+  "workspaceRefOccurrences": 192,
+  "preparedManifestExports": 406,
+  "noteExports": 270,
   "unavailable": [],
   "hostedHistoryUnavailable": [],
   "limitations": [

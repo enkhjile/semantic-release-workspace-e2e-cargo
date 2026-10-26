@@ -1,59 +1,209 @@
 {
-  "controlledCrateArchives": 99,
-  "registryLedgers": 54,
-  "checksumsVerified": true,
-  "lifecycleCases": 54,
-  "discoveryCasesEachRuntime": 21,
-  "runtimes": [
-    "24.11.0",
-    "24.22.1",
-    "26.12.1"
-  ],
-  "acceptedPublicVersions": 2,
-  "publicBudget": 4,
-  "refs": {
-    "generatedAt": "2026-10-26T03:21:13.530983+00:00",
-    "operation": "ALPHA3_RETAINED_REMOTE_EXPORT",
-    "fixtureCount": 121,
-    "statusCounts": {
-      "PASS": 121
-    },
-    "bundleBytes": 713596,
-    "refOccurrences": 709,
-    "tagRefOccurrences": 173,
-    "notesRefOccurrences": 228,
-    "workspaceRefOccurrences": 181,
-    "preparedManifestExports": 384,
-    "noteExports": 252,
-    "unavailable": [],
-    "hostedHistoryUnavailable": [],
-    "limitations": [
-      "Raw alpha.3 bundles and exports are retained with the run evidence.",
-      "Local fixtures were exported in their retained final state, including deliberate fault damage. No pre-fault ref snapshot is invented.",
-      "Export covers refs and their reachable objects, not unreferenced dangling objects or reflogs."
-    ]
+  "generatedAt": "2026-10-26T04:13:56.190984+00:00",
+  "verdict": "FAIL",
+  "artifact": {
+    "name": "semantic-release-workspace",
+    "version": "1.0.0-alpha.3",
+    "integrity": "sha512-1tMxZpQb7PwUtoAJYiqSwjsurUEpdWCKZzFBikoGj4buyAKUkm6GwNccxjDsWPe6DtzGtYFUZ91E1c9b4pSRrg==",
+    "mode": "DOCUMENTED_PACKAGE_NAME",
+    "installProof": "evidence/alpha3/artifact-install.json"
   },
-  "bootstrapVerification": {
-    "generatedAt": "2026-10-26T03:20:05.439Z",
-    "nativeDownstreamExit": 0,
-    "crates": [
-      {
-        "name": "enkhjile-srw-e2e-core",
-        "version": "0.1.0",
-        "sha256": "27da3040a016bce6969e426922d5b69d33d1c938ac3f6f0e258e9150218c9d75",
-        "bytes": 987,
-        "trustpub": null
+  "tooling": {
+    "node": "v24.22.1",
+    "npm": "12.2.1",
+    "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+    "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+    "git": "git version 2.56.0",
+    "plugin": "1.0.0-alpha.3",
+    "semanticRelease": "25.0.9"
+  },
+  "baseline": {
+    "discovery": {
+      "24.11.0": {
+        "pass": 21
       },
-      {
-        "name": "enkhjile-srw-e2e-adapter",
-        "version": "0.1.0",
-        "sha256": "e58e9cfb60d3b19e06e43a77355341f3968900c4bf6fa2b7fd3982756d115f39",
-        "bytes": 1132,
-        "trustpub": null
+      "24.22.1": {
+        "pass": 21
+      },
+      "26.12.1": {
+        "pass": 21
       }
-    ]
+    },
+    "lifecycle": {
+      "pass": 56,
+      "fail": 0,
+      "ledger": "evidence/alpha3/acceptance-ledger.json"
+    },
+    "controlledCrateArchives": 102,
+    "registryLedgers": 56,
+    "retainedHistory": {
+      "fixtureCount": 123,
+      "statusCounts": {
+        "PASS": 123
+      },
+      "refOccurrences": 733,
+      "bundleBytes": 732226,
+      "preparedManifestExports": 394,
+      "noteExports": 262
+    },
+    "retentionIndex": "evidence/alpha3/baseline-ref-backups/index.json"
   },
-  "localHarnessCommit": "8ce0ebd5",
-  "localAlphaCommit": "a9646f9",
-  "remotePushStatus": "BLOCKED_AUTO_REVIEW_AUTHORIZATION_CLARIFICATION"
+  "additionalDiagnostics": {
+    "fullyInheritedSharedGraphs": {
+      "pass": 2,
+      "ledger": "evidence/alpha3/fully-inherited-results.json"
+    },
+    "ordinaryDefaultCratesIo": {
+      "fail": 2,
+      "nativeOriginalTestsPass": 2,
+      "sourceHeads": [
+        "0069c248211efa87e5ae6bc5b01e22d2085b038b",
+        "11e0af59911b75e926b1147add8ec45b508123ce"
+      ],
+      "ledger": "evidence/alpha3/ordinary-default-registry-results.json",
+      "proofs": [
+        "evidence/alpha3/ordinary-default-1-proof.json",
+        "evidence/alpha3/ordinary-default-2-proof.json"
+      ]
+    },
+    "explicitNamedIndexControl": {
+      "nativePackagingPass": true,
+      "expectedLocalIdentity503Requests": 1,
+      "noJwtIssued": true,
+      "publicExchanges": 0,
+      "publicUploads": 0,
+      "proof": "evidence/alpha3/ordinary-default-positive-proof.json"
+    },
+    "earlierSplitConfigIsolation": {
+      "fail": 2,
+      "classification": "SUPPLEMENTAL_DIAGNOSTIC_ONLY_NOT_DECISIVE_ORDINARY_CONTEXT_REPRO",
+      "ledger": "evidence/alpha3/default-registry-defect-results.json"
+    },
+    "controlledCrateArchives": 12,
+    "registryLedgers": 7,
+    "retainedHistory": {
+      "fixtureCount": 7,
+      "statusCounts": {
+        "PASS": 7
+      },
+      "refOccurrences": 86,
+      "bundleBytes": 84204,
+      "preparedManifestExports": 57,
+      "noteExports": 32
+    },
+    "retentionIndex": "evidence/alpha3/diagnostics-ref-backups/index.json"
+  },
+  "allLocalRetention": {
+    "summary": {
+      "generatedAt": "2026-10-26T04:07:29.872339+00:00",
+      "operation": "ALPHA3_RETAINED_REMOTE_EXPORT",
+      "fixtureCount": 130,
+      "statusCounts": {
+        "PASS": 130
+      },
+      "bundleBytes": 816430,
+      "refOccurrences": 819,
+      "tagRefOccurrences": 202,
+      "notesRefOccurrences": 267,
+      "workspaceRefOccurrences": 209,
+      "preparedManifestExports": 451,
+      "noteExports": 294,
+      "unavailable": [],
+      "hostedHistoryUnavailable": [],
+      "limitations": [
+        "Raw alpha.3 bundles and exports are retained with the run evidence.",
+        "Local fixtures were exported in their retained final state, including deliberate fault damage. No pre-fault ref snapshot is invented.",
+        "Export covers refs and their reachable objects, not unreferenced dangling objects or reflogs."
+      ]
+    },
+    "index": "evidence/alpha3/ref-backups/index.json",
+    "allCrateArchives": 114,
+    "allRegistryLedgers": 63
+  },
+  "hostedControlled": {
+    "run": "https://github.com/enkhjile/semantic-release-workspace-e2e-cargo/actions/runs/40264209105",
+    "sourceSha": "fd374c40fdbe4ccf29c346eca5fe1656e57cc596",
+    "discoveryPass": 21,
+    "lifecyclePass": 56,
+    "verifiedCrateArchives": 102,
+    "hostedOriginalGitBundlesVerified": 78,
+    "refSummary": {
+      "generatedAt": "2026-10-26T03:32:06.852815+00:00",
+      "operation": "ALPHA3_RETAINED_REMOTE_EXPORT",
+      "fixtureCount": 78,
+      "statusCounts": {
+        "PASS": 78
+      },
+      "bundleBytes": 655465,
+      "refOccurrences": 662,
+      "tagRefOccurrences": 173,
+      "notesRefOccurrences": 227,
+      "workspaceRefOccurrences": 178,
+      "preparedManifestExports": 376,
+      "noteExports": 251,
+      "unavailable": [],
+      "hostedHistoryUnavailable": [],
+      "limitations": [
+        "Raw alpha.3 bundles and exports are retained with the run evidence.",
+        "Local fixtures were exported in their retained final state, including deliberate fault damage. No pre-fault ref snapshot is invented.",
+        "Export covers refs and their reachable objects, not unreferenced dangling objects or reflogs."
+      ]
+    },
+    "independentDownloadedBundleMirrorRestoreAndFsckPass": 78
+  },
+  "live": {
+    "status": "PARTIAL_REAL_OIDC_CORE_ONLY_ADAPTER_BLOCKED_BY_CONFIRMED_DEFECT",
+    "guardRun": "https://github.com/enkhjile/semantic-release-workspace-e2e-cargo/actions/runs/40264782407",
+    "sourceSha": "1452d281faec526927ef9c2587c5f6e2359c14a3",
+    "releaseRun": "https://github.com/enkhjile/semantic-release-workspace-e2e-cargo/actions/runs/40265063955",
+    "attempt1": "FAIL_AFTER_CORE_UPLOAD_ADAPTER_NATIVE_PACKAGE",
+    "attempt2": "FAIL_SAME_SOURCE_FRESH_RUNNER_ADAPTER_NATIVE_PACKAGE",
+    "acceptedPublicVersions": 3,
+    "publicVersionBudget": 4,
+    "acceptedVersions": {
+      "enkhjile-srw-e2e-core": [
+        "0.1.0",
+        "0.2.0-alpha.1"
+      ],
+      "enkhjile-srw-e2e-adapter": [
+        "0.1.0"
+      ]
+    },
+    "adapterAlpha": "NOT_UPLOADED",
+    "coreOidc": {
+      "provider": "github",
+      "repository": "enkhjile/semantic-release-workspace-e2e-cargo",
+      "run_id": "40265063955",
+      "sha": "1452d281faec526927ef9c2587c5f6e2359c14a3"
+    },
+    "coreChecksum": "df6606e5d05d921b61973da900fe12f2885704d908f7da112273edd784333b71",
+    "coreNativeDownloadedConsumerExit": 0,
+    "adapterAlphaDownloadedConsumer": "NOT_RUN_BLOCKED_BY_DEFECT",
+    "liveNoChange": "NOT_RUN_BLOCKED_BY_PENDING_BATCH",
+    "pendingRetention": "evidence/alpha3/live-public-state/final-pending-retention.json",
+    "initialIndexDelayHypothesis": "SUPERSEDED_BY_PAIRED_DEFAULT_REGISTRY_DEFECT_REPRODUCTION"
+  },
+  "confirmedDefect": {
+    "trigger": "coordinated local Cargo dependency published with ordinary built-in crates.io and no named crates-io index configuration",
+    "behavior": "staging inserts registry=crates-io then removes path; native Cargo rejects missing named-registry configuration",
+    "installedBundleProof": "evidence/alpha3/default-registry-product-proof.json",
+    "ordinaryProofIndex": "evidence/alpha3/ordinary-default-proof/index.json"
+  },
+  "publicRefs": {
+    "existingMainUnchanged": "1f45112c7780363a0edf2a24a8abbdffc8e48d9a",
+    "existingAlphaUnchanged": "d55358a490e3006bbdd192b2dcc7076167254659",
+    "newControlledBranch": "acceptance/alpha3",
+    "newLiveBranch": "alpha3-live"
+  },
+  "historicalAlpha2Evidence": "PRESERVED_UNCHANGED",
+  "verificationScripts": [
+    "scripts/audit-alpha3-evidence.py",
+    "scripts/export-alpha3-evidence.py"
+  ],
+  "checksums": {
+    "path": "evidence/alpha3/checksums.json",
+    "sha256": "f65b14c8dcb53c7f59117f5a6886d3b2769b0b09fb860a440203d3c39dbb9c95",
+    "fileCount": 2881,
+    "externalBundleCount": 2
+  }
 }

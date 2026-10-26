@@ -1,0 +1,17 @@
+   Packaging fixture-core v1.1.0 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-P82l1G/source/crates/core)
+    Packaged 6 files, 1.4KiB (1.0KiB compressed)
+   Verifying fixture-core v1.1.0 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-P82l1G/source/crates/core)
+   Compiling fixture-core v1.1.0 (/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-P82l1G/target/package/fixture-core-1.1.0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.10s
+    Updating `fixture` index
+     Locking 1 package to highest compatible version
+      Adding fixture-core v1.1.0 (registry `fixture`)
+   Packaging fixture-adapter v1.1.0 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-sFg6T2/source/crates/adapter)
+    Updating `fixture` index
+    Packaged 6 files, 1.8KiB (1.1KiB compressed)
+   Verifying fixture-adapter v1.1.0 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-sFg6T2/source/crates/adapter)
+ Downloading crates ...
+  Downloaded fixture-core v1.1.0 (registry `fixture`)
+   Compiling fixture-core v1.1.0 (registry `fixture`)
+   Compiling fixture-adapter v1.1.0 (/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-sFg6T2/target/package/fixture-adapter-1.1.0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.15s

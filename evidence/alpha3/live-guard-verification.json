@@ -1,0 +1,13 @@
+{
+  "guardRun": "40264782407",
+  "sourceSha": "1452d281faec526927ef9c2587c5f6e2359c14a3",
+  "requiredOidcDryRunPassed": true,
+  "remoteRefsUnchanged": true,
+  "allTrackedSourceHashesUnchanged": true,
+  "nativePublishTokenAbsenceStepPassed": true,
+  "exactPlannedVersions": {
+    "enkhjile-srw-e2e-core": "0.2.0-alpha.1",
+    "enkhjile-srw-e2e-adapter": "0.2.0-alpha.1"
+  },
+  "bothVersionsAbsentBeforeLiveDispatch": true
+}

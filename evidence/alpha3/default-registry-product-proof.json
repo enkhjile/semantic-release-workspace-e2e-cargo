@@ -1,0 +1,12 @@
+{
+  "artifact": "semantic-release-workspace@1.0.0-alpha.3",
+  "installedDistSha256": "38149feea28c0850216df06b3cdf98f1aedbfe17a8cee5a1fb5ee3a90e09f2e1",
+  "stagingAssignmentLine": 1967,
+  "stagingAssignment": "\t\t\t\t\tdep.registry = (await destination(context, config, target)).registry;",
+  "pathDeletionLine": 1968,
+  "pathDeletion": "\t\t\t\t\tdelete dep.path;",
+  "packBeforeIdentityLine": 2880,
+  "identityAcquisitionLine": 2899,
+  "artifactInstallProof": "evidence/alpha3/artifact-install.json",
+  "nativeMissingIndexProof": "evidence/alpha3/native-explicit-crates-io-package.log"
+}

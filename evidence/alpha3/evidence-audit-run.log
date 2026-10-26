@@ -1,0 +1,107 @@
+{
+  "dryRunAndNoChange": {
+    "dry-run": {
+      "sourceAndRefsUnchanged": true,
+      "httpWrites": 0,
+      "identityOrExchangeOrRevocationRequests": 0,
+      "additionalUploads": 0
+    },
+    "no-change": {
+      "sourceAndRefsUnchanged": true,
+      "httpWrites": 0,
+      "identityOrExchangeOrRevocationRequests": 0,
+      "additionalUploads": 0
+    },
+    "oidc-required-dry-run": {
+      "sourceAndRefsUnchanged": true,
+      "httpWrites": 0,
+      "identityOrExchangeOrRevocationRequests": 0,
+      "additionalUploads": 0
+    },
+    "oidc-required-no-change": {
+      "sourceAndRefsUnchanged": true,
+      "httpWrites": 0,
+      "identityOrExchangeOrRevocationRequests": 0,
+      "additionalUploads": 0
+    }
+  },
+  "freshCloneRecovery": {
+    "reject": {
+      "initialExit": 1,
+      "retryExit": 0,
+      "retainedArtifactRefsUnchanged": 1,
+      "totalNativePackageCalls": 2,
+      "uniqueUploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "sourceShaSame": true
+    },
+    "reject-second": {
+      "initialExit": 1,
+      "retryExit": 0,
+      "retainedArtifactRefsUnchanged": 2,
+      "totalNativePackageCalls": 2,
+      "uniqueUploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "sourceShaSame": true
+    },
+    "uncertain-full": {
+      "initialExit": 1,
+      "retryExit": 0,
+      "retainedArtifactRefsUnchanged": 1,
+      "totalNativePackageCalls": 1,
+      "uniqueUploads": [
+        "cargo:fixture-core@1.1.0"
+      ],
+      "sourceShaSame": true
+    },
+    "uncertain-partial": {
+      "initialExit": 1,
+      "retryExit": 0,
+      "retainedArtifactRefsUnchanged": 1,
+      "totalNativePackageCalls": 2,
+      "uniqueUploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "sourceShaSame": true
+    }
+  },
+  "inheritedVariants": {
+    "runtime": {
+      "normalizedCoreVersion": "1.1.0",
+      "noWorkspaceInheritanceInArchive": true
+    },
+    "shared": {
+      "normalizedCoreVersion": "1.1.0",
+      "noWorkspaceInheritanceInArchive": true
+    },
+    "renamed": {
+      "normalizedCoreVersion": "1.1.0",
+      "noWorkspaceInheritanceInArchive": true
+    },
+    "optional": {
+      "normalizedCoreVersion": "1.1.0",
+      "noWorkspaceInheritanceInArchive": true
+    },
+    "target": {
+      "normalizedCoreVersion": "1.1.0",
+      "noWorkspaceInheritanceInArchive": true
+    },
+    "build": {
+      "normalizedCoreVersion": "1.1.0",
+      "noWorkspaceInheritanceInArchive": true
+    },
+    "dev": {
+      "normalizedCoreVersion": "1.1.0",
+      "noWorkspaceInheritanceInArchive": true
+    }
+  },
+  "artifactChecks": {
+    "count": 114,
+    "allSha256Matched": true
+  }
+}

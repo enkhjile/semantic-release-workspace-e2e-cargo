@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-10-26T03:44:11.097Z",
+  "node": "v24.22.1",
+  "results": [
+    {
+      "name": "fully-inherited-shared-graph-1",
+      "status": "PASS",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "ms": 8015,
+      "nativeOriginalTestExit": 0,
+      "downloadedDownstreamExit": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ]
+    },
+    {
+      "name": "fully-inherited-shared-graph-2",
+      "status": "PASS",
+      "mode": "DOCUMENTED_PACKAGE_NAME",
+      "ms": 7607,
+      "nativeOriginalTestExit": 0,
+      "downloadedDownstreamExit": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ]
+    }
+  ]
+}

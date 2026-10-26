@@ -1,0 +1,129 @@
+release	Plugin-owned Cargo OIDC release	﻿2026-10-26T03:48:15.9411481Z ##[group]Run npm exec -- semantic-release --extends ./release.oidc.config.mjs | tee evidence/alpha3/live/release.log
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:15.9412110Z ^[[36;1mnpm exec -- semantic-release --extends ./release.oidc.config.mjs | tee evidence/alpha3/live/release.log^[[0m
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:15.9467951Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:15.9468230Z env:
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:15.9470247Z   GITHUB_TOKEN: ***
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:15.9470601Z ##[endgroup]
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:16.1541269Z npm notice run npx
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:16.1543124Z npm notice run 'semantic-release' --extends ./release.oidc.config.mjs
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:16.5299912Z [3:48:16 AM] [semantic-release] › ℹ  Running semantic-release version 25.0.9
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:16.7106801Z [3:48:16 AM] [semantic-release] › ✔  Loaded plugin "verifyConditions" from "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:16.7108229Z [3:48:16 AM] [semantic-release] › ✔  Loaded plugin "analyzeCommits" from "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:16.7110612Z [3:48:16 AM] [semantic-release] › ✔  Loaded plugin "verifyRelease" from "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:16.7112323Z [3:48:16 AM] [semantic-release] › ✔  Loaded plugin "generateNotes" from "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:16.7114137Z [3:48:16 AM] [semantic-release] › ✔  Loaded plugin "prepare" from "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:16.7115840Z [3:48:16 AM] [semantic-release] › ✔  Loaded plugin "publish" from "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:16.7118396Z [3:48:16 AM] [semantic-release] › ✔  Loaded plugin "addChannel" from "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:16.7120299Z [3:48:16 AM] [semantic-release] › ✔  Loaded plugin "success" from "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:16.7122972Z [3:48:16 AM] [semantic-release] › ✔  Loaded plugin "fail" from "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:18.3769717Z [3:48:18 AM] [semantic-release] › ✔  Run automated release from branch alpha3-live on repository https://github.com/enkhjile/semantic-release-workspace-e2e-cargo
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:18.7266859Z [3:48:18 AM] [semantic-release] › ✔  Allowed to push to the Git repository
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:18.7269636Z [3:48:18 AM] [semantic-release] › ℹ  Start step "verifyConditions" of plugin "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:20.7081837Z [3:48:20 AM] [semantic-release] [semantic-release-workspace] › ℹ  Discovered 2 workspace packages (2 publishable).
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.3403659Z [3:48:21 AM] [semantic-release] › ✔  Completed step "verifyConditions" of plugin "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.3459844Z [3:48:21 AM] [semantic-release] › ℹ  Found git tag workspace-v1.0.0-alpha.1 associated with version 1.0.0-alpha.1 on branch alpha3-live
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.3520683Z [3:48:21 AM] [semantic-release] › ℹ  Found 0 commits since last release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.3521652Z [3:48:21 AM] [semantic-release] › ℹ  Start step "analyzeCommits" of plugin "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7174717Z [3:48:21 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: verify alpha.3 inherited Cargo release through trusted publishing
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7179233Z [3:48:21 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7180729Z [3:48:21 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: isolate live Cargo OIDC with explicit manifest metadata
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7182166Z [3:48:21 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7183558Z [3:48:21 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: test: add exact alpha.2 Cargo consumer acceptance fixtures
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7184855Z [3:48:21 AM] [semantic-release] [semantic-release-workspace] › ℹ  The commit should not trigger a release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7186162Z [3:48:21 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 3 commits complete: minor release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7191824Z [3:48:21 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: verify alpha.3 inherited Cargo release through trusted publishing
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7193650Z [3:48:21 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7195660Z [3:48:21 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: isolate live Cargo OIDC with explicit manifest metadata
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7197290Z [3:48:21 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7198674Z [3:48:21 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: test: add exact alpha.2 Cargo consumer acceptance fixtures
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7199971Z [3:48:21 AM] [semantic-release] [semantic-release-workspace] › ℹ  The commit should not trigger a release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7201149Z [3:48:21 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 3 commits complete: minor release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7262028Z [3:48:21 AM] [semantic-release] › ✔  Completed step "analyzeCommits" of plugin "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7297623Z [3:48:21 AM] [semantic-release] › ℹ  The next release version is 1.0.0-alpha.2
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:21.7298975Z [3:48:21 AM] [semantic-release] › ℹ  Start step "verifyRelease" of plugin "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.0804833Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: verify alpha.3 inherited Cargo release through trusted publishing
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.0806541Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.0826527Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: isolate live Cargo OIDC with explicit manifest metadata
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.0827841Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.0829061Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: test: add exact alpha.2 Cargo consumer acceptance fixtures
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.0829817Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  The commit should not trigger a release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.0830494Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 3 commits complete: minor release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.0831736Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: verify alpha.3 inherited Cargo release through trusted publishing
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.0833039Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.0833890Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: isolate live Cargo OIDC with explicit manifest metadata
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.0834672Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.0835633Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: test: add exact alpha.2 Cargo consumer acceptance fixtures
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.0836408Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  The commit should not trigger a release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.0837091Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 3 commits complete: minor release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.0908448Z [3:48:22 AM] [semantic-release] › ✔  Completed step "verifyRelease" of plugin "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.0909587Z [3:48:22 AM] [semantic-release] › ℹ  Start step "generateNotes" of plugin "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.8334018Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: verify alpha.3 inherited Cargo release through trusted publishing
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.8335127Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.8357382Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: isolate live Cargo OIDC with explicit manifest metadata
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.8358414Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.8359237Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: test: add exact alpha.2 Cargo consumer acceptance fixtures
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.8360500Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  The commit should not trigger a release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.8361179Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 3 commits complete: minor release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.8362028Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: verify alpha.3 inherited Cargo release through trusted publishing
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.8363184Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.8364479Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: isolate live Cargo OIDC with explicit manifest metadata
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.8365659Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.8366505Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: test: add exact alpha.2 Cargo consumer acceptance fixtures
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.8367258Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  The commit should not trigger a release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.8367932Z [3:48:22 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 3 commits complete: minor release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.8435423Z [3:48:22 AM] [semantic-release] › ✔  Completed step "generateNotes" of plugin "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:22.8443512Z [3:48:22 AM] [semantic-release] › ℹ  Start step "prepare" of plugin "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:23.2082820Z [3:48:23 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: verify alpha.3 inherited Cargo release through trusted publishing
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:23.2084273Z [3:48:23 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:23.2085787Z [3:48:23 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: isolate live Cargo OIDC with explicit manifest metadata
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:23.2096651Z [3:48:23 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:23.2097772Z [3:48:23 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: test: add exact alpha.2 Cargo consumer acceptance fixtures
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:23.2098756Z [3:48:23 AM] [semantic-release] [semantic-release-workspace] › ℹ  The commit should not trigger a release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:23.2099679Z [3:48:23 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 3 commits complete: minor release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:23.2100815Z [3:48:23 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: verify alpha.3 inherited Cargo release through trusted publishing
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:23.2101825Z [3:48:23 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:23.2102853Z [3:48:23 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: isolate live Cargo OIDC with explicit manifest metadata
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:23.2103921Z [3:48:23 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:23.2105246Z [3:48:23 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: test: add exact alpha.2 Cargo consumer acceptance fixtures
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:23.2106207Z [3:48:23 AM] [semantic-release] [semantic-release-workspace] › ℹ  The commit should not trigger a release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:23.2107318Z [3:48:23 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 3 commits complete: minor release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:27.6906419Z [3:48:27 AM] [semantic-release] › ✔  Completed step "prepare" of plugin "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:30.1515810Z [3:48:30 AM] [semantic-release] › ✔  Created tag workspace-v1.0.0-alpha.2
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:30.1517340Z [3:48:30 AM] [semantic-release] › ℹ  Start step "publish" of plugin "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:30.9079115Z [3:48:30 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: verify alpha.3 inherited Cargo release through trusted publishing
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:30.9080683Z [3:48:30 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:30.9082107Z [3:48:30 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: isolate live Cargo OIDC with explicit manifest metadata
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:30.9083550Z [3:48:30 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:30.9085102Z [3:48:30 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: test: add exact alpha.2 Cargo consumer acceptance fixtures
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:30.9086417Z [3:48:30 AM] [semantic-release] [semantic-release-workspace] › ℹ  The commit should not trigger a release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:30.9087617Z [3:48:30 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 3 commits complete: minor release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:30.9089860Z [3:48:30 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: verify alpha.3 inherited Cargo release through trusted publishing
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:30.9091302Z [3:48:30 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:30.9092657Z [3:48:30 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: feat: isolate live Cargo OIDC with explicit manifest metadata
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:30.9102991Z [3:48:30 AM] [semantic-release] [semantic-release-workspace] › ℹ  The release type for the commit is minor
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:30.9103868Z [3:48:30 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analyzing commit: test: add exact alpha.2 Cargo consumer acceptance fixtures
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:30.9104682Z [3:48:30 AM] [semantic-release] [semantic-release-workspace] › ℹ  The commit should not trigger a release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:30.9105582Z [3:48:30 AM] [semantic-release] [semantic-release-workspace] › ℹ  Analysis of 3 commits complete: minor release
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:35.3749889Z [3:48:35 AM] [semantic-release] [semantic-release-workspace] › ℹ  Published cargo:enkhjile-srw-e2e-core@0.2.0-alpha.1.
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0619036Z [3:48:36 AM] [semantic-release] › ✘  Failed step "publish" of plugin "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0631812Z [3:48:36 AM] [semantic-release] › ℹ  Start step "fail" of plugin "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0638811Z [3:48:36 AM] [semantic-release] [semantic-release-workspace] › ✘  Workspace batch did not complete. Any pending journal is preserved for retry.
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0641018Z [3:48:36 AM] [semantic-release] › ✘  EWORKSPACEPUBLISH Workspace command failed: cargo package. Check tool availability, package validity and registry access. Subprocess output is withheld because it may contain credentials.
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0642716Z [3:48:36 AM] [semantic-release] › ✔  Completed step "fail" of plugin "semantic-release-workspace"
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0648068Z SemanticReleaseError: Workspace command failed: cargo package. Check tool availability, package validity and registry access. Subprocess output is withheld because it may contain credentials.
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0650141Z     at releaseError ^[[90m(file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/^[[39mnode_modules/^[[4msemantic-release-workspace^[[24m/dist/index.mjs:342:8^[[90m)^[[39m
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0652392Z     at command ^[[90m(file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/^[[39mnode_modules/^[[4msemantic-release-workspace^[[24m/dist/index.mjs:356:10^[[90m)^[[39m
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0653774Z ^[[90m    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)^[[39m
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0655629Z     at async pack ^[[90m(file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/^[[39mnode_modules/^[[4msemantic-release-workspace^[[24m/dist/index.mjs:1983:3^[[90m)^[[39m
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0657652Z     at async publishPackages ^[[90m(file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/^[[39mnode_modules/^[[4msemantic-release-workspace^[[24m/dist/index.mjs:2880:23^[[90m)^[[39m
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0659721Z     at async publish ^[[90m(file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/^[[39mnode_modules/^[[4msemantic-release-workspace^[[24m/dist/index.mjs:3111:3^[[90m)^[[39m
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0661789Z     at async validator ^[[90m(file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/^[[39mnode_modules/^[[4msemantic-release^[[24m/lib/plugins/normalize.js:36:24^[[90m)^[[39m
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0663646Z     at async ^[[90mfile:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/^[[39mnode_modules/^[[4msemantic-release^[[24m/lib/plugins/pipeline.js:38:36
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0665609Z     at async ^[[90mfile:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/^[[39mnode_modules/^[[4msemantic-release^[[24m/lib/plugins/pipeline.js:32:5
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0667885Z     at async pluginsConfigAccumulator.<computed> [as publish] ^[[90m(file:///home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/^[[39mnode_modules/^[[4msemantic-release^[[24m/lib/plugins/index.js:87:11^[[90m)^[[39m {
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0669178Z   code: ^[[32m'EWORKSPACEPUBLISH'^[[39m,
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0669586Z   details: ^[[90mundefined^[[39m,
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0669965Z   semanticRelease: ^[[33mtrue^[[39m,
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0670412Z   pluginName: ^[[32m'semantic-release-workspace'^[[39m
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0860019Z }
+release	Plugin-owned Cargo OIDC release	2026-10-26T03:48:36.0870702Z ##[error]Process completed with exit code 1.

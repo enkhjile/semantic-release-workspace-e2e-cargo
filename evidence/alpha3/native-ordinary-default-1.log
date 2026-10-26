@@ -1,0 +1,35 @@
+   Packaging enkhjile-srw-e2e-core v0.2.0-alpha.1 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-Ss4COW/source/crates/core)
+    Packaged 6 files, 1.5KiB (1.1KiB compressed)
+   Verifying enkhjile-srw-e2e-core v0.2.0-alpha.1 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-Ss4COW/source/crates/core)
+   Compiling enkhjile-srw-e2e-core v0.2.0-alpha.1 (/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-Ss4COW/target/package/enkhjile-srw-e2e-core-0.2.0-alpha.1)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.32s
+    Updating `fixture` index
+     Locking 1 package to highest compatible version
+      Adding enkhjile-srw-e2e-core v0.2.0-alpha.1 (registry `fixture`)
+   Packaging enkhjile-srw-e2e-adapter v0.2.0-alpha.1 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-diDzsZ/source/crates/adapter)
+    Updating `fixture` index
+    Packaged 6 files, 2.0KiB (1.2KiB compressed)
+   Verifying enkhjile-srw-e2e-adapter v0.2.0-alpha.1 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-diDzsZ/source/crates/adapter)
+ Downloading crates ...
+  Downloaded enkhjile-srw-e2e-core v0.2.0-alpha.1 (registry `fixture`)
+   Compiling enkhjile-srw-e2e-core v0.2.0-alpha.1 (registry `fixture`)
+   Compiling enkhjile-srw-e2e-adapter v0.2.0-alpha.1 (/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-diDzsZ/target/package/enkhjile-srw-e2e-adapter-0.2.0-alpha.1)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.11s
+   Compiling enkhjile-srw-e2e-core v0.1.0 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/.scratch/alpha3/ordinary-default-1-AH0VOp/work/crates/core)
+   Compiling enkhjile-srw-e2e-adapter v0.1.0 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/.scratch/alpha3/ordinary-default-1-AH0VOp/work/crates/adapter)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.44s
+     Running unittests src/lib.rs (target/debug/deps/enkhjile_srw_e2e_adapter-f54dfb6136a8775c)
+     Running unittests src/lib.rs (target/debug/deps/enkhjile_srw_e2e_core-2467cc07f680b778)
+   Doc-tests enkhjile_srw_e2e_adapter
+   Doc-tests enkhjile_srw_e2e_core
+    Updating crates.io index
+     Locking 1 package to highest compatible version
+      Adding enkhjile-srw-e2e-core v0.2.0-alpha.1
+warning: manifest has no documentation, homepage or repository
+  |
+  = note: see https://doc.rust-lang.org/cargo/reference/manifest.html#package-metadata for more info
+   Packaging enkhjile-srw-e2e-adapter v0.2.0-alpha.2 (/private/var/folders/lg/yx8chq1s5cj8t4tz3svrvc5m0000gn/T/workspace-cargo-1JlJgv/source/crates/adapter)
+error: failed to prepare local package for uploading
+
+Caused by:
+  registry index was not found in any configuration: `crates-io`

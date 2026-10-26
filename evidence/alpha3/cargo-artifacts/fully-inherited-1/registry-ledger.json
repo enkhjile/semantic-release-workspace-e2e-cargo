@@ -1,0 +1,167 @@
+{
+  "uploads": [
+    "cargo:fixture-core@1.1.0",
+    "cargo:fixture-adapter@1.1.0"
+  ],
+  "crates": {
+    "fixture-core": {
+      "1.1.0": {
+        "metadata": {
+          "name": "fixture-core",
+          "vers": "1.1.0",
+          "deps": [],
+          "features": {},
+          "authors": [],
+          "description": "Fully inherited Cargo graph",
+          "documentation": null,
+          "homepage": null,
+          "keywords": [],
+          "categories": [],
+          "license": "MIT",
+          "license_file": null,
+          "repository": "https://github.com/fixture/repo",
+          "links": null,
+          "rust_version": null,
+          "readme_file": null,
+          "readme": null
+        },
+        "sha256": "f45890e011d8e7cc9e099a1cfc35dcf573fdea020b7173e7b855b32636ebb6fe"
+      }
+    },
+    "fixture-adapter": {
+      "1.1.0": {
+        "metadata": {
+          "name": "fixture-adapter",
+          "vers": "1.1.0",
+          "deps": [
+            {
+              "name": "fixture-core",
+              "version_req": "^1.0.0",
+              "features": [],
+              "optional": false,
+              "default_features": true,
+              "target": null,
+              "kind": "normal",
+              "registry": null,
+              "explicit_name_in_toml": null
+            }
+          ],
+          "features": {},
+          "authors": [],
+          "description": "Fully inherited Cargo graph",
+          "documentation": null,
+          "homepage": null,
+          "keywords": [],
+          "categories": [],
+          "license": "MIT",
+          "license_file": null,
+          "repository": "https://github.com/fixture/repo",
+          "links": null,
+          "rust_version": null,
+          "readme_file": null,
+          "readme": null
+        },
+        "sha256": "9645b429a1cb0abed5d5b50fdcb7a001bce47d6a975b2dbab7409169b1f0a5f8"
+      }
+    }
+  },
+  "exchangeCount": 0,
+  "revocationCount": 0,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-adapter",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "PUT",
+      "path": "/cargo/api/v1/crates/new",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/api/v1/crates/fixture-core/1.1.0/download",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-adapter",
+      "authorizationPresent": true
+    },
+    {
+      "method": "PUT",
+      "path": "/cargo/api/v1/crates/new",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-adapter",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-adapter",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/api/v1/crates/fixture-adapter/1.1.0/download",
+      "authorizationPresent": false
+    }
+  ]
+}

@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-10-26T03:21:13.530983+00:00",
+  "generatedAt": "2026-10-26T04:07:29.872339+00:00",
   "operation": "ALPHA3_RETAINED_REMOTE_EXPORT",
-  "fixtureCount": 121,
+  "fixtureCount": 130,
   "statusCounts": {
-    "PASS": 121
+    "PASS": 130
   },
-  "bundleBytes": 713596,
-  "refOccurrences": 709,
-  "tagRefOccurrences": 173,
-  "notesRefOccurrences": 228,
-  "workspaceRefOccurrences": 181,
-  "preparedManifestExports": 384,
-  "noteExports": 252,
+  "bundleBytes": 816430,
+  "refOccurrences": 819,
+  "tagRefOccurrences": 202,
+  "notesRefOccurrences": 267,
+  "workspaceRefOccurrences": 209,
+  "preparedManifestExports": 451,
+  "noteExports": 294,
   "unavailable": [],
   "hostedHistoryUnavailable": [],
   "limitations": [

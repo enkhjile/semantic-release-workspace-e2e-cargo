@@ -1,0 +1,12 @@
+[3:32:39 AM] [semantic-release] › ℹ  Running semantic-release version 25.0.9
+[3:32:39 AM] [semantic-release] › ✔  Loaded plugin "verifyConditions" from "semantic-release-workspace"
+[3:32:39 AM] [semantic-release] › ✔  Loaded plugin "analyzeCommits" from "semantic-release-workspace"
+[3:32:39 AM] [semantic-release] › ✔  Loaded plugin "verifyRelease" from "semantic-release-workspace"
+[3:32:39 AM] [semantic-release] › ✔  Loaded plugin "generateNotes" from "semantic-release-workspace"
+[3:32:39 AM] [semantic-release] › ✔  Loaded plugin "prepare" from "semantic-release-workspace"
+[3:32:39 AM] [semantic-release] › ✔  Loaded plugin "publish" from "semantic-release-workspace"
+[3:32:39 AM] [semantic-release] › ✔  Loaded plugin "addChannel" from "semantic-release-workspace"
+[3:32:39 AM] [semantic-release] › ✔  Loaded plugin "success" from "semantic-release-workspace"
+[3:32:39 AM] [semantic-release] › ✔  Loaded plugin "fail" from "semantic-release-workspace"
+[3:32:41 AM] [semantic-release] › ✔  Allowed to push to the Git repository
+[3:32:41 AM] [semantic-release] › ℹ  Start step "verifyConditions" of plugin "semantic-release-workspace"

@@ -1,0 +1,5 @@
+[workspace]
+members=["crates/*"]
+resolver="2"
+[workspace.dependencies]
+enkhjile-srw-e2e-core={path="crates/core",version="0.1.0"}

@@ -1,0 +1,1534 @@
+{
+  "operation": "SCOPE_INDEX_DERIVED_FROM_FINAL_RETAINED_HISTORY_NO_TEST_RERUN",
+  "sourceIndex": "evidence/alpha3/ref-backups/index.json",
+  "sourceIndexSha256": "d4806ddf85d1f53ac69317ab16994963600c341ab98063ff8b8927af07001530",
+  "summary": {
+    "fixtureCount": 7,
+    "statusCounts": {
+      "PASS": 7
+    },
+    "refOccurrences": 86,
+    "bundleBytes": 84204,
+    "preparedManifestExports": 57,
+    "noteExports": 32
+  },
+  "fixtures": [
+    {
+      "fixture": "default-registry-1-WblNGa",
+      "fixtureLabel": "default-registry-1",
+      "sourceRemote": ".scratch/alpha3/default-registry-1-WblNGa/remote.git",
+      "refs": [
+        {
+          "oid": "1702c4b32826dd3b940201093532e407f527539f",
+          "type": "commit",
+          "name": "refs/heads/alpha"
+        },
+        {
+          "oid": "1702c4b32826dd3b940201093532e407f527539f",
+          "type": "commit",
+          "name": "refs/heads/main"
+        },
+        {
+          "oid": "b35737109e0e548a39f37d345f817007ba34585d",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-0-workspace"
+        },
+        {
+          "oid": "b35737109e0e548a39f37d345f817007ba34585d",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-workspace-v1.0.0-alpha.1"
+        },
+        {
+          "oid": "f8ce616af5321e2dc73f6bb4d73c68f1b8df3def",
+          "type": "commit",
+          "name": "refs/notes/workspace-release-branches/8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8"
+        },
+        {
+          "oid": "edcbba23117a05d23bf7915981e1cbee22004fb3",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/artifacts/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/1702c4b32826dd3b940201093532e407f527539f/f1337bd7722fc4850aba2f598cbfa338965784c9e906d963f19b824300c2cb6f"
+        },
+        {
+          "oid": "0df8cdf118164d5d643e656cb180a2d107045801",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/1702c4b32826dd3b940201093532e407f527539f"
+        },
+        {
+          "oid": "0df8cdf118164d5d643e656cb180a2d107045801",
+          "type": "commit",
+          "name": "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+        },
+        {
+          "oid": "1702c4b32826dd3b940201093532e407f527539f",
+          "type": "commit",
+          "name": "refs/tags/workspace-v1.0.0-alpha.1"
+        }
+      ],
+      "refCounts": {
+        "other": 2,
+        "notes": 3,
+        "workspace": 2,
+        "tags": 2
+      },
+      "preparedExports": [
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-1-WblNGa/prepared/0df8cdf118164d5d643e656cb180a2d107045801/Cargo.lock",
+          "sha256": "8524bf5fb2b0913fd2286e5bf4e048da1810237fc16b3f434ceef62e33ea3bc5",
+          "bytes": 266,
+          "commit": "0df8cdf118164d5d643e656cb180a2d107045801",
+          "sourcePath": "Cargo.lock",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/1702c4b32826dd3b940201093532e407f527539f",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-1-WblNGa/prepared/0df8cdf118164d5d643e656cb180a2d107045801/Cargo.toml",
+          "sha256": "305e1f6596947ff490ad8960836f0197c3813b133d6e5d8f4485c25cea295d3a",
+          "bytes": 138,
+          "commit": "0df8cdf118164d5d643e656cb180a2d107045801",
+          "sourcePath": "Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/1702c4b32826dd3b940201093532e407f527539f",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-1-WblNGa/prepared/0df8cdf118164d5d643e656cb180a2d107045801/crates/adapter/CHANGELOG.md",
+          "sha256": "aa5894c3e5f32cc7dad6d3e87fae041f51192c351e61da36f3fa276a56442019",
+          "bytes": 238,
+          "commit": "0df8cdf118164d5d643e656cb180a2d107045801",
+          "sourcePath": "crates/adapter/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/1702c4b32826dd3b940201093532e407f527539f",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-1-WblNGa/prepared/0df8cdf118164d5d643e656cb180a2d107045801/crates/adapter/Cargo.toml",
+          "sha256": "14e109899013c0954c0d40d32541d4f432be12763fc6505d5ffb3eadbf841357",
+          "bytes": 209,
+          "commit": "0df8cdf118164d5d643e656cb180a2d107045801",
+          "sourcePath": "crates/adapter/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/1702c4b32826dd3b940201093532e407f527539f",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-1-WblNGa/prepared/0df8cdf118164d5d643e656cb180a2d107045801/crates/core/CHANGELOG.md",
+          "sha256": "2e0fcff7da2159d09a437b483e0acff3c27c52e153ca83475aafb50f1a955fdf",
+          "bytes": 142,
+          "commit": "0df8cdf118164d5d643e656cb180a2d107045801",
+          "sourcePath": "crates/core/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/1702c4b32826dd3b940201093532e407f527539f",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-1-WblNGa/prepared/0df8cdf118164d5d643e656cb180a2d107045801/crates/core/Cargo.toml",
+          "sha256": "f5fb3196c27cc6320125234cd8e793584a85c884259f96c33e9945eb2e1059f0",
+          "bytes": 162,
+          "commit": "0df8cdf118164d5d643e656cb180a2d107045801",
+          "sourcePath": "crates/core/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/1702c4b32826dd3b940201093532e407f527539f",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        }
+      ],
+      "noteExports": [
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-1-WblNGa/notes/ddb42a47138283e1/1702c4b32826dd3b940201093532e407f527539f.json",
+          "sha256": "39ddd28e91e70d5747f4379a521c7dd9543fb1024741c2894cbb0b83b3907423",
+          "bytes": 23,
+          "notesRef": "refs/notes/semantic-release-0-workspace",
+          "target": "1702c4b32826dd3b940201093532e407f527539f",
+          "noteBlob": "2b52dab8bd2ab1385e797da224e2e7d678b87a9a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-1-WblNGa/notes/4f254e6ff81a8dc1/1702c4b32826dd3b940201093532e407f527539f.json",
+          "sha256": "39ddd28e91e70d5747f4379a521c7dd9543fb1024741c2894cbb0b83b3907423",
+          "bytes": 23,
+          "notesRef": "refs/notes/semantic-release-workspace-v1.0.0-alpha.1",
+          "target": "1702c4b32826dd3b940201093532e407f527539f",
+          "noteBlob": "2b52dab8bd2ab1385e797da224e2e7d678b87a9a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-1-WblNGa/notes/7d8fd3f3922024d5/59861e76e9d297e1135d14539660f8e3de331c85.json",
+          "sha256": "d53ad1ac0459ca6d7c2d5e5bc16d8b1659c7074e56a4d9223033bd6e911a87d6",
+          "bytes": 3326,
+          "notesRef": "refs/notes/workspace-release-branches/8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8",
+          "target": "59861e76e9d297e1135d14539660f8e3de331c85",
+          "noteBlob": "b7ab3b45cedc9466aa200e9dc782d7b49d9c8ce1"
+        }
+      ],
+      "status": "PASS",
+      "bundle": {
+        "path": "evidence/alpha3/ref-backups/bundles/default-registry-1-WblNGa.bundle",
+        "sha256": "cadd35da270daa15f0945e35135dbd2be57a8f15902182f3433bf78147e1fb89",
+        "bytes": 8279,
+        "allRefsMatched": true,
+        "mirrorRestoreVerified": true,
+        "restoredFsckPassed": true,
+        "sourceRefsUnchanged": true
+      }
+    },
+    {
+      "fixture": "default-registry-2-tcb082",
+      "fixtureLabel": "default-registry-2",
+      "sourceRemote": ".scratch/alpha3/default-registry-2-tcb082/remote.git",
+      "refs": [
+        {
+          "oid": "197c8bf2122cac110c6b1c63c14f861d687f3502",
+          "type": "commit",
+          "name": "refs/heads/alpha"
+        },
+        {
+          "oid": "197c8bf2122cac110c6b1c63c14f861d687f3502",
+          "type": "commit",
+          "name": "refs/heads/main"
+        },
+        {
+          "oid": "f532c60cbc1ecd9ea0a9a0125a762e45edf295d4",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-0-workspace"
+        },
+        {
+          "oid": "88ae21f310e6398e350410af273306899fac5dfd",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-workspace-v1.0.0-alpha.1"
+        },
+        {
+          "oid": "7171ae1f60a0438988fd6f599f349ea803f4192c",
+          "type": "commit",
+          "name": "refs/notes/workspace-release-branches/8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8"
+        },
+        {
+          "oid": "7873abbcca672e6e6d287cb8eacea10f3963381f",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/artifacts/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/197c8bf2122cac110c6b1c63c14f861d687f3502/f1337bd7722fc4850aba2f598cbfa338965784c9e906d963f19b824300c2cb6f"
+        },
+        {
+          "oid": "4d5a333a7eea10502deb406108982457307b35ee",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/197c8bf2122cac110c6b1c63c14f861d687f3502"
+        },
+        {
+          "oid": "4d5a333a7eea10502deb406108982457307b35ee",
+          "type": "commit",
+          "name": "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+        },
+        {
+          "oid": "197c8bf2122cac110c6b1c63c14f861d687f3502",
+          "type": "commit",
+          "name": "refs/tags/workspace-v1.0.0-alpha.1"
+        }
+      ],
+      "refCounts": {
+        "other": 2,
+        "notes": 3,
+        "workspace": 2,
+        "tags": 2
+      },
+      "preparedExports": [
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-2-tcb082/prepared/4d5a333a7eea10502deb406108982457307b35ee/Cargo.lock",
+          "sha256": "8524bf5fb2b0913fd2286e5bf4e048da1810237fc16b3f434ceef62e33ea3bc5",
+          "bytes": 266,
+          "commit": "4d5a333a7eea10502deb406108982457307b35ee",
+          "sourcePath": "Cargo.lock",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/197c8bf2122cac110c6b1c63c14f861d687f3502",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-2-tcb082/prepared/4d5a333a7eea10502deb406108982457307b35ee/Cargo.toml",
+          "sha256": "305e1f6596947ff490ad8960836f0197c3813b133d6e5d8f4485c25cea295d3a",
+          "bytes": 138,
+          "commit": "4d5a333a7eea10502deb406108982457307b35ee",
+          "sourcePath": "Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/197c8bf2122cac110c6b1c63c14f861d687f3502",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-2-tcb082/prepared/4d5a333a7eea10502deb406108982457307b35ee/crates/adapter/CHANGELOG.md",
+          "sha256": "b621a8391acd757994214b8caf2e7ff7f829d713da2f7b11c5f4a55fee84d46e",
+          "bytes": 238,
+          "commit": "4d5a333a7eea10502deb406108982457307b35ee",
+          "sourcePath": "crates/adapter/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/197c8bf2122cac110c6b1c63c14f861d687f3502",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-2-tcb082/prepared/4d5a333a7eea10502deb406108982457307b35ee/crates/adapter/Cargo.toml",
+          "sha256": "14e109899013c0954c0d40d32541d4f432be12763fc6505d5ffb3eadbf841357",
+          "bytes": 209,
+          "commit": "4d5a333a7eea10502deb406108982457307b35ee",
+          "sourcePath": "crates/adapter/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/197c8bf2122cac110c6b1c63c14f861d687f3502",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-2-tcb082/prepared/4d5a333a7eea10502deb406108982457307b35ee/crates/core/CHANGELOG.md",
+          "sha256": "be838f02a920884f8128a081fb369b683183937ae6a1986a6d918fd8fbee7b48",
+          "bytes": 142,
+          "commit": "4d5a333a7eea10502deb406108982457307b35ee",
+          "sourcePath": "crates/core/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/197c8bf2122cac110c6b1c63c14f861d687f3502",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-2-tcb082/prepared/4d5a333a7eea10502deb406108982457307b35ee/crates/core/Cargo.toml",
+          "sha256": "f5fb3196c27cc6320125234cd8e793584a85c884259f96c33e9945eb2e1059f0",
+          "bytes": 162,
+          "commit": "4d5a333a7eea10502deb406108982457307b35ee",
+          "sourcePath": "crates/core/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/197c8bf2122cac110c6b1c63c14f861d687f3502",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        }
+      ],
+      "noteExports": [
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-2-tcb082/notes/ddb42a47138283e1/197c8bf2122cac110c6b1c63c14f861d687f3502.json",
+          "sha256": "39ddd28e91e70d5747f4379a521c7dd9543fb1024741c2894cbb0b83b3907423",
+          "bytes": 23,
+          "notesRef": "refs/notes/semantic-release-0-workspace",
+          "target": "197c8bf2122cac110c6b1c63c14f861d687f3502",
+          "noteBlob": "2b52dab8bd2ab1385e797da224e2e7d678b87a9a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-2-tcb082/notes/4f254e6ff81a8dc1/197c8bf2122cac110c6b1c63c14f861d687f3502.json",
+          "sha256": "39ddd28e91e70d5747f4379a521c7dd9543fb1024741c2894cbb0b83b3907423",
+          "bytes": 23,
+          "notesRef": "refs/notes/semantic-release-workspace-v1.0.0-alpha.1",
+          "target": "197c8bf2122cac110c6b1c63c14f861d687f3502",
+          "noteBlob": "2b52dab8bd2ab1385e797da224e2e7d678b87a9a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/default-registry-2-tcb082/notes/7d8fd3f3922024d5/70de84124d7b504534a37b9388ecbfc3964aaaaa.json",
+          "sha256": "e6dc7fe218a0da1038728460b68cc2d69fdc47eca792cf4c8cfcc162278d846b",
+          "bytes": 3326,
+          "notesRef": "refs/notes/workspace-release-branches/8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8",
+          "target": "70de84124d7b504534a37b9388ecbfc3964aaaaa",
+          "noteBlob": "c9121c8a05ceb0ede50986a6f9db932f511c8d91"
+        }
+      ],
+      "status": "PASS",
+      "bundle": {
+        "path": "evidence/alpha3/ref-backups/bundles/default-registry-2-tcb082.bundle",
+        "sha256": "b1eebf4f9590ee9ad85a5457c1aa833f0769a651f6b61841bb463b5118c833e1",
+        "bytes": 8277,
+        "allRefsMatched": true,
+        "mirrorRestoreVerified": true,
+        "restoredFsckPassed": true,
+        "sourceRefsUnchanged": true
+      }
+    },
+    {
+      "fixture": "fully-inherited-1-7imQ7j",
+      "fixtureLabel": "fully-inherited-1",
+      "sourceRemote": ".scratch/alpha3/fully-inherited-1-7imQ7j/remote.git",
+      "refs": [
+        {
+          "oid": "167783140607c3b39561646aef8c321564d190bc",
+          "type": "commit",
+          "name": "refs/heads/main"
+        },
+        {
+          "oid": "7c42910bae637bf11adb3d9fba18ad1b3ca92b69",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-0-workspace"
+        },
+        {
+          "oid": "c948d7951dfbd95c38abbd79b51165803b466ef0",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-workspace"
+        },
+        {
+          "oid": "7c42910bae637bf11adb3d9fba18ad1b3ca92b69",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-workspace-v1.0.0"
+        },
+        {
+          "oid": "adceac19efc3578e4518ff0f97ad531998e68d92",
+          "type": "commit",
+          "name": "refs/notes/workspace-release-history/0d6e4079e36703ebd37c00722f5891d28b0e2811dc114b129215123adcce3605"
+        },
+        {
+          "oid": "3a952d2f377fb17fd415315cb8b9094161efc601",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/artifacts/167783140607c3b39561646aef8c321564d190bc/ce2d414f8a44d714dd09a89f89bbe861bd2ed4239ab3b44a4b4482dd5a718327"
+        },
+        {
+          "oid": "825717e84dd195bbc004ad345e6bfd3ea4f824dc",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/artifacts/167783140607c3b39561646aef8c321564d190bc/ea858e31123d5d530b1ef1c3582a35d81f9f01f46daca9de630b53fa37896446"
+        },
+        {
+          "oid": "7803f46e54fb75171c207de365c456226f787847",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/prepared/167783140607c3b39561646aef8c321564d190bc"
+        },
+        {
+          "oid": "7803f46e54fb75171c207de365c456226f787847",
+          "type": "commit",
+          "name": "refs/tags/cargo/fixture-adapter@1.1.0"
+        },
+        {
+          "oid": "7803f46e54fb75171c207de365c456226f787847",
+          "type": "commit",
+          "name": "refs/tags/cargo/fixture-core@1.1.0"
+        },
+        {
+          "oid": "167783140607c3b39561646aef8c321564d190bc",
+          "type": "commit",
+          "name": "refs/tags/workspace-v1.0.0"
+        }
+      ],
+      "refCounts": {
+        "other": 1,
+        "notes": 4,
+        "workspace": 3,
+        "tags": 3
+      },
+      "preparedExports": [
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-1-7imQ7j/prepared/7803f46e54fb75171c207de365c456226f787847/Cargo.lock",
+          "sha256": "d330c5c6455da36520401e048cb74d5280e512bd5e74a6cd96b4ccb3f90a5f59",
+          "bytes": 248,
+          "commit": "7803f46e54fb75171c207de365c456226f787847",
+          "sourcePath": "Cargo.lock",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/167783140607c3b39561646aef8c321564d190bc",
+            "refs/tags/cargo/fixture-adapter@1.1.0",
+            "refs/tags/cargo/fixture-core@1.1.0"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-1-7imQ7j/prepared/7803f46e54fb75171c207de365c456226f787847/Cargo.toml",
+          "sha256": "d470defab0c73b70ff5310d2489128ce8b203dacc8bce38f30efecb969064ddd",
+          "bytes": 231,
+          "commit": "7803f46e54fb75171c207de365c456226f787847",
+          "sourcePath": "Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/167783140607c3b39561646aef8c321564d190bc",
+            "refs/tags/cargo/fixture-adapter@1.1.0",
+            "refs/tags/cargo/fixture-core@1.1.0"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-1-7imQ7j/prepared/7803f46e54fb75171c207de365c456226f787847/crates/adapter/CHANGELOG.md",
+          "sha256": "4e90b9b43ce59dcd23d4ed5db75c9a5f6bff2b774d8596d8e00d1038945d69fd",
+          "bytes": 130,
+          "commit": "7803f46e54fb75171c207de365c456226f787847",
+          "sourcePath": "crates/adapter/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/167783140607c3b39561646aef8c321564d190bc",
+            "refs/tags/cargo/fixture-adapter@1.1.0",
+            "refs/tags/cargo/fixture-core@1.1.0"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-1-7imQ7j/prepared/7803f46e54fb75171c207de365c456226f787847/crates/adapter/Cargo.toml",
+          "sha256": "66d6f4619e4a42b2be87a60cd55e12a564815ac72db811ab015d895a0fe35fde",
+          "bytes": 208,
+          "commit": "7803f46e54fb75171c207de365c456226f787847",
+          "sourcePath": "crates/adapter/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/167783140607c3b39561646aef8c321564d190bc",
+            "refs/tags/cargo/fixture-adapter@1.1.0",
+            "refs/tags/cargo/fixture-core@1.1.0"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-1-7imQ7j/prepared/7803f46e54fb75171c207de365c456226f787847/crates/core/CHANGELOG.md",
+          "sha256": "6231ba556293245413509301336bcbff0edaeebd83fcd960240ed953b23a4267",
+          "bytes": 127,
+          "commit": "7803f46e54fb75171c207de365c456226f787847",
+          "sourcePath": "crates/core/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/167783140607c3b39561646aef8c321564d190bc",
+            "refs/tags/cargo/fixture-adapter@1.1.0",
+            "refs/tags/cargo/fixture-core@1.1.0"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-1-7imQ7j/prepared/7803f46e54fb75171c207de365c456226f787847/crates/core/Cargo.toml",
+          "sha256": "4b2ef7c84b62e5ab755ab201a294fe574cd0c8f2e654970c8a12fe6caef2efce",
+          "bytes": 162,
+          "commit": "7803f46e54fb75171c207de365c456226f787847",
+          "sourcePath": "crates/core/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/167783140607c3b39561646aef8c321564d190bc",
+            "refs/tags/cargo/fixture-adapter@1.1.0",
+            "refs/tags/cargo/fixture-core@1.1.0"
+          ]
+        }
+      ],
+      "noteExports": [
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-1-7imQ7j/notes/ddb42a47138283e1/167783140607c3b39561646aef8c321564d190bc.json",
+          "sha256": "653a139e51e3d99262c5ee2d167ff9e394c78cd163ba11b264abeafa7266ac27",
+          "bytes": 20,
+          "notesRef": "refs/notes/semantic-release-0-workspace",
+          "target": "167783140607c3b39561646aef8c321564d190bc",
+          "noteBlob": "3d91d82aa73f3ff99a8c7a786deb1d3eed8cba6f"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-1-7imQ7j/notes/a2af6d4ebae6ee3d/167783140607c3b39561646aef8c321564d190bc.json",
+          "sha256": "b5b7478058c8944e4fa6c967745fe3e7e8613fbaa264584385e06ff3bf08a704",
+          "bytes": 3231,
+          "notesRef": "refs/notes/semantic-release-workspace",
+          "target": "167783140607c3b39561646aef8c321564d190bc",
+          "noteBlob": "21f4fb0cb5abaf4786e0d28ba627eab198c8ad61"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-1-7imQ7j/notes/e3dd07d5035912ee/167783140607c3b39561646aef8c321564d190bc.json",
+          "sha256": "653a139e51e3d99262c5ee2d167ff9e394c78cd163ba11b264abeafa7266ac27",
+          "bytes": 20,
+          "notesRef": "refs/notes/semantic-release-workspace-v1.0.0",
+          "target": "167783140607c3b39561646aef8c321564d190bc",
+          "noteBlob": "3d91d82aa73f3ff99a8c7a786deb1d3eed8cba6f"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-1-7imQ7j/notes/ca8190abfce9ddbb/167783140607c3b39561646aef8c321564d190bc.json",
+          "sha256": "b5b7478058c8944e4fa6c967745fe3e7e8613fbaa264584385e06ff3bf08a704",
+          "bytes": 3231,
+          "notesRef": "refs/notes/workspace-release-history/0d6e4079e36703ebd37c00722f5891d28b0e2811dc114b129215123adcce3605",
+          "target": "167783140607c3b39561646aef8c321564d190bc",
+          "noteBlob": "21f4fb0cb5abaf4786e0d28ba627eab198c8ad61"
+        }
+      ],
+      "status": "PASS",
+      "bundle": {
+        "path": "evidence/alpha3/ref-backups/bundles/fully-inherited-1-7imQ7j.bundle",
+        "sha256": "fe1cc4046b1c0f3dc9ad2d2bfa318fc16ba1984664ea1b3236701d025eb926a4",
+        "bytes": 10855,
+        "allRefsMatched": true,
+        "mirrorRestoreVerified": true,
+        "restoredFsckPassed": true,
+        "sourceRefsUnchanged": true
+      }
+    },
+    {
+      "fixture": "fully-inherited-2-cGND4O",
+      "fixtureLabel": "fully-inherited-2",
+      "sourceRemote": ".scratch/alpha3/fully-inherited-2-cGND4O/remote.git",
+      "refs": [
+        {
+          "oid": "9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be",
+          "type": "commit",
+          "name": "refs/heads/main"
+        },
+        {
+          "oid": "ae94d81def1d10995f2d490e26aa213c83e49967",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-0-workspace"
+        },
+        {
+          "oid": "74764e923bb9c437c7e1ccf96d30e9611b2f2c9b",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-workspace"
+        },
+        {
+          "oid": "ae94d81def1d10995f2d490e26aa213c83e49967",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-workspace-v1.0.0"
+        },
+        {
+          "oid": "e1bbb25856317b87c4e2380cf441c6bbedfc7cd2",
+          "type": "commit",
+          "name": "refs/notes/workspace-release-history/0d6e4079e36703ebd37c00722f5891d28b0e2811dc114b129215123adcce3605"
+        },
+        {
+          "oid": "88aae8e35b637d6c8ab52451997c4f7f8f8e4d6b",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/artifacts/9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be/ce2d414f8a44d714dd09a89f89bbe861bd2ed4239ab3b44a4b4482dd5a718327"
+        },
+        {
+          "oid": "021ef5d858ae58528a278ef398ae34929e6d489d",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/artifacts/9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be/ea858e31123d5d530b1ef1c3582a35d81f9f01f46daca9de630b53fa37896446"
+        },
+        {
+          "oid": "d661f1673af11eeeafc2c3dce8a5adb9491e9c10",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/prepared/9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be"
+        },
+        {
+          "oid": "d661f1673af11eeeafc2c3dce8a5adb9491e9c10",
+          "type": "commit",
+          "name": "refs/tags/cargo/fixture-adapter@1.1.0"
+        },
+        {
+          "oid": "d661f1673af11eeeafc2c3dce8a5adb9491e9c10",
+          "type": "commit",
+          "name": "refs/tags/cargo/fixture-core@1.1.0"
+        },
+        {
+          "oid": "9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be",
+          "type": "commit",
+          "name": "refs/tags/workspace-v1.0.0"
+        }
+      ],
+      "refCounts": {
+        "other": 1,
+        "notes": 4,
+        "workspace": 3,
+        "tags": 3
+      },
+      "preparedExports": [
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-2-cGND4O/prepared/d661f1673af11eeeafc2c3dce8a5adb9491e9c10/Cargo.lock",
+          "sha256": "d330c5c6455da36520401e048cb74d5280e512bd5e74a6cd96b4ccb3f90a5f59",
+          "bytes": 248,
+          "commit": "d661f1673af11eeeafc2c3dce8a5adb9491e9c10",
+          "sourcePath": "Cargo.lock",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be",
+            "refs/tags/cargo/fixture-adapter@1.1.0",
+            "refs/tags/cargo/fixture-core@1.1.0"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-2-cGND4O/prepared/d661f1673af11eeeafc2c3dce8a5adb9491e9c10/Cargo.toml",
+          "sha256": "d470defab0c73b70ff5310d2489128ce8b203dacc8bce38f30efecb969064ddd",
+          "bytes": 231,
+          "commit": "d661f1673af11eeeafc2c3dce8a5adb9491e9c10",
+          "sourcePath": "Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be",
+            "refs/tags/cargo/fixture-adapter@1.1.0",
+            "refs/tags/cargo/fixture-core@1.1.0"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-2-cGND4O/prepared/d661f1673af11eeeafc2c3dce8a5adb9491e9c10/crates/adapter/CHANGELOG.md",
+          "sha256": "95f96ab0dbb15a387f916f9a3fe19e89c7dcc38547bdb7099efcb846fc4fc81f",
+          "bytes": 130,
+          "commit": "d661f1673af11eeeafc2c3dce8a5adb9491e9c10",
+          "sourcePath": "crates/adapter/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be",
+            "refs/tags/cargo/fixture-adapter@1.1.0",
+            "refs/tags/cargo/fixture-core@1.1.0"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-2-cGND4O/prepared/d661f1673af11eeeafc2c3dce8a5adb9491e9c10/crates/adapter/Cargo.toml",
+          "sha256": "66d6f4619e4a42b2be87a60cd55e12a564815ac72db811ab015d895a0fe35fde",
+          "bytes": 208,
+          "commit": "d661f1673af11eeeafc2c3dce8a5adb9491e9c10",
+          "sourcePath": "crates/adapter/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be",
+            "refs/tags/cargo/fixture-adapter@1.1.0",
+            "refs/tags/cargo/fixture-core@1.1.0"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-2-cGND4O/prepared/d661f1673af11eeeafc2c3dce8a5adb9491e9c10/crates/core/CHANGELOG.md",
+          "sha256": "bd9f284f53b1cdb4647582110df5331d02144b375f18f892897b7c644a40399a",
+          "bytes": 127,
+          "commit": "d661f1673af11eeeafc2c3dce8a5adb9491e9c10",
+          "sourcePath": "crates/core/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be",
+            "refs/tags/cargo/fixture-adapter@1.1.0",
+            "refs/tags/cargo/fixture-core@1.1.0"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-2-cGND4O/prepared/d661f1673af11eeeafc2c3dce8a5adb9491e9c10/crates/core/Cargo.toml",
+          "sha256": "4b2ef7c84b62e5ab755ab201a294fe574cd0c8f2e654970c8a12fe6caef2efce",
+          "bytes": 162,
+          "commit": "d661f1673af11eeeafc2c3dce8a5adb9491e9c10",
+          "sourcePath": "crates/core/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be",
+            "refs/tags/cargo/fixture-adapter@1.1.0",
+            "refs/tags/cargo/fixture-core@1.1.0"
+          ]
+        }
+      ],
+      "noteExports": [
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-2-cGND4O/notes/ddb42a47138283e1/9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be.json",
+          "sha256": "653a139e51e3d99262c5ee2d167ff9e394c78cd163ba11b264abeafa7266ac27",
+          "bytes": 20,
+          "notesRef": "refs/notes/semantic-release-0-workspace",
+          "target": "9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be",
+          "noteBlob": "3d91d82aa73f3ff99a8c7a786deb1d3eed8cba6f"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-2-cGND4O/notes/a2af6d4ebae6ee3d/9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be.json",
+          "sha256": "1a626f140b1d8931cc07573f57b70b907bce773364db6a002bae3372e17911d9",
+          "bytes": 3231,
+          "notesRef": "refs/notes/semantic-release-workspace",
+          "target": "9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be",
+          "noteBlob": "5da54ec08a5b036e983d3cdaf67c2a74e2832e4f"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-2-cGND4O/notes/e3dd07d5035912ee/9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be.json",
+          "sha256": "653a139e51e3d99262c5ee2d167ff9e394c78cd163ba11b264abeafa7266ac27",
+          "bytes": 20,
+          "notesRef": "refs/notes/semantic-release-workspace-v1.0.0",
+          "target": "9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be",
+          "noteBlob": "3d91d82aa73f3ff99a8c7a786deb1d3eed8cba6f"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/fully-inherited-2-cGND4O/notes/ca8190abfce9ddbb/9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be.json",
+          "sha256": "1a626f140b1d8931cc07573f57b70b907bce773364db6a002bae3372e17911d9",
+          "bytes": 3231,
+          "notesRef": "refs/notes/workspace-release-history/0d6e4079e36703ebd37c00722f5891d28b0e2811dc114b129215123adcce3605",
+          "target": "9f8f321cb29f2c7241b19fc643d3fb7e1d2c33be",
+          "noteBlob": "5da54ec08a5b036e983d3cdaf67c2a74e2832e4f"
+        }
+      ],
+      "status": "PASS",
+      "bundle": {
+        "path": "evidence/alpha3/ref-backups/bundles/fully-inherited-2-cGND4O.bundle",
+        "sha256": "32db045f121476acc7d1666948361c6f7b9beb2eba3895f92426b0e59b981adf",
+        "bytes": 10846,
+        "allRefsMatched": true,
+        "mirrorRestoreVerified": true,
+        "restoredFsckPassed": true,
+        "sourceRefsUnchanged": true
+      }
+    },
+    {
+      "fixture": "ordinary-default-1-AH0VOp",
+      "fixtureLabel": "ordinary-default-1",
+      "sourceRemote": ".scratch/alpha3/ordinary-default-1-AH0VOp/remote.git",
+      "refs": [
+        {
+          "oid": "0069c248211efa87e5ae6bc5b01e22d2085b038b",
+          "type": "commit",
+          "name": "refs/heads/alpha"
+        },
+        {
+          "oid": "36d8f7e41bb34673946951d2dcdde1fef5484672",
+          "type": "commit",
+          "name": "refs/heads/main"
+        },
+        {
+          "oid": "68d328cbda88c95527e2e09220ee38b9ce231ae8",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-0-workspace"
+        },
+        {
+          "oid": "2c80a1cb676b2dcd0930034b2dd715970d7e2ea1",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-workspace-v1.0.0-alpha.1"
+        },
+        {
+          "oid": "8de8a5402e884bf33ac9b5e9bc16bcfabbdf31a5",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-workspace-v1.0.0-alpha.2"
+        },
+        {
+          "oid": "02c21e99b827d792533be1c04f6ebaa799dd2a81",
+          "type": "commit",
+          "name": "refs/notes/workspace-release-branches/8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8"
+        },
+        {
+          "oid": "344fb9c5fe827785c7514bb904dfd1edbc80ffb1",
+          "type": "commit",
+          "name": "refs/notes/workspace-release-history/8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8"
+        },
+        {
+          "oid": "6a153654f4971587ccdbf58f51599baa51a3d769",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/artifacts/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/36d8f7e41bb34673946951d2dcdde1fef5484672/2adc6a1790d1c9a6534185970e8bbaa853a7c4a4612af66f3e250c9dd3c0e238"
+        },
+        {
+          "oid": "ffb2500bed6a5a66f890d605ec6c78adb23b7330",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/artifacts/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/36d8f7e41bb34673946951d2dcdde1fef5484672/f1337bd7722fc4850aba2f598cbfa338965784c9e906d963f19b824300c2cb6f"
+        },
+        {
+          "oid": "693a61c52e3f4d4b290c9297fb9091b5dc4cadd9",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/0069c248211efa87e5ae6bc5b01e22d2085b038b"
+        },
+        {
+          "oid": "5041e91abc7820aabee2287335c55fb19fb82886",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/36d8f7e41bb34673946951d2dcdde1fef5484672"
+        },
+        {
+          "oid": "5041e91abc7820aabee2287335c55fb19fb82886",
+          "type": "commit",
+          "name": "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1"
+        },
+        {
+          "oid": "5041e91abc7820aabee2287335c55fb19fb82886",
+          "type": "commit",
+          "name": "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+        },
+        {
+          "oid": "36d8f7e41bb34673946951d2dcdde1fef5484672",
+          "type": "commit",
+          "name": "refs/tags/workspace-v1.0.0-alpha.1"
+        },
+        {
+          "oid": "0069c248211efa87e5ae6bc5b01e22d2085b038b",
+          "type": "commit",
+          "name": "refs/tags/workspace-v1.0.0-alpha.2"
+        }
+      ],
+      "refCounts": {
+        "other": 2,
+        "notes": 5,
+        "workspace": 4,
+        "tags": 4
+      },
+      "preparedExports": [
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/prepared/5041e91abc7820aabee2287335c55fb19fb82886/Cargo.lock",
+          "sha256": "7a0b0f4b40ea9091e4a26207236bd4fca1707d259f738177ff99ec0e3eda4058",
+          "bytes": 275,
+          "commit": "5041e91abc7820aabee2287335c55fb19fb82886",
+          "sourcePath": "Cargo.lock",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/36d8f7e41bb34673946951d2dcdde1fef5484672",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/prepared/5041e91abc7820aabee2287335c55fb19fb82886/Cargo.toml",
+          "sha256": "305e1f6596947ff490ad8960836f0197c3813b133d6e5d8f4485c25cea295d3a",
+          "bytes": 138,
+          "commit": "5041e91abc7820aabee2287335c55fb19fb82886",
+          "sourcePath": "Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/36d8f7e41bb34673946951d2dcdde1fef5484672",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/prepared/5041e91abc7820aabee2287335c55fb19fb82886/crates/adapter/CHANGELOG.md",
+          "sha256": "6396788ff30b8581dfd1a57822b582826fc2ea3bca26bec8a66ae7f71bfa8ae6",
+          "bytes": 247,
+          "commit": "5041e91abc7820aabee2287335c55fb19fb82886",
+          "sourcePath": "crates/adapter/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/36d8f7e41bb34673946951d2dcdde1fef5484672",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/prepared/5041e91abc7820aabee2287335c55fb19fb82886/crates/adapter/Cargo.toml",
+          "sha256": "65e0f4e95b4f9216257ccd2235aa2f8ae888d082579c9c7a6c19d82a17f553ae",
+          "bytes": 218,
+          "commit": "5041e91abc7820aabee2287335c55fb19fb82886",
+          "sourcePath": "crates/adapter/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/36d8f7e41bb34673946951d2dcdde1fef5484672",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/prepared/5041e91abc7820aabee2287335c55fb19fb82886/crates/core/CHANGELOG.md",
+          "sha256": "748d8cc55b4a2a863dee5bd309cd7a7b8e209c984f6fd90b41c965e271501472",
+          "bytes": 142,
+          "commit": "5041e91abc7820aabee2287335c55fb19fb82886",
+          "sourcePath": "crates/core/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/36d8f7e41bb34673946951d2dcdde1fef5484672",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/prepared/5041e91abc7820aabee2287335c55fb19fb82886/crates/core/Cargo.toml",
+          "sha256": "f5fb3196c27cc6320125234cd8e793584a85c884259f96c33e9945eb2e1059f0",
+          "bytes": 162,
+          "commit": "5041e91abc7820aabee2287335c55fb19fb82886",
+          "sourcePath": "crates/core/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/36d8f7e41bb34673946951d2dcdde1fef5484672",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/prepared/693a61c52e3f4d4b290c9297fb9091b5dc4cadd9/Cargo.lock",
+          "sha256": "7a0b0f4b40ea9091e4a26207236bd4fca1707d259f738177ff99ec0e3eda4058",
+          "bytes": 275,
+          "commit": "693a61c52e3f4d4b290c9297fb9091b5dc4cadd9",
+          "sourcePath": "Cargo.lock",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/0069c248211efa87e5ae6bc5b01e22d2085b038b"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/prepared/693a61c52e3f4d4b290c9297fb9091b5dc4cadd9/Cargo.toml",
+          "sha256": "305e1f6596947ff490ad8960836f0197c3813b133d6e5d8f4485c25cea295d3a",
+          "bytes": 138,
+          "commit": "693a61c52e3f4d4b290c9297fb9091b5dc4cadd9",
+          "sourcePath": "Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/0069c248211efa87e5ae6bc5b01e22d2085b038b"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/prepared/693a61c52e3f4d4b290c9297fb9091b5dc4cadd9/crates/adapter/CHANGELOG.md",
+          "sha256": "7de25e6acf38fe1dab510a7ab38453969e6f2cd14ea5e8f601656cca2060afe3",
+          "bytes": 510,
+          "commit": "693a61c52e3f4d4b290c9297fb9091b5dc4cadd9",
+          "sourcePath": "crates/adapter/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/0069c248211efa87e5ae6bc5b01e22d2085b038b"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/prepared/693a61c52e3f4d4b290c9297fb9091b5dc4cadd9/crates/adapter/Cargo.toml",
+          "sha256": "12affbc76efb95ca64f47d5cac3f8a2c5c17b689cde93fd0aab953ef26253a75",
+          "bytes": 218,
+          "commit": "693a61c52e3f4d4b290c9297fb9091b5dc4cadd9",
+          "sourcePath": "crates/adapter/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/0069c248211efa87e5ae6bc5b01e22d2085b038b"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/prepared/693a61c52e3f4d4b290c9297fb9091b5dc4cadd9/crates/core/Cargo.toml",
+          "sha256": "f5fb3196c27cc6320125234cd8e793584a85c884259f96c33e9945eb2e1059f0",
+          "bytes": 162,
+          "commit": "693a61c52e3f4d4b290c9297fb9091b5dc4cadd9",
+          "sourcePath": "crates/core/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/0069c248211efa87e5ae6bc5b01e22d2085b038b"
+          ]
+        }
+      ],
+      "noteExports": [
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/notes/ddb42a47138283e1/0069c248211efa87e5ae6bc5b01e22d2085b038b.json",
+          "sha256": "39ddd28e91e70d5747f4379a521c7dd9543fb1024741c2894cbb0b83b3907423",
+          "bytes": 23,
+          "notesRef": "refs/notes/semantic-release-0-workspace",
+          "target": "0069c248211efa87e5ae6bc5b01e22d2085b038b",
+          "noteBlob": "2b52dab8bd2ab1385e797da224e2e7d678b87a9a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/notes/ddb42a47138283e1/36d8f7e41bb34673946951d2dcdde1fef5484672.json",
+          "sha256": "39ddd28e91e70d5747f4379a521c7dd9543fb1024741c2894cbb0b83b3907423",
+          "bytes": 23,
+          "notesRef": "refs/notes/semantic-release-0-workspace",
+          "target": "36d8f7e41bb34673946951d2dcdde1fef5484672",
+          "noteBlob": "2b52dab8bd2ab1385e797da224e2e7d678b87a9a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/notes/4f254e6ff81a8dc1/36d8f7e41bb34673946951d2dcdde1fef5484672.json",
+          "sha256": "39ddd28e91e70d5747f4379a521c7dd9543fb1024741c2894cbb0b83b3907423",
+          "bytes": 23,
+          "notesRef": "refs/notes/semantic-release-workspace-v1.0.0-alpha.1",
+          "target": "36d8f7e41bb34673946951d2dcdde1fef5484672",
+          "noteBlob": "2b52dab8bd2ab1385e797da224e2e7d678b87a9a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/notes/6fadd3001d690048/0069c248211efa87e5ae6bc5b01e22d2085b038b.json",
+          "sha256": "39ddd28e91e70d5747f4379a521c7dd9543fb1024741c2894cbb0b83b3907423",
+          "bytes": 23,
+          "notesRef": "refs/notes/semantic-release-workspace-v1.0.0-alpha.2",
+          "target": "0069c248211efa87e5ae6bc5b01e22d2085b038b",
+          "noteBlob": "2b52dab8bd2ab1385e797da224e2e7d678b87a9a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/notes/7d8fd3f3922024d5/36d8f7e41bb34673946951d2dcdde1fef5484672.json",
+          "sha256": "92e40d77192afd03672f92f0e80d5c2904e89ba70e35ea1d264536331493ae3e",
+          "bytes": 3045,
+          "notesRef": "refs/notes/workspace-release-branches/8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8",
+          "target": "36d8f7e41bb34673946951d2dcdde1fef5484672",
+          "noteBlob": "a52c8e6d95c3d8f9866249bf2100b2c8f837e9ef"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-1-AH0VOp/notes/9b5a5670ceae17b3/36d8f7e41bb34673946951d2dcdde1fef5484672.json",
+          "sha256": "8713b7bc27d023e60e521d2e0232c92fb0cc1346ae4d5477e32d7898a23f7506",
+          "bytes": 4286,
+          "notesRef": "refs/notes/workspace-release-history/8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8",
+          "target": "36d8f7e41bb34673946951d2dcdde1fef5484672",
+          "noteBlob": "16c9890017b1ad0eea4e9ef437d4cead1ceb9426"
+        }
+      ],
+      "status": "PASS",
+      "bundle": {
+        "path": "evidence/alpha3/ref-backups/bundles/ordinary-default-1-AH0VOp.bundle",
+        "sha256": "5d86d7c07ebac30ac12ef8f8eaecfcc445bc77f7778ff890022ee5afb1cc9c01",
+        "bytes": 14461,
+        "allRefsMatched": true,
+        "mirrorRestoreVerified": true,
+        "restoredFsckPassed": true,
+        "sourceRefsUnchanged": true
+      }
+    },
+    {
+      "fixture": "ordinary-default-2-Eb2dVT",
+      "fixtureLabel": "ordinary-default-2",
+      "sourceRemote": ".scratch/alpha3/ordinary-default-2-Eb2dVT/remote.git",
+      "refs": [
+        {
+          "oid": "11e0af59911b75e926b1147add8ec45b508123ce",
+          "type": "commit",
+          "name": "refs/heads/alpha"
+        },
+        {
+          "oid": "46c85e62f16ee870d6ab4e07a495b566c86b858e",
+          "type": "commit",
+          "name": "refs/heads/main"
+        },
+        {
+          "oid": "272b076a1ff80edb7903eb9b6a1d590242494a6f",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-0-workspace"
+        },
+        {
+          "oid": "fc47f1363f682bc32a1c587cb7d4529fa634f70c",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-workspace-v1.0.0-alpha.1"
+        },
+        {
+          "oid": "2305e40b9665eab520c2284c69923966c293c629",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-workspace-v1.0.0-alpha.2"
+        },
+        {
+          "oid": "2bf0368b9b810349b7fe85cb61c6f7ea21a37bb4",
+          "type": "commit",
+          "name": "refs/notes/workspace-release-branches/8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8"
+        },
+        {
+          "oid": "41ee3186e1dc2dcae9a5f924c9ad458827d1932d",
+          "type": "commit",
+          "name": "refs/notes/workspace-release-history/8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8"
+        },
+        {
+          "oid": "cd9966b64813090342ca2d6a827b35febd3e09be",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/artifacts/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/46c85e62f16ee870d6ab4e07a495b566c86b858e/2adc6a1790d1c9a6534185970e8bbaa853a7c4a4612af66f3e250c9dd3c0e238"
+        },
+        {
+          "oid": "ee65d9936315a8550ff9b2fdc79a2934f8fc1d1f",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/artifacts/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/46c85e62f16ee870d6ab4e07a495b566c86b858e/f1337bd7722fc4850aba2f598cbfa338965784c9e906d963f19b824300c2cb6f"
+        },
+        {
+          "oid": "96e6a43054d4de0203bfbb042d0b6a15fceec748",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/11e0af59911b75e926b1147add8ec45b508123ce"
+        },
+        {
+          "oid": "7c4b9022728aae1b5de7f501487abf287172f260",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/46c85e62f16ee870d6ab4e07a495b566c86b858e"
+        },
+        {
+          "oid": "7c4b9022728aae1b5de7f501487abf287172f260",
+          "type": "commit",
+          "name": "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1"
+        },
+        {
+          "oid": "7c4b9022728aae1b5de7f501487abf287172f260",
+          "type": "commit",
+          "name": "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+        },
+        {
+          "oid": "46c85e62f16ee870d6ab4e07a495b566c86b858e",
+          "type": "commit",
+          "name": "refs/tags/workspace-v1.0.0-alpha.1"
+        },
+        {
+          "oid": "11e0af59911b75e926b1147add8ec45b508123ce",
+          "type": "commit",
+          "name": "refs/tags/workspace-v1.0.0-alpha.2"
+        }
+      ],
+      "refCounts": {
+        "other": 2,
+        "notes": 5,
+        "workspace": 4,
+        "tags": 4
+      },
+      "preparedExports": [
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/prepared/7c4b9022728aae1b5de7f501487abf287172f260/Cargo.lock",
+          "sha256": "7a0b0f4b40ea9091e4a26207236bd4fca1707d259f738177ff99ec0e3eda4058",
+          "bytes": 275,
+          "commit": "7c4b9022728aae1b5de7f501487abf287172f260",
+          "sourcePath": "Cargo.lock",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/46c85e62f16ee870d6ab4e07a495b566c86b858e",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/prepared/7c4b9022728aae1b5de7f501487abf287172f260/Cargo.toml",
+          "sha256": "305e1f6596947ff490ad8960836f0197c3813b133d6e5d8f4485c25cea295d3a",
+          "bytes": 138,
+          "commit": "7c4b9022728aae1b5de7f501487abf287172f260",
+          "sourcePath": "Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/46c85e62f16ee870d6ab4e07a495b566c86b858e",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/prepared/7c4b9022728aae1b5de7f501487abf287172f260/crates/adapter/CHANGELOG.md",
+          "sha256": "e8d1838abb2c14fdd815c1cbf935dc856c3a6876584ddd658f58b6b3ad6160cc",
+          "bytes": 247,
+          "commit": "7c4b9022728aae1b5de7f501487abf287172f260",
+          "sourcePath": "crates/adapter/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/46c85e62f16ee870d6ab4e07a495b566c86b858e",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/prepared/7c4b9022728aae1b5de7f501487abf287172f260/crates/adapter/Cargo.toml",
+          "sha256": "65e0f4e95b4f9216257ccd2235aa2f8ae888d082579c9c7a6c19d82a17f553ae",
+          "bytes": 218,
+          "commit": "7c4b9022728aae1b5de7f501487abf287172f260",
+          "sourcePath": "crates/adapter/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/46c85e62f16ee870d6ab4e07a495b566c86b858e",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/prepared/7c4b9022728aae1b5de7f501487abf287172f260/crates/core/CHANGELOG.md",
+          "sha256": "a3876e99fab900f7a9b9862c8af20d5f726087fb8311c54cdf02d0ef6c2a1c38",
+          "bytes": 142,
+          "commit": "7c4b9022728aae1b5de7f501487abf287172f260",
+          "sourcePath": "crates/core/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/46c85e62f16ee870d6ab4e07a495b566c86b858e",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/prepared/7c4b9022728aae1b5de7f501487abf287172f260/crates/core/Cargo.toml",
+          "sha256": "f5fb3196c27cc6320125234cd8e793584a85c884259f96c33e9945eb2e1059f0",
+          "bytes": 162,
+          "commit": "7c4b9022728aae1b5de7f501487abf287172f260",
+          "sourcePath": "crates/core/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/46c85e62f16ee870d6ab4e07a495b566c86b858e",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/prepared/96e6a43054d4de0203bfbb042d0b6a15fceec748/Cargo.lock",
+          "sha256": "7a0b0f4b40ea9091e4a26207236bd4fca1707d259f738177ff99ec0e3eda4058",
+          "bytes": 275,
+          "commit": "96e6a43054d4de0203bfbb042d0b6a15fceec748",
+          "sourcePath": "Cargo.lock",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/11e0af59911b75e926b1147add8ec45b508123ce"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/prepared/96e6a43054d4de0203bfbb042d0b6a15fceec748/Cargo.toml",
+          "sha256": "305e1f6596947ff490ad8960836f0197c3813b133d6e5d8f4485c25cea295d3a",
+          "bytes": 138,
+          "commit": "96e6a43054d4de0203bfbb042d0b6a15fceec748",
+          "sourcePath": "Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/11e0af59911b75e926b1147add8ec45b508123ce"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/prepared/96e6a43054d4de0203bfbb042d0b6a15fceec748/crates/adapter/CHANGELOG.md",
+          "sha256": "53c666880bfd142174c72de7fef2e21852364f5b471353f1a805f37c62537f82",
+          "bytes": 510,
+          "commit": "96e6a43054d4de0203bfbb042d0b6a15fceec748",
+          "sourcePath": "crates/adapter/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/11e0af59911b75e926b1147add8ec45b508123ce"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/prepared/96e6a43054d4de0203bfbb042d0b6a15fceec748/crates/adapter/Cargo.toml",
+          "sha256": "12affbc76efb95ca64f47d5cac3f8a2c5c17b689cde93fd0aab953ef26253a75",
+          "bytes": 218,
+          "commit": "96e6a43054d4de0203bfbb042d0b6a15fceec748",
+          "sourcePath": "crates/adapter/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/11e0af59911b75e926b1147add8ec45b508123ce"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/prepared/96e6a43054d4de0203bfbb042d0b6a15fceec748/crates/core/Cargo.toml",
+          "sha256": "f5fb3196c27cc6320125234cd8e793584a85c884259f96c33e9945eb2e1059f0",
+          "bytes": 162,
+          "commit": "96e6a43054d4de0203bfbb042d0b6a15fceec748",
+          "sourcePath": "crates/core/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/11e0af59911b75e926b1147add8ec45b508123ce"
+          ]
+        }
+      ],
+      "noteExports": [
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/notes/ddb42a47138283e1/11e0af59911b75e926b1147add8ec45b508123ce.json",
+          "sha256": "39ddd28e91e70d5747f4379a521c7dd9543fb1024741c2894cbb0b83b3907423",
+          "bytes": 23,
+          "notesRef": "refs/notes/semantic-release-0-workspace",
+          "target": "11e0af59911b75e926b1147add8ec45b508123ce",
+          "noteBlob": "2b52dab8bd2ab1385e797da224e2e7d678b87a9a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/notes/ddb42a47138283e1/46c85e62f16ee870d6ab4e07a495b566c86b858e.json",
+          "sha256": "39ddd28e91e70d5747f4379a521c7dd9543fb1024741c2894cbb0b83b3907423",
+          "bytes": 23,
+          "notesRef": "refs/notes/semantic-release-0-workspace",
+          "target": "46c85e62f16ee870d6ab4e07a495b566c86b858e",
+          "noteBlob": "2b52dab8bd2ab1385e797da224e2e7d678b87a9a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/notes/4f254e6ff81a8dc1/46c85e62f16ee870d6ab4e07a495b566c86b858e.json",
+          "sha256": "39ddd28e91e70d5747f4379a521c7dd9543fb1024741c2894cbb0b83b3907423",
+          "bytes": 23,
+          "notesRef": "refs/notes/semantic-release-workspace-v1.0.0-alpha.1",
+          "target": "46c85e62f16ee870d6ab4e07a495b566c86b858e",
+          "noteBlob": "2b52dab8bd2ab1385e797da224e2e7d678b87a9a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/notes/6fadd3001d690048/11e0af59911b75e926b1147add8ec45b508123ce.json",
+          "sha256": "39ddd28e91e70d5747f4379a521c7dd9543fb1024741c2894cbb0b83b3907423",
+          "bytes": 23,
+          "notesRef": "refs/notes/semantic-release-workspace-v1.0.0-alpha.2",
+          "target": "11e0af59911b75e926b1147add8ec45b508123ce",
+          "noteBlob": "2b52dab8bd2ab1385e797da224e2e7d678b87a9a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/notes/7d8fd3f3922024d5/46c85e62f16ee870d6ab4e07a495b566c86b858e.json",
+          "sha256": "1af34a11778ca5f66732d74fc7f0541b489d2ec34e8f3c94afa76292713dc146",
+          "bytes": 3045,
+          "notesRef": "refs/notes/workspace-release-branches/8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8",
+          "target": "46c85e62f16ee870d6ab4e07a495b566c86b858e",
+          "noteBlob": "a827bbeb349e2cdc4bded6a154b4cfea04bc671a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-2-Eb2dVT/notes/9b5a5670ceae17b3/46c85e62f16ee870d6ab4e07a495b566c86b858e.json",
+          "sha256": "b2160d0de2d643094e6b510da2b0bce922f025d3068e78d866f2a0ef784bbd5c",
+          "bytes": 4286,
+          "notesRef": "refs/notes/workspace-release-history/8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8",
+          "target": "46c85e62f16ee870d6ab4e07a495b566c86b858e",
+          "noteBlob": "a8a5ffd9dc4752764fea0d281d761bf6fb3eb8b9"
+        }
+      ],
+      "status": "PASS",
+      "bundle": {
+        "path": "evidence/alpha3/ref-backups/bundles/ordinary-default-2-Eb2dVT.bundle",
+        "sha256": "c422a083d841efcbc460b34b49e773cf40c55f1482387ff7b1d0fc1f3f2b616f",
+        "bytes": 14427,
+        "allRefsMatched": true,
+        "mirrorRestoreVerified": true,
+        "restoredFsckPassed": true,
+        "sourceRefsUnchanged": true
+      }
+    },
+    {
+      "fixture": "ordinary-default-positive-SaNGOC",
+      "fixtureLabel": "ordinary-default-positive",
+      "sourceRemote": ".scratch/alpha3/ordinary-default-positive-SaNGOC/remote.git",
+      "refs": [
+        {
+          "oid": "29d4e8ef6e0c88a45a90bd9a30380b0238ffe98d",
+          "type": "commit",
+          "name": "refs/heads/alpha"
+        },
+        {
+          "oid": "e74104bde5bf24ebefd9c449ce2820f021612382",
+          "type": "commit",
+          "name": "refs/heads/main"
+        },
+        {
+          "oid": "747f2407600b5fe4056f3dc374f99d0bf502d49c",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-0-workspace"
+        },
+        {
+          "oid": "3024d01ba97af19d0290deda851f17f4cfbfad4c",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-workspace-v1.0.0-alpha.1"
+        },
+        {
+          "oid": "abefccc1b7c13b17cd40eba4ecaac3a843be37c5",
+          "type": "commit",
+          "name": "refs/notes/semantic-release-workspace-v1.0.0-alpha.2"
+        },
+        {
+          "oid": "1258f2091aa31b1aca3ed018fddb1557f4fc90f1",
+          "type": "commit",
+          "name": "refs/notes/workspace-release-branches/8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8"
+        },
+        {
+          "oid": "ae99ab2d274af251d33f4f95851870115ef019e8",
+          "type": "commit",
+          "name": "refs/notes/workspace-release-history/8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8"
+        },
+        {
+          "oid": "de53365898fd1e0ed9cda14eeac9ef50523128b2",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/artifacts/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/29d4e8ef6e0c88a45a90bd9a30380b0238ffe98d/2adc6a1790d1c9a6534185970e8bbaa853a7c4a4612af66f3e250c9dd3c0e238"
+        },
+        {
+          "oid": "9ad481a2b2375f6a003ecff5a61c1a6895d594af",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/artifacts/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/e74104bde5bf24ebefd9c449ce2820f021612382/2adc6a1790d1c9a6534185970e8bbaa853a7c4a4612af66f3e250c9dd3c0e238"
+        },
+        {
+          "oid": "6de3844cf138a49f168f3104e139b66037379c72",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/artifacts/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/e74104bde5bf24ebefd9c449ce2820f021612382/f1337bd7722fc4850aba2f598cbfa338965784c9e906d963f19b824300c2cb6f"
+        },
+        {
+          "oid": "1eef51e8666eb972ceb50be8715ba48767bdd14c",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/29d4e8ef6e0c88a45a90bd9a30380b0238ffe98d"
+        },
+        {
+          "oid": "3936ee04c7167450a9de2f7f20cb755c5d59d0e1",
+          "type": "commit",
+          "name": "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/e74104bde5bf24ebefd9c449ce2820f021612382"
+        },
+        {
+          "oid": "3936ee04c7167450a9de2f7f20cb755c5d59d0e1",
+          "type": "commit",
+          "name": "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1"
+        },
+        {
+          "oid": "3936ee04c7167450a9de2f7f20cb755c5d59d0e1",
+          "type": "commit",
+          "name": "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+        },
+        {
+          "oid": "e74104bde5bf24ebefd9c449ce2820f021612382",
+          "type": "commit",
+          "name": "refs/tags/workspace-v1.0.0-alpha.1"
+        },
+        {
+          "oid": "29d4e8ef6e0c88a45a90bd9a30380b0238ffe98d",
+          "type": "commit",
+          "name": "refs/tags/workspace-v1.0.0-alpha.2"
+        }
+      ],
+      "refCounts": {
+        "other": 2,
+        "notes": 5,
+        "workspace": 5,
+        "tags": 4
+      },
+      "preparedExports": [
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/prepared/1eef51e8666eb972ceb50be8715ba48767bdd14c/Cargo.lock",
+          "sha256": "7a0b0f4b40ea9091e4a26207236bd4fca1707d259f738177ff99ec0e3eda4058",
+          "bytes": 275,
+          "commit": "1eef51e8666eb972ceb50be8715ba48767bdd14c",
+          "sourcePath": "Cargo.lock",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/29d4e8ef6e0c88a45a90bd9a30380b0238ffe98d"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/prepared/1eef51e8666eb972ceb50be8715ba48767bdd14c/Cargo.toml",
+          "sha256": "305e1f6596947ff490ad8960836f0197c3813b133d6e5d8f4485c25cea295d3a",
+          "bytes": 138,
+          "commit": "1eef51e8666eb972ceb50be8715ba48767bdd14c",
+          "sourcePath": "Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/29d4e8ef6e0c88a45a90bd9a30380b0238ffe98d"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/prepared/1eef51e8666eb972ceb50be8715ba48767bdd14c/crates/adapter/CHANGELOG.md",
+          "sha256": "4ed23c8b517cdd1fe3b4d85ad7f7f16ea2d0e997e266cb70562cc1447b1b6dea",
+          "bytes": 510,
+          "commit": "1eef51e8666eb972ceb50be8715ba48767bdd14c",
+          "sourcePath": "crates/adapter/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/29d4e8ef6e0c88a45a90bd9a30380b0238ffe98d"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/prepared/1eef51e8666eb972ceb50be8715ba48767bdd14c/crates/adapter/Cargo.toml",
+          "sha256": "12affbc76efb95ca64f47d5cac3f8a2c5c17b689cde93fd0aab953ef26253a75",
+          "bytes": 218,
+          "commit": "1eef51e8666eb972ceb50be8715ba48767bdd14c",
+          "sourcePath": "crates/adapter/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/29d4e8ef6e0c88a45a90bd9a30380b0238ffe98d"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/prepared/1eef51e8666eb972ceb50be8715ba48767bdd14c/crates/core/Cargo.toml",
+          "sha256": "f5fb3196c27cc6320125234cd8e793584a85c884259f96c33e9945eb2e1059f0",
+          "bytes": 162,
+          "commit": "1eef51e8666eb972ceb50be8715ba48767bdd14c",
+          "sourcePath": "crates/core/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/29d4e8ef6e0c88a45a90bd9a30380b0238ffe98d"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/prepared/3936ee04c7167450a9de2f7f20cb755c5d59d0e1/Cargo.lock",
+          "sha256": "7a0b0f4b40ea9091e4a26207236bd4fca1707d259f738177ff99ec0e3eda4058",
+          "bytes": 275,
+          "commit": "3936ee04c7167450a9de2f7f20cb755c5d59d0e1",
+          "sourcePath": "Cargo.lock",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/e74104bde5bf24ebefd9c449ce2820f021612382",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/prepared/3936ee04c7167450a9de2f7f20cb755c5d59d0e1/Cargo.toml",
+          "sha256": "305e1f6596947ff490ad8960836f0197c3813b133d6e5d8f4485c25cea295d3a",
+          "bytes": 138,
+          "commit": "3936ee04c7167450a9de2f7f20cb755c5d59d0e1",
+          "sourcePath": "Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/e74104bde5bf24ebefd9c449ce2820f021612382",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/prepared/3936ee04c7167450a9de2f7f20cb755c5d59d0e1/crates/adapter/CHANGELOG.md",
+          "sha256": "767cb96e66b4bf2ecdca6655de7901943881dde148e2458cc85c1cef9d80b42c",
+          "bytes": 247,
+          "commit": "3936ee04c7167450a9de2f7f20cb755c5d59d0e1",
+          "sourcePath": "crates/adapter/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/e74104bde5bf24ebefd9c449ce2820f021612382",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/prepared/3936ee04c7167450a9de2f7f20cb755c5d59d0e1/crates/adapter/Cargo.toml",
+          "sha256": "65e0f4e95b4f9216257ccd2235aa2f8ae888d082579c9c7a6c19d82a17f553ae",
+          "bytes": 218,
+          "commit": "3936ee04c7167450a9de2f7f20cb755c5d59d0e1",
+          "sourcePath": "crates/adapter/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/e74104bde5bf24ebefd9c449ce2820f021612382",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/prepared/3936ee04c7167450a9de2f7f20cb755c5d59d0e1/crates/core/CHANGELOG.md",
+          "sha256": "df9107b46c12f2ffa167ba50dea21e150f507fc7b751a750accf02be8b9add6c",
+          "bytes": 142,
+          "commit": "3936ee04c7167450a9de2f7f20cb755c5d59d0e1",
+          "sourcePath": "crates/core/CHANGELOG.md",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/e74104bde5bf24ebefd9c449ce2820f021612382",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/prepared/3936ee04c7167450a9de2f7f20cb755c5d59d0e1/crates/core/Cargo.toml",
+          "sha256": "f5fb3196c27cc6320125234cd8e793584a85c884259f96c33e9945eb2e1059f0",
+          "bytes": 162,
+          "commit": "3936ee04c7167450a9de2f7f20cb755c5d59d0e1",
+          "sourcePath": "crates/core/Cargo.toml",
+          "refs": [
+            "refs/semantic-release-workspace/prepared/34dfc45d80403d7d2a9df1c7d2e4549314af5383d2e6c83c9736a4afa109bd72/e74104bde5bf24ebefd9c449ce2820f021612382",
+            "refs/tags/cargo/enkhjile-srw-e2e-adapter@0.2.0-alpha.1",
+            "refs/tags/cargo/enkhjile-srw-e2e-core@0.2.0-alpha.1"
+          ]
+        }
+      ],
+      "noteExports": [
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/notes/ddb42a47138283e1/29d4e8ef6e0c88a45a90bd9a30380b0238ffe98d.json",
+          "sha256": "39ddd28e91e70d5747f4379a521c7dd9543fb1024741c2894cbb0b83b3907423",
+          "bytes": 23,
+          "notesRef": "refs/notes/semantic-release-0-workspace",
+          "target": "29d4e8ef6e0c88a45a90bd9a30380b0238ffe98d",
+          "noteBlob": "2b52dab8bd2ab1385e797da224e2e7d678b87a9a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/notes/ddb42a47138283e1/e74104bde5bf24ebefd9c449ce2820f021612382.json",
+          "sha256": "39ddd28e91e70d5747f4379a521c7dd9543fb1024741c2894cbb0b83b3907423",
+          "bytes": 23,
+          "notesRef": "refs/notes/semantic-release-0-workspace",
+          "target": "e74104bde5bf24ebefd9c449ce2820f021612382",
+          "noteBlob": "2b52dab8bd2ab1385e797da224e2e7d678b87a9a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/notes/4f254e6ff81a8dc1/e74104bde5bf24ebefd9c449ce2820f021612382.json",
+          "sha256": "39ddd28e91e70d5747f4379a521c7dd9543fb1024741c2894cbb0b83b3907423",
+          "bytes": 23,
+          "notesRef": "refs/notes/semantic-release-workspace-v1.0.0-alpha.1",
+          "target": "e74104bde5bf24ebefd9c449ce2820f021612382",
+          "noteBlob": "2b52dab8bd2ab1385e797da224e2e7d678b87a9a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/notes/6fadd3001d690048/29d4e8ef6e0c88a45a90bd9a30380b0238ffe98d.json",
+          "sha256": "39ddd28e91e70d5747f4379a521c7dd9543fb1024741c2894cbb0b83b3907423",
+          "bytes": 23,
+          "notesRef": "refs/notes/semantic-release-workspace-v1.0.0-alpha.2",
+          "target": "29d4e8ef6e0c88a45a90bd9a30380b0238ffe98d",
+          "noteBlob": "2b52dab8bd2ab1385e797da224e2e7d678b87a9a"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/notes/7d8fd3f3922024d5/e74104bde5bf24ebefd9c449ce2820f021612382.json",
+          "sha256": "620e358ea2ab52c610233ba4ff138a2f99f70a4b66a48693817929f64bcf21c6",
+          "bytes": 3516,
+          "notesRef": "refs/notes/workspace-release-branches/8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8",
+          "target": "e74104bde5bf24ebefd9c449ce2820f021612382",
+          "noteBlob": "005ec647c4199fabd82e359707fdf3f44523376e"
+        },
+        {
+          "path": "evidence/alpha3/ref-backups/exports/ordinary-default-positive-SaNGOC/notes/9b5a5670ceae17b3/e74104bde5bf24ebefd9c449ce2820f021612382.json",
+          "sha256": "2b8a318b4bd6ce25eeda94718bdf71f321ee72dada2583c78c8816a32891af72",
+          "bytes": 4286,
+          "notesRef": "refs/notes/workspace-release-history/8ed3f6ad685b959ead7022518e1af76cd816f8e8ec7ccdda1ed4018e8f2223f8",
+          "target": "e74104bde5bf24ebefd9c449ce2820f021612382",
+          "noteBlob": "53b3269af9c90de948c97aaf4498049d61b2c72c"
+        }
+      ],
+      "status": "PASS",
+      "bundle": {
+        "path": "evidence/alpha3/ref-backups/bundles/ordinary-default-positive-SaNGOC.bundle",
+        "sha256": "724cec4403caa6772e5f851c24b9d63b9ef367e85495d9077e099c24c07ebe70",
+        "bytes": 17059,
+        "allRefsMatched": true,
+        "mirrorRestoreVerified": true,
+        "restoredFsckPassed": true,
+        "sourceRefsUnchanged": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+   Packaging enkhjile-srw-e2e-adapter v0.2.0-alpha.1 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/.scratch/live-prepared-native/crates/adapter)
+    Updating crates.io index
+    Packaged 6 files, 2.3KiB (1.3KiB compressed)
+   Verifying enkhjile-srw-e2e-adapter v0.2.0-alpha.1 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/.scratch/live-prepared-native/crates/adapter)
+ Downloading crates ...
+  Downloaded enkhjile-srw-e2e-core v0.2.0-alpha.1
+   Compiling enkhjile-srw-e2e-core v0.2.0-alpha.1
+   Compiling enkhjile-srw-e2e-adapter v0.2.0-alpha.1 (/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/.scratch/live-prepared-native/target/package/enkhjile-srw-e2e-adapter-0.2.0-alpha.1)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.00s

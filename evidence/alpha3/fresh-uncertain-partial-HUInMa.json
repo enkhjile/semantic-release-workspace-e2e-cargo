@@ -1,0 +1,5 @@
+{
+  "sourceSha": "40fcfe51c8838ef574c821e368a023a4963533b5",
+  "customAndNotesBeforeRetry": "",
+  "remoteRefs": "40fcfe51c8838ef574c821e368a023a4963533b5\tHEAD\n40fcfe51c8838ef574c821e368a023a4963533b5\trefs/heads/main\n7d5883ce8182fd385a93b4e13fda42709658daca\trefs/notes/semantic-release-0-workspace\naf8165bfabf925a60046ef6e66a8b109b7257296\trefs/notes/semantic-release-workspace\n7d5883ce8182fd385a93b4e13fda42709658daca\trefs/notes/semantic-release-workspace-v1.0.0\ne427970b01bb5f62281979d7a3b4b4751401fdc6\trefs/semantic-release-workspace/artifacts/40fcfe51c8838ef574c821e368a023a4963533b5/ea858e31123d5d530b1ef1c3582a35d81f9f01f46daca9de630b53fa37896446\ne667509d84e59314ffc6c0cdbc79ecc166ab4eca\trefs/semantic-release-workspace/prepared/40fcfe51c8838ef574c821e368a023a4963533b5\n40fcfe51c8838ef574c821e368a023a4963533b5\trefs/tags/workspace-v1.0.0\n"
+}

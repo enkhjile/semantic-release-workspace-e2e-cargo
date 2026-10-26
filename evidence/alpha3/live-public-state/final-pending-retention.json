@@ -1,0 +1,12 @@
+{
+  "operation": "READ_ONLY_REMOTE_FETCH_AND_BUNDLE_NO_REGISTRY_ACTION",
+  "sourceSha": "1452d281faec526927ef9c2587c5f6e2359c14a3",
+  "retainedCoreSha256": "df6606e5d05d921b61973da900fe12f2885704d908f7da112273edd784333b71",
+  "retainedCoreUnchangedAfterRetry": true,
+  "bundlePath": "/Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/artifacts/alpha3/cargo/public-final-pending.bundle",
+  "bundleSha256": "95a1c74f34be3179f3647ca6210222a7a746f20ace8371982eac5652f4ffc7c6",
+  "bundleBytes": 859385,
+  "refCount": 15,
+  "remoteMain": "1f45112c7780363a0edf2a24a8abbdffc8e48d9a",
+  "remoteAlpha": "d55358a490e3006bbdd192b2dcc7076167254659"
+}
