@@ -1,11 +1,9 @@
-# semantic-release-workspace Cargo consumer acceptance
+# Cargo consumer acceptance
 
-Independent consumer of the exact npm artifact `semantic-release-workspace@1.0.0-alpha.2` with `semantic-release@25.0.9`, Rust/Cargo 1.99.1, and native Cargo consumers.
+This repository consumes the exact published `semantic-release-workspace@1.0.0-alpha.3` with `semantic-release@25.0.9`, native npm12.2.1, Node24.22.1, and Rust/Cargo1.99.1. Ordinary package-name configuration is used throughout the current lane.
 
-The documented plugin-name setup fails with `ERR_PACKAGE_PATH_NOT_EXPORTED` before hooks run. `scripts/acceptance.mjs` records this as a failure in two independent fixtures. The diagnostic lane resolves the installed public ESM export with `import.meta.resolve`; all such results are labelled `PUBLIC_ESM_RESOLUTION_WORKAROUND` and do not clear the documented setup failure.
+Run `npm ci --ignore-scripts`, `npm test`, and `node scripts/lifecycle.mjs`. Native buildable Cargo fixtures use disposable bare Git remotes and loopback registries with synthetic credentials. The actual semantic-release CLI performs releases; actual Cargo packages and fresh downstream binaries verify downloaded crates. The current evidence is under `evidence/alpha3/`; historical alpha.2 failures and retained Git bundles remain unchanged.
 
-Run `npm ci --ignore-scripts`, `npm test`, `PUBLIC_ESM_RESOLUTION_WORKAROUND=1 npm test`, and `node scripts/lifecycle.mjs`. Controlled lifecycle tests use disposable bare Git remotes and loopback sparse registries with synthetic credentials. They invoke the actual semantic-release CLI and actual Cargo packaging, then build fresh downstream binaries from downloaded registry crates. Runtime compatibility fixtures are isolated from each other.
+The manual controlled Actions workflow exports disposable Git histories before runner teardown. The separate `live-release.yml` workflow requires the `cargo-live` environment and per-crate trusted publishers, uses plugin-owned OIDC, and has no native publication token.
 
-`evidence/` contains machine-readable results and CLI logs. The explicit Actions workflow preserves the normal setup failure while collecting diagnostics. `bootstrap/` contains reviewed minimal crates at 0.1.0; no public upload occurs through the controlled test workflow. The separately dispatched live workflow requires the `cargo-live` environment and per-crate trusted publishers.
-
-Public-write budget: two dedicated crates × one bootstrap plus one OIDC release = at most four crate-version uploads. The names are `enkhjile-srw-e2e-core` and `enkhjile-srw-e2e-adapter`. Publish bootstrap core before adapter; the adapter's registry requirement is `0.1.0`.
+The two reviewed public test names are `enkhjile-srw-e2e-core` and `enkhjile-srw-e2e-adapter`. Their bootstrap is0.1.0 in dependency order, followed by exactly one plugin OIDC0.2.0-alpha.1 version each. Maximum public budget: four crate-version uploads. Controlled scenarios never publish to crates.io.

@@ -24,7 +24,33 @@ jobs:
       - run: rustup toolchain install 1.99.1 --profile minimal
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: cargo test --workspace --locked
-      - name: Public ESM resolution diagnostic OIDC lane
+      - name: Record source boundary
+        run: |
+          mkdir -p evidence/alpha3/live
+          git rev-parse HEAD > evidence/alpha3/live/source-before.txt
+          git status --porcelain > evidence/alpha3/live/status-before.txt
+          git ls-remote origin > evidence/alpha3/live/refs-before.txt
+      - name: Plugin-owned Cargo OIDC release
         run: npm exec -- semantic-release --extends ./release.oidc.config.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Verify restored source and published artifacts
+        run: |
+          git rev-parse HEAD > evidence/alpha3/live/source-after.txt
+          git status --porcelain > evidence/alpha3/live/status-after.txt
+          diff evidence/alpha3/live/source-before.txt evidence/alpha3/live/source-after.txt
+          diff evidence/alpha3/live/status-before.txt evidence/alpha3/live/status-after.txt
+          node scripts/live-proof.mjs
+      - name: No-change release
+        run: |
+          git ls-remote origin > evidence/alpha3/live/refs-complete.txt
+          npm exec -- semantic-release --extends ./release.oidc.config.mjs
+          git ls-remote origin > evidence/alpha3/live/refs-rerun.txt
+          diff evidence/alpha3/live/refs-complete.txt evidence/alpha3/live/refs-rerun.txt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: cargo-live-alpha3
+          path: evidence/alpha3/live/

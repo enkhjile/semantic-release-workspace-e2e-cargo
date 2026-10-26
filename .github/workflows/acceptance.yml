@@ -1,4 +1,4 @@
-name: Cargo alpha.2 consumer acceptance
+name: Cargo alpha.3 consumer acceptance
 on:
   workflow_dispatch:
   pull_request:
@@ -27,18 +27,17 @@ jobs:
         id: documented
         continue-on-error: true
         run: npm test
-      - name: Public ESM resolution diagnostics
-        env:
-          PUBLIC_ESM_RESOLUTION_WORKAROUND: '1'
-        run: npm test
-      - name: Controlled Cargo lifecycle diagnostics
+      - name: Controlled Cargo lifecycle
         if: always()
         run: node scripts/lifecycle.mjs
+      - name: Preserve disposable Git histories
+        if: always()
+        run: python3 scripts/export-alpha3-evidence.py
       - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
           name: cargo-evidence
-          path: evidence/
-      - name: Preserve alpha.2 contract verdict
+          path: evidence/alpha3/
+      - name: Preserve alpha.3 contract verdict
         if: steps.documented.outcome != 'success'
         run: exit 1
