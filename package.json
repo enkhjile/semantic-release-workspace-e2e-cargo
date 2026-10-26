@@ -6,7 +6,7 @@
     "node": ">=24.11.0"
   },
   "scripts": {
-    "test": "node scripts/acceptance.mjs",
+    "test": "node --test test/live-fresh-env-alpha4.test.mjs && node scripts/acceptance.mjs",
     "release": "semantic-release"
   },
   "devDependencies": {
