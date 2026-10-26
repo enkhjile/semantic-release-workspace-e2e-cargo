@@ -5,8 +5,10 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { startRegistry } from '../support/registry.mjs';
 const root=resolve(import.meta.dirname,'..');
-const evidence=join(root,'evidence/alpha3');
-const scratch=join(root,'.scratch/alpha3');const cli=join(root,'node_modules/semantic-release/bin/semantic-release.js');
+const evidence=join(root,process.env.CARGO_EVIDENCE_DIR??'evidence/alpha3');
+const scratch=join(root,process.env.CARGO_SCRATCH_DIR??'.scratch/alpha3');const cli=join(root,'node_modules/semantic-release/bin/semantic-release.js');
+async function installedArtifact(){if(process.env.CARGO_CANDIDATE_PRODUCT!=='true')return 'semantic-release-workspace@1.0.0-alpha.3';const installed=JSON.parse(await readFile(join(root,'node_modules/semantic-release-workspace/package.json'),'utf8'));assert.equal(installed.name,'semantic-release-workspace');assert.ok(typeof installed.version==='string'&&installed.version.length>0,'candidate plugin must have a version');return `${installed.name}@${installed.version}`;}
+const evidenceArtifact=await installedArtifact();
 const env0={...process.env,CI:'true',GIT_AUTHOR_NAME:'Cargo Acceptance',GIT_AUTHOR_EMAIL:'cargo@example.invalid',GIT_COMMITTER_NAME:'Cargo Acceptance',GIT_COMMITTER_EMAIL:'cargo@example.invalid',RUSTUP_TOOLCHAIN:'1.99.1'};
 for(const k of Object.keys(env0))if(/TOKEN|SECRET|PASSWORD|ACTIONS_ID|GITHUB|GITLAB/.test(k))delete env0[k];
 const results=[];await mkdir(scratch,{recursive:true});await mkdir(evidence,{recursive:true});
@@ -70,5 +72,82 @@ await scenario('maintenance-major-bound',()=>withFixture('maintenance',graph(),{
 await scenario('explicit-source-dependency-edit-wins',()=>withFixture('source-dependency-edit',graph(),{},async f=>{await success(f,'source-dependency-initial');await writeFile(join(f.cwd,'crates/core/src/lib.rs'),'pub fn value()->u32{42}\n// breaking API signal\n');await commit(f,'feat: update core API\n\nBREAKING CHANGE: core API changed');await success(f,'source-dependency-major');const manifest=join(f.cwd,'crates/adapter/Cargo.toml');await writeFile(manifest,(await readFile(manifest,'utf8')).replace('version="1.0.0" }','version="*" }').replace('version="1.0.0"}\n','version="*"}\n'));await writeFile(join(f.cwd,'crates/adapter/src/lib.rs'),'pub fn value()->u32{fixture_core::value()}\n// deliberate broad dependency requirement\n');await ok('cargo',['generate-lockfile'],f.cwd,f.env);await commit(f,'fix: explicitly broaden adapter core requirement');await success(f,'source-dependency-explicit');const prepared=await ok('git',['show','cargo/fixture-adapter@1.1.2:crates/adapter/Cargo.toml'],f.cwd);assert.match(prepared,/version\s*=\s*"\*"/);return{uploads:f.server.state().uploads,explicitDependencyEditPreserved:true};}));
 for(let attempt=1;attempt<=2;attempt++)await scenario('fully-inherited-shared-graph-'+attempt,()=>{const files=graph('shared');files['Cargo.toml']+='[workspace.package]\nversion="1.0.0"\nedition="2021"\nlicense="MIT"\nrepository="https://github.com/fixture/repo"\n';for(const name of ['core','adapter'])files['crates/'+name+'/Cargo.toml']='[package]\nname="fixture-'+name+'"\nversion.workspace=true\nedition.workspace=true\nlicense.workspace=true\nrepository.workspace=true\ndescription="Fully inherited Cargo graph"\n'+(name==='adapter'?'[dependencies]\nfixture-core.workspace=true\n':'');return withFixture('fully-inherited-'+attempt,files,{},async f=>{const native=await ok('cargo',['test','--workspace','--locked'],f.cwd,f.env);await writeFile(join(evidence,'native-fully-inherited-original-'+attempt+'.log'),native);await success(f,'fully-inherited-'+attempt);await downstream(f);return{nativeOriginalTestExit:0,downloadedDownstreamExit:0,uploads:f.server.state().uploads};});});
 for(let attempt=1;attempt<=2;attempt++)await scenario('default-crates-io-native-packaging-'+attempt,()=>{const files=graph('shared');for(const key of Object.keys(files))files[key]=files[key].replaceAll('fixture-core','enkhjile-srw-e2e-core').replaceAll('fixture_core','enkhjile_srw_e2e_core').replaceAll('1.0.0','0.1.0');return withFixture('default-registry-'+attempt,files,{cargo:{registry:'crates-io',trustedPublishing:false}},async f=>{await writeFile(join(f.cwd,'.cargo/config.toml'),'# Native built-in crates.io context has no named registry configuration.\n');await mkdir(f.env.CARGO_HOME,{recursive:true});await writeFile(join(f.env.CARGO_HOME,'config.toml'),`[registries.crates-io]\nindex="sparse+${f.server.url}/cargo/index/"\ncredential-provider="cargo:token"\n`);f.env.CARGO_REGISTRY_TOKEN='fixture-token';f.env.CARGO_REGISTRIES_CRATES_IO_TOKEN='fixture-token';const nativeHome=join(f.d,'native-default-home');await mkdir(nativeHome);const actualCargo=(await ok('which',['cargo'],root)).trim(),quote=v=>"'"+v.replaceAll("'","'\"'\"'")+"'";await writeFile(join(f.d,'tools/cargo'),`#!/bin/sh\nprintf '%s\\n' "$*" >> ${quote(f.cargoLog)}\nif [ "$1" = package ]; then\nexec env -u CARGO_REGISTRY_TOKEN -u CARGO_REGISTRIES_CRATES_IO_TOKEN -u CARGO_REGISTRIES_FIXTURE_TOKEN CARGO_HOME=${quote(nativeHome)} ${quote(actualCargo)} "$@" 2>> ${quote(f.nativeStderr)}\nfi\nexec ${quote(actualCargo)} "$@" 2>> ${quote(f.nativeStderr)}\n`);await ok('cargo',['test','--workspace','--locked'],f.cwd,{...f.env,CARGO_HOME:nativeHome,CARGO_REGISTRY_TOKEN:'',CARGO_REGISTRIES_CRATES_IO_TOKEN:''});await commit(f,'chore: isolate Node registry endpoint from native built-in context');await ok('git',['checkout','-b','alpha'],f.cwd);await ok('git',['push','-u','origin','alpha'],f.cwd);const result=await release(f,'default-registry-'+attempt);const native=await readFile(f.nativeStderr,'utf8');await writeFile(join(evidence,'default-registry-proof-'+attempt+'.json'),JSON.stringify({nativeOriginalTestExit:0,expectedReleaseExit:0,actualReleaseExit:result.code,controlledUploads:f.server.state().uploads,controlledNodeRegistry:f.server.url,nativeCargoContext:'empty CARGO_HOME; no named crates-io index; no native credentials',publicUploads:0,installedArtifact:'semantic-release-workspace@1.0.0-alpha.3',nativeMissingNamedIndex:/registry index was not found in any configuration: `crates-io`/.test(native)},null,2));assert.equal(result.code,0,result.out);return{nativeOriginalTestExit:0,uploads:f.server.state().uploads};});});
-for(const label of ['1','2','positive'])await scenario('ordinary-default-crates-io-'+label,()=>{const files=graph('shared');for(const key of Object.keys(files))files[key]=files[key].replaceAll('fixture-core','enkhjile-srw-e2e-core').replaceAll('fixture_core','enkhjile_srw_e2e_core').replaceAll('fixture-adapter','enkhjile-srw-e2e-adapter').replaceAll('1.0.0','0.1.0');return withFixture('ordinary-default-'+label,files,{},async f=>{await ok('git',['checkout','-b','alpha'],f.cwd);await ok('git',['push','-u','origin','alpha'],f.cwd);await success(f,'ordinary-default-'+label+'-baseline');assert.equal(f.server.state().uploads.length,2);await config(f,{cargo:{trustedPublishing:true}});await writeFile(join(f.cwd,'.cargo/config.toml'),'# Ordinary built-in crates.io; no named registry configuration.\n');const cargoHome=join(f.d,'ordinary-default-home');await mkdir(cargoHome);f.env.CARGO_HOME=cargoHome;delete f.env.CARGO_REGISTRIES_FIXTURE_TOKEN;await writeFile(join(f.cwd,'crates/adapter/src/lib.rs'),'pub fn value()->u32{enkhjile_srw_e2e_core::value()}\n// Adapter-only default-registry release.\n');if(label==='positive')await writeFile(join(cargoHome,'config.toml'),'[registries.crates-io]\nindex="sparse+https://index.crates.io/"\n');await ok('cargo',['test','--workspace','--locked'],f.cwd,f.env);await commit(f,'fix: advance only adapter against ordinary default registry');const head=(await ok('git',['rev-parse','HEAD'],f.cwd)).trim(),identity=await startRegistry();identity.control('get-fail');try{const r=await release(f,'ordinary-default-'+label+'-public-package',[],{GITHUB_ACTIONS:'true',GITHUB_REF:'refs/heads/alpha',GITHUB_SHA:head,GITHUB_REPOSITORY:'fixture/repo',ACTIONS_ID_TOKEN_REQUEST_URL:identity.url+'/oidc',ACTIONS_ID_TOKEN_REQUEST_TOKEN:'ci-request-secret'});const native=await readFile(f.nativeStderr,'utf8'),missing=/registry index was not found in any configuration: `crates-io`/.test(native),identityRequests=identity.state().requests.filter(x=>x.path.startsWith('/oidc')).length;const proof={nativeOriginalTestExit:0,releaseExit:r.code,ordinaryNodeAndCargoShareSameHome:true,nativeEnvironmentUnchangedByShim:true,nativeNamedCratesIoIndexConfigured:label==='positive',nativeMissingNamedIndex:missing,localIdentityRequests:identityRequests,localIdentityAlwaysReturns503NoJwt:true,publicIdentityExchangeRequests:0,publicUploads:0,controlledBaselineUploads:f.server.state().uploads,unchangedCoreCurrentVersion:'0.2.0-alpha.1',adapterCandidateVersion:'0.2.0-alpha.2',installedArtifact:'semantic-release-workspace@1.0.0-alpha.3'};await writeFile(join(evidence,'ordinary-default-'+label+'-proof.json'),JSON.stringify(proof,null,2));assert.equal(f.server.state().uploads.length,2);if(label==='positive'){assert.equal(missing,false);assert.ok(identityRequests>0,r.out);assert.match(r.out,/OIDC|identity|token/i);return{...proof,expectedLocalIdentityFailure:true};}assert.equal(missing,false,'Native Cargo packaging must not require a named crates-io registry for its built-in default');assert.ok(identityRequests>0,'After successful native packaging, local identity guard must stop upload');assert.notEqual(r.code,0);return{...proof,expectedLocalIdentityFailure:true};}finally{await identity.close();}});});
+for (const label of ['1', '2', 'positive']) await scenario(
+  'ordinary-default-crates-io-' + label,
+  () => {
+    const files = graph('shared');
+    for (const key of Object.keys(files)) files[key] = files[key]
+      .replaceAll('fixture-core', 'enkhjile-srw-e2e-core')
+      .replaceAll('fixture_core', 'enkhjile_srw_e2e_core')
+      .replaceAll('fixture-adapter', 'enkhjile-srw-e2e-adapter')
+      .replaceAll('1.0.0', '0.1.0');
+    return withFixture('ordinary-default-' + label, files, {}, async f => {
+      await ok('git', ['checkout', '-b', 'alpha'], f.cwd);
+      await ok('git', ['push', '-u', 'origin', 'alpha'], f.cwd);
+      await success(f, 'ordinary-default-' + label + '-baseline');
+      assert.equal(f.server.state().uploads.length, 2);
+      const controlledBaselineUploads = f.server.state().uploads.length;
+      await config(f, { cargo: { trustedPublishing: true } });
+      await writeFile(join(f.cwd, '.cargo/config.toml'), '# Ordinary built-in crates.io; no named registry configuration.\n');
+      const cargoHome = join(f.d, 'ordinary-default-home');
+      await mkdir(cargoHome);
+      f.env.CARGO_HOME = cargoHome;
+      delete f.env.CARGO_REGISTRIES_FIXTURE_TOKEN;
+      await writeFile(join(f.cwd, 'crates/adapter/src/lib.rs'), 'pub fn value()->u32{enkhjile_srw_e2e_core::value()}\n// Adapter-only default-registry release.\n');
+      if (label === 'positive') {
+        await writeFile(join(cargoHome, 'config.toml'), '[registries.crates-io]\nindex="sparse+https://index.crates.io/"\n');
+      }
+      await ok('cargo', ['test', '--workspace', '--locked'], f.cwd, f.env);
+      await commit(f, 'fix: advance only adapter against ordinary default registry');
+      const head = (await ok('git', ['rev-parse', 'HEAD'], f.cwd)).trim();
+      const identity = await startRegistry();
+      identity.control('get-fail');
+      try {
+        const nativeCallsBefore = await readFile(f.cargoLog, 'utf8').catch(() => '');
+        const r = await release(f, 'ordinary-default-' + label + '-public-package', [], {
+          GITHUB_ACTIONS: 'true',
+          GITHUB_REF: 'refs/heads/alpha',
+          GITHUB_SHA: head,
+          GITHUB_REPOSITORY: 'fixture/repo',
+          ACTIONS_ID_TOKEN_REQUEST_URL: identity.url + '/oidc',
+          ACTIONS_ID_TOKEN_REQUEST_TOKEN: 'ci-request-secret',
+        });
+        const nativeCallsAfter = await readFile(f.cargoLog, 'utf8').catch(() => '');
+        const releaseCargoCalls = nativeCallsAfter.slice(nativeCallsBefore.length).split('\n').filter(Boolean);
+        const cargoPublishCalls = releaseCargoCalls.filter(call => /^publish(?:\s|$)/.test(call)).length;
+        const native = await readFile(f.nativeStderr, 'utf8');
+        const missing = /registry index was not found in any configuration: `crates-io`/.test(native);
+        const identityRequests = identity.state().requests.filter(x => x.path.startsWith('/oidc')).length;
+        const publicUploads = f.server.state().uploads.length - controlledBaselineUploads;
+        const proof = {
+          nativeOriginalTestExit: 0,
+          releaseExit: r.code,
+          ordinaryNodeAndCargoShareSameHome: true,
+          nativeEnvironmentUnchangedByShim: true,
+          nativeNamedCratesIoIndexConfigured: label === 'positive',
+          nativeMissingNamedIndex: missing,
+          localIdentityRequests: identityRequests,
+          localIdentityAlwaysReturns503NoJwt: true,
+          publicIdentityExchangeRequests: 0,
+          cargoPublishCalls,
+          publicUploads,
+          controlledBaselineUploads,
+          unchangedCoreCurrentVersion: '0.2.0-alpha.1',
+          adapterCandidateVersion: '0.2.0-alpha.2',
+          installedArtifact: evidenceArtifact,
+        };
+        await writeFile(join(evidence, 'ordinary-default-' + label + '-proof.json'), JSON.stringify(proof, null, 2));
+        assert.equal(missing, false, 'Native Cargo packaging must not require a named crates-io registry for its built-in default');
+        assert.ok(identityRequests > 0, 'After successful native packaging, local identity guard must stop upload');
+        assert.notEqual(r.code, 0, 'The local identity guard must reject the release');
+        assert.equal(cargoPublishCalls, 0, 'The local identity guard must prevent cargo publish');
+        assert.equal(publicUploads, 0, 'The local identity guard must prevent fixture uploads');
+        if (label === 'positive') assert.match(r.out, /OIDC|identity|token/i);
+        return { ...proof, expectedLocalIdentityFailure: true };
+      } finally {
+        await identity.close();
+      }
+    });
+  },
+);
 console.log(JSON.stringify({total:results.length,pass:results.filter(x=>x.status==='PASS').length,fail:results.filter(x=>x.status==='FAIL').length}));process.exitCode=results.some(x=>x.status==='FAIL')?1:0;
