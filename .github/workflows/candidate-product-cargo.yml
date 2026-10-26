@@ -1,0 +1,100 @@
+name: "Cargo candidate product: built-in crates.io packaging"
+
+on:
+  workflow_dispatch:
+    inputs:
+      product_ref:
+        description: Exact reviewed product branch, tag, or commit to build, pack, and test without publishing
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cargo-product-candidate-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  native-packaging:
+    # This runs reviewed candidate install, build, and package code before the local harness.
+    # It has no publication credentials, OIDC permission, or write token.
+    # It does not sandbox an untrusted ref; dispatch only a ref that has been reviewed.
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Check out the locked alpha.4 consumer
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check out the requested product candidate
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: enkhjile/semantic-release-workspace
+          ref: ${{ inputs.product_ref }}
+          path: candidate-product
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Set up Node.js, pnpm, and the product dependency cache
+        uses: pnpm/setup@a0881977cd8ea73b1ed212236c99ca10dcc80cf4 # v3.1.1
+        with:
+          runtime: node@24.22.1
+          working-directory: candidate-product
+          cache: true
+          require-lockfile: true
+          install: false
+      - run: npm install --global npm@12.2.1
+      - run: rustup toolchain install 1.99.1 --profile minimal --no-self-update
+      - name: Install the locked consumer
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Test the candidate workflow guard
+        run: node --test scripts/candidate-product.test.mjs
+      - name: Build and pack the requested product candidate
+        id: pack
+        run: |
+          pnpm --dir candidate-product install --frozen-lockfile --ignore-scripts
+          pnpm --dir candidate-product build
+          mkdir -p "$RUNNER_TEMP/srw-cargo-candidate"
+          pnpm --dir candidate-product pack --ignore-scripts --pack-destination "$RUNNER_TEMP/srw-cargo-candidate"
+          shopt -s nullglob
+          packages=("$RUNNER_TEMP/srw-cargo-candidate"/*.tgz)
+          test "${#packages[@]}" -eq 1
+          printf 'tarball=%s\n' "${packages[0]}" >> "$GITHUB_OUTPUT"
+      - name: Replace the installed alpha.4 plugin without changing its lockfile
+        run: |
+          cp package-lock.json "$RUNNER_TEMP/package-lock.before.json"
+          npm install --ignore-scripts --no-save --package-lock=false --no-audit --no-fund "${{ steps.pack.outputs.tarball }}"
+          mkdir -p evidence/candidate-product
+          cp "${{ steps.pack.outputs.tarball }}" evidence/candidate-product/semantic-release-workspace.tgz
+      - name: Record the exact candidate artifact and source
+        env:
+          PRODUCT_REF: ${{ inputs.product_ref }}
+        run: |
+          node scripts/candidate-product.mjs record \
+            --product-dir candidate-product \
+            --product-ref "$PRODUCT_REF" \
+            --tarball evidence/candidate-product/semantic-release-workspace.tgz \
+            --lock-before "$RUNNER_TEMP/package-lock.before.json" \
+            --out evidence/candidate-product/installed-candidate.json
+      - name: Run the isolated native built-in crates.io packaging scenarios
+        env:
+          CARGO_SCENARIO_FILTER: '^ordinary-default-crates-io-(?:1|2|positive)$'
+          CARGO_EVIDENCE_DIR: evidence/candidate-product
+          CARGO_SCRATCH_DIR: .scratch/candidate-product
+          CARGO_RESULT_FILE: lifecycle-results.json
+        run: node scripts/lifecycle.mjs
+      - name: Verify the candidate remained local and did not alter the lockfile
+        run: |
+          node scripts/candidate-product.mjs verify \
+            --results evidence/candidate-product/lifecycle-results.json \
+            --metadata evidence/candidate-product/installed-candidate.json \
+            --lock-before "$RUNNER_TEMP/package-lock.before.json" \
+            --out evidence/candidate-product/verdict.json
+      - uses: actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: cargo-product-candidate
+          path: evidence/candidate-product/
