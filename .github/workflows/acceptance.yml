@@ -1,4 +1,4 @@
-name: Cargo alpha.3 consumer acceptance
+name: Cargo alpha.4 consumer acceptance
 on:
   workflow_dispatch:
   pull_request:
@@ -32,12 +32,12 @@ jobs:
         run: node scripts/lifecycle.mjs
       - name: Preserve disposable Git histories
         if: always()
-        run: python3 scripts/export-alpha3-evidence.py
+        run: python3 scripts/export-alpha4-evidence.py
       - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
           name: cargo-evidence
-          path: evidence/alpha3/
-      - name: Preserve alpha.3 contract verdict
+          path: evidence/alpha4/
+      - name: Preserve alpha.4 contract verdict
         if: steps.documented.outcome != 'success'
         run: exit 1
