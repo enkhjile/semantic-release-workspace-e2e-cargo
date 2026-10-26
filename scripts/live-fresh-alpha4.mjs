@@ -32,14 +32,18 @@ assert.equal(lock.integrity,'sha512-F6KE3hXv6iPDA5X9XwxogvXi0nb1hz3/Gp0kdsHG1VQr
 const installed=await readFile(join(fresh,'node_modules/semantic-release-workspace/dist/index.mjs'));
 assert.deepEqual(installed,await readFile(join(root,'node_modules/semantic-release-workspace/dist/index.mjs')));
 const hashes=async()=>Object.fromEntries(await Promise.all(git(fresh,'ls-files').split('\n').map(async p=>[p,sha256(await readFile(join(fresh,p)))])));
-const beforeHashes=await hashes(),beforeRefs=git(fresh,'ls-remote','origin'),before=await inventory(fresh,source),beforeProtected=protectedState(fresh);
+const beforeHashes=await hashes(),beforeRefs=git(fresh,'ls-remote','origin'),before=await inventory(root,source),beforeProtected=protectedState(root);
 assert.ok(before.accepted&&before.ownership,'fresh clone runs only after registry acceptance');
 const registryView=s=>s.packages.map(p=>({name:p.name,versions:p.versions,releases:p.releases.map(x=>({version:x.num,checksum:x.checksum,provenance:x.trustpub_data??null}))}));
 const coreBytes=async()=>{const r=await fetch('https://static.crates.io/crates/enkhjile-srw-e2e-core/enkhjile-srw-e2e-core-0.2.0-alpha.1.crate');assert.equal(r.status,200);const bytes=Buffer.from(await r.arrayBuffer());assert.equal(sha256(bytes),coreChecksum);return bytes;};
 const beforeCore=await coreBytes();
+const customRefsImmediatelyBeforeCli=git(fresh,'for-each-ref','--format=%(objectname) %(refname)','refs/notes','refs/semantic-release-workspace');
+assert.equal(customRefsImmediatelyBeforeCli,'','observers must not preload the ordinary clone');
 const completion=execute(process.execPath,[join(fresh,'node_modules/semantic-release/bin/semantic-release.js'),'--no-ci'],fresh,env);
 await writeFile(join(out,'fresh-completion.log'),completion.stdout+completion.stderr);
 assert.equal(completion.status,0,completion.stdout+completion.stderr);
+const customRefsImmediatelyAfterCli=git(fresh,'for-each-ref','--format=%(objectname) %(refname)','refs/notes','refs/semantic-release-workspace');
+assert.ok(customRefsImmediatelyAfterCli.includes('refs/notes/workspace-release-branches/'+sha256('alpha4-live')),'plugin must retrieve its own completion journal');
 const after=await inventory(fresh,source),afterRefs=git(fresh,'ls-remote','origin');
 assert.equal(after.ownership.journalStatus,'complete');
 assert.deepEqual(registryView(after),registryView(before));
@@ -49,7 +53,7 @@ if(before.ownership.journalStatus==='complete')assert.equal(afterRefs,beforeRefs
 assert.deepEqual(await hashes(),beforeHashes);assert.equal(git(fresh,'status','--porcelain'),'');
 assert.deepEqual(await coreBytes(),beforeCore);
 const protection=preserved(fresh,beforeProtected,protectedState(fresh));
-const proof={status:'PASS',source,candidate,initialCustomRefs,installVersion:lock.version,installIntegrity:lock.integrity,installedDistSha256:sha256(installed),completionExit:0,beforeJournalStatus:before.ownership.journalStatus,afterJournalStatus:after.ownership.journalStatus,allRemoteRefsUnchanged:beforeRefs===afterRefs,sourceFilesUnchanged:true,registryInventoryUnchanged:true,oldCoreBytesUnchanged:true,oldCoreSha256:coreChecksum,identityEnvironmentNames:identityNames,publishingCredentialEnvironmentNames:publishingNames,repositoryTransportCredentialPresent:Boolean(env.GITHUB_TOKEN),acceptedProvenance:after.accepted.trustpub_data,protectedState:protection};
+const proof={status:'PASS',source,candidate,initialCustomRefs,customRefsImmediatelyBeforeCli,customRefsImmediatelyAfterCli,preCliOwnershipObserver:'original checkout',installVersion:lock.version,installIntegrity:lock.integrity,installedDistSha256:sha256(installed),completionExit:0,beforeJournalStatus:before.ownership.journalStatus,afterJournalStatus:after.ownership.journalStatus,allRemoteRefsUnchanged:beforeRefs===afterRefs,sourceFilesUnchanged:true,registryInventoryUnchanged:true,oldCoreBytesUnchanged:true,oldCoreSha256:coreChecksum,identityEnvironmentNames:identityNames,publishingCredentialEnvironmentNames:publishingNames,repositoryTransportCredentialPresent:Boolean(env.GITHUB_TOKEN),acceptedProvenance:after.accepted.trustpub_data,protectedState:protection};
 await writeFile(join(out,'fresh-clone-verification.json'),JSON.stringify(proof,null,2));
 await writeFile(join(out,'fresh-refs-before.txt'),beforeRefs+'\n');await writeFile(join(out,'fresh-refs-after.txt'),afterRefs+'\n');
 await writeFile(join(out,'fresh-inventory-before.json'),JSON.stringify(registryView(before),null,2));await writeFile(join(out,'fresh-inventory-after.json'),JSON.stringify(registryView(after),null,2));
