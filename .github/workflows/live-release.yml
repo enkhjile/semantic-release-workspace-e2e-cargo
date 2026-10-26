@@ -1,9 +1,9 @@
-name: Cargo live OIDC acceptance
+name: Cargo alpha.4 adapter-only live OIDC acceptance
 on:
   workflow_dispatch:
     inputs:
       publish:
-        description: Publish the two approved alpha versions after trusted-publisher setup
+        description: Publish only adapter 0.2.0-alpha4.1 (one remaining accepted version)
         type: boolean
         default: false
 permissions:
@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   release:
-    if: github.ref == 'refs/heads/alpha3-live'
+    if: github.ref == 'refs/heads/alpha4-live'
     runs-on: ubuntu-latest
     environment: cargo-live
     defaults:
@@ -32,49 +32,64 @@ jobs:
       - run: rustup toolchain install 1.99.1 --profile minimal
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: cargo test --workspace --locked
+      - name: Install native Cargo observation guard
+        run: |
+          actual_cargo="$(command -v cargo)"
+          mkdir -p "$RUNNER_TEMP/cargo-observe"
+          cat > "$RUNNER_TEMP/cargo-observe/cargo" <<SCRIPT
+          #!/bin/bash
+          for argument in "\$@"; do
+            if [ "\$argument" = publish ]; then exit 78; fi
+          done
+          printf '%s\\n' "\$PWD : \$*" >> "$GITHUB_WORKSPACE/evidence/alpha4/live/native-cargo-invocations.log"
+          exec "$actual_cargo" "\$@"
+          SCRIPT
+          chmod +x "$RUNNER_TEMP/cargo-observe/cargo"
+          echo "$RUNNER_TEMP/cargo-observe" >> "$GITHUB_PATH"
       - name: Record source boundary
         run: |
-          mkdir -p evidence/alpha3/live
-          git rev-parse HEAD > evidence/alpha3/live/source-before.txt
-          git status --porcelain > evidence/alpha3/live/status-before.txt
-          git ls-remote origin > evidence/alpha3/live/refs-before.txt
-          git ls-files -z | xargs -0 sha256sum > evidence/alpha3/live/source-hashes-before.txt
+          mkdir -p evidence/alpha4/live
+          git rev-parse HEAD > evidence/alpha4/live/source-before.txt
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          git status --porcelain > evidence/alpha4/live/status-before.txt
+          git ls-remote origin > evidence/alpha4/live/refs-before.txt
+          git ls-files -z | xargs -0 sha256sum > evidence/alpha4/live/source-hashes-before.txt
           node -e "for(const k of ['CARGO_REGISTRY_TOKEN','CARGO_REGISTRIES_CRATES_IO_TOKEN'])require('node:assert/strict').ok(!process.env[k],k+' must be absent')"
       - name: Required-OIDC dry run with real GitHub identity context
         run: |
-          npm exec -- semantic-release --dry-run --extends ./release.oidc.config.mjs | tee evidence/alpha3/live/dryrun.log
-          git ls-remote origin > evidence/alpha3/live/refs-after-dryrun.txt
-          diff evidence/alpha3/live/refs-before.txt evidence/alpha3/live/refs-after-dryrun.txt
-          git ls-files -z | xargs -0 sha256sum > evidence/alpha3/live/source-hashes-after-dryrun.txt
-          diff evidence/alpha3/live/source-hashes-before.txt evidence/alpha3/live/source-hashes-after-dryrun.txt
+          node scripts/live-guard-alpha4.mjs
+          git ls-remote origin > evidence/alpha4/live/refs-after-dryrun.txt
+          diff evidence/alpha4/live/refs-before.txt evidence/alpha4/live/refs-after-dryrun.txt
+          git ls-files -z | xargs -0 sha256sum > evidence/alpha4/live/source-hashes-after-dryrun.txt
+          diff evidence/alpha4/live/source-hashes-before.txt evidence/alpha4/live/source-hashes-after-dryrun.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Plugin-owned Cargo OIDC release
         if: inputs.publish
-        run: npm exec -- semantic-release --extends ./release.oidc.config.mjs | tee evidence/alpha3/live/release.log
+        run: npm exec -- semantic-release --extends ./release.oidc.config.mjs | tee evidence/alpha4/live/release.log
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Verify restored source and published artifacts
         if: inputs.publish
         run: |
-          git rev-parse HEAD > evidence/alpha3/live/source-after.txt
-          git status --porcelain > evidence/alpha3/live/status-after.txt
-          diff evidence/alpha3/live/source-before.txt evidence/alpha3/live/source-after.txt
-          diff evidence/alpha3/live/status-before.txt evidence/alpha3/live/status-after.txt
-          git ls-files -z | xargs -0 sha256sum > evidence/alpha3/live/source-hashes-after.txt
-          diff evidence/alpha3/live/source-hashes-before.txt evidence/alpha3/live/source-hashes-after.txt
-          node scripts/live-proof.mjs
+          git rev-parse HEAD > evidence/alpha4/live/source-after.txt
+          git status --porcelain > evidence/alpha4/live/status-after.txt
+          diff evidence/alpha4/live/source-before.txt evidence/alpha4/live/source-after.txt
+          diff evidence/alpha4/live/status-before.txt evidence/alpha4/live/status-after.txt
+          git ls-files -z | xargs -0 sha256sum > evidence/alpha4/live/source-hashes-after.txt
+          diff evidence/alpha4/live/source-hashes-before.txt evidence/alpha4/live/source-hashes-after.txt
+          node scripts/live-proof-alpha4.mjs
       - name: No-change release
         if: inputs.publish
         run: |
-          git ls-remote origin > evidence/alpha3/live/refs-complete.txt
-          npm exec -- semantic-release --extends ./release.oidc.config.mjs | tee evidence/alpha3/live/no-change.log
-          git ls-remote origin > evidence/alpha3/live/refs-rerun.txt
-          diff evidence/alpha3/live/refs-complete.txt evidence/alpha3/live/refs-rerun.txt
+          git ls-remote origin > evidence/alpha4/live/refs-complete.txt
+          npm exec -- semantic-release --extends ./release.oidc.config.mjs | tee evidence/alpha4/live/no-change.log
+          git ls-remote origin > evidence/alpha4/live/refs-rerun.txt
+          diff evidence/alpha4/live/refs-complete.txt evidence/alpha4/live/refs-rerun.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
-          name: cargo-live-alpha3
-          path: evidence/alpha3/live/
+          name: cargo-live-alpha4
+          path: evidence/alpha4/live/
