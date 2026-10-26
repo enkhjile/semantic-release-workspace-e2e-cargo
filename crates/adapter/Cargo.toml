@@ -1,10 +1,10 @@
 [package]
-name="enkhjile-srw-e2e-adapter"
-version="0.1.0"
-edition="2021"
-license="MIT"
-repository="https://github.com/enkhjile/semantic-release-workspace-e2e-cargo"
-description="Dedicated semantic-release-workspace Cargo acceptance adapter"
+name = "enkhjile-srw-e2e-adapter"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Minimal semantic-release-workspace Cargo consumer acceptance adapter"
 
 [dependencies]
-enkhjile-srw-e2e-core={path="../core",version="0.1.0"}
+enkhjile-srw-e2e-core.workspace = true
