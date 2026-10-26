@@ -79,6 +79,11 @@ jobs:
           git ls-files -z | xargs -0 sha256sum > evidence/alpha4/live/source-hashes-after.txt
           diff evidence/alpha4/live/source-hashes-before.txt evidence/alpha4/live/source-hashes-after.txt
           node scripts/live-proof-alpha4.mjs
+      - name: Ordinary fresh-clone completion without publication credentials
+        if: inputs.publish
+        run: node scripts/live-fresh-alpha4.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: No-change release
         if: inputs.publish
         run: |
