@@ -85,6 +85,7 @@ jobs:
           CARGO_EVIDENCE_DIR: evidence/candidate-product
           CARGO_SCRATCH_DIR: .scratch/candidate-product
           CARGO_RESULT_FILE: lifecycle-results.json
+          CARGO_CANDIDATE_PRODUCT: 'true'
         run: node scripts/lifecycle.mjs
       - name: Verify the candidate remained local and did not alter the lockfile
         run: |

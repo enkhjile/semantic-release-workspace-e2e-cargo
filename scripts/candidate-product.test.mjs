@@ -28,6 +28,26 @@ test('accepts the complete built-in crates.io native-packaging candidate evidenc
   assert.equal(verdict.localIdentityRequests, expectedBuiltInCratesIoScenarios.length);
 });
 
+test('requires candidate lifecycle evidence to identify the recorded installed plugin', () => {
+  const installedPlugin = { name: 'semantic-release-workspace', version: '0.0.0-candidate.1' };
+  const expectedArtifact = `${installedPlugin.name}@${installedPlugin.version}`;
+  const mismatched = {
+    results: expectedBuiltInCratesIoScenarios.map((name) => result(name, {
+      installedArtifact: 'semantic-release-workspace@1.0.0-alpha.3',
+    })),
+  };
+
+  assert.throws(
+    () => verifyCandidateResults(mismatched, installedPlugin),
+    /installed candidate/,
+  );
+
+  const verdict = verifyCandidateResults({
+    results: expectedBuiltInCratesIoScenarios.map((name) => result(name, { installedArtifact: expectedArtifact })),
+  }, installedPlugin);
+  assert.equal(verdict.installedArtifact, expectedArtifact);
+});
+
 test('rejects a candidate that did not reach the local OIDC guard after native packaging', () => {
   assert.throws(
     () => verifyCandidateResults({
@@ -98,6 +118,17 @@ test('lifecycle supports isolated candidate evidence and disposable state paths'
 
   assert.match(lifecycle, /process\.env\.CARGO_EVIDENCE_DIR/);
   assert.match(lifecycle, /process\.env\.CARGO_SCRATCH_DIR/);
+});
+
+test('candidate workflow derives the lifecycle artifact from the installed package', async () => {
+  const [workflow, lifecycle] = await Promise.all([
+    readFile(join(root, '.github/workflows/candidate-product-cargo.yml'), 'utf8'),
+    readFile(join(root, 'scripts/lifecycle.mjs'), 'utf8'),
+  ]);
+
+  assert.match(workflow, /CARGO_CANDIDATE_PRODUCT:\s*['"]true['"]/);
+  assert.match(lifecycle, /process\.env\.CARGO_CANDIDATE_PRODUCT/);
+  assert.match(lifecycle, /node_modules\/semantic-release-workspace\/package\.json/);
 });
 
 test('candidate artifacts are not commit candidates', async () => {

@@ -41,8 +41,15 @@ export function candidateCredentialNames(env = process.env) {
   return Object.keys(env).filter((name) => candidateCredential.test(name)).sort();
 }
 
-export function verifyCandidateResults(report) {
+function installedArtifact(installedPlugin) {
+  assert.equal(installedPlugin?.name, 'semantic-release-workspace', 'candidate metadata must identify semantic-release-workspace');
+  assert.ok(typeof installedPlugin.version === 'string' && installedPlugin.version.length > 0, 'candidate metadata must include the installed plugin version');
+  return `${installedPlugin.name}@${installedPlugin.version}`;
+}
+
+export function verifyCandidateResults(report, installedPlugin) {
   assert.ok(Array.isArray(report?.results), 'candidate lifecycle must write a results array');
+  const expectedArtifact = installedPlugin ? installedArtifact(installedPlugin) : undefined;
 
   const selected = expectedBuiltInCratesIoScenarios.map((name) => {
     const matches = report.results.filter((result) => result.name === name);
@@ -54,6 +61,7 @@ export function verifyCandidateResults(report) {
     assert.ok(Number.isInteger(result.releaseExit) && result.releaseExit !== 0, `${name} local identity guard must reject the release`);
     assert.equal(result.cargoPublishCalls, 0, `${name} local identity guard must prevent cargo publish`);
     assert.equal(result.publicUploads, 0, `${name} must record zero public uploads`);
+    if (expectedArtifact) assert.equal(result.installedArtifact, expectedArtifact, `${name} must identify the installed candidate ${expectedArtifact}`);
     return result;
   });
 
@@ -61,6 +69,7 @@ export function verifyCandidateResults(report) {
     scenarios: selected.map((result) => result.name),
     localIdentityRequests: selected.reduce((total, result) => total + result.localIdentityRequests, 0),
     publicUploads: selected.reduce((total, result) => total + result.publicUploads, 0),
+    installedArtifact: expectedArtifact,
   };
 }
 
@@ -120,6 +129,7 @@ async function record(optionsForCommand) {
       packageLockSha256: lockSha256,
     },
     installedPlugin: {
+      name: installedPackage.name,
       version: installedPackage.version,
       distIndexSha256: sha256(installedDist),
       matchesProductDist: true,
@@ -148,11 +158,13 @@ async function verify(optionsForCommand) {
   assert.match(metadata.tarball?.sha256, /^[0-9a-f]{64}$/);
   assert.equal(metadata.lockedPlugin?.version, '1.0.0-alpha.4');
   assert.equal(metadata.lockedPlugin?.packageLockSha256, lockSha256);
+  assert.equal(metadata.installedPlugin?.version, metadata.productVersion, 'candidate metadata must retain the installed product version');
   assert.equal(git(root, 'status', '--porcelain', '--', 'package.json', 'package-lock.json'), '', 'candidate lane must not modify committed manifests or lockfiles');
+  const candidateEvidence = verifyCandidateResults(results, metadata.installedPlugin);
 
   const verdict = {
     status: 'PASS',
-    ...verifyCandidateResults(results),
+    ...candidateEvidence,
     product: {
       ref: metadata.productRef,
       sourceSha: metadata.productSourceSha,

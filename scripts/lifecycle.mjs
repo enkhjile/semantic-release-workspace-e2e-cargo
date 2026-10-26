@@ -7,6 +7,8 @@ import { startRegistry } from '../support/registry.mjs';
 const root=resolve(import.meta.dirname,'..');
 const evidence=join(root,process.env.CARGO_EVIDENCE_DIR??'evidence/alpha3');
 const scratch=join(root,process.env.CARGO_SCRATCH_DIR??'.scratch/alpha3');const cli=join(root,'node_modules/semantic-release/bin/semantic-release.js');
+async function installedArtifact(){if(process.env.CARGO_CANDIDATE_PRODUCT!=='true')return 'semantic-release-workspace@1.0.0-alpha.3';const installed=JSON.parse(await readFile(join(root,'node_modules/semantic-release-workspace/package.json'),'utf8'));assert.equal(installed.name,'semantic-release-workspace');assert.ok(typeof installed.version==='string'&&installed.version.length>0,'candidate plugin must have a version');return `${installed.name}@${installed.version}`;}
+const evidenceArtifact=await installedArtifact();
 const env0={...process.env,CI:'true',GIT_AUTHOR_NAME:'Cargo Acceptance',GIT_AUTHOR_EMAIL:'cargo@example.invalid',GIT_COMMITTER_NAME:'Cargo Acceptance',GIT_COMMITTER_EMAIL:'cargo@example.invalid',RUSTUP_TOOLCHAIN:'1.99.1'};
 for(const k of Object.keys(env0))if(/TOKEN|SECRET|PASSWORD|ACTIONS_ID|GITHUB|GITLAB/.test(k))delete env0[k];
 const results=[];await mkdir(scratch,{recursive:true});await mkdir(evidence,{recursive:true});
@@ -132,7 +134,7 @@ for (const label of ['1', '2', 'positive']) await scenario(
           controlledBaselineUploads,
           unchangedCoreCurrentVersion: '0.2.0-alpha.1',
           adapterCandidateVersion: '0.2.0-alpha.2',
-          installedArtifact: 'semantic-release-workspace@1.0.0-alpha.3',
+          installedArtifact: evidenceArtifact,
         };
         await writeFile(join(evidence, 'ordinary-default-' + label + '-proof.json'), JSON.stringify(proof, null, 2));
         assert.equal(missing, false, 'Native Cargo packaging must not require a named crates-io registry for its built-in default');
