@@ -5,7 +5,7 @@ permissions:
   contents: write
   id-token: write
 concurrency:
-  group: workspace-release
+  group: alpha6-read-only-preview
   cancel-in-progress: false
 jobs:
   required-oidc-preview:
