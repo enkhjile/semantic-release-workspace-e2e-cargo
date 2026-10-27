@@ -4,3 +4,5 @@ pub fn value() -> u32 { 42 }
 pub fn cycle_marker() -> u32 { 8 }
 
 // alpha.8 default changed-only acceptance correction
+
+pub fn alpha8_capability() -> u32 { 9 }

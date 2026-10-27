@@ -1,5 +1,14 @@
 {
   "mode": "release",
-  "expected": [],
-  "phase": "alpha8-backmerge-no-upload"
+  "expected": [
+    {
+      "name": "enkhjile-srw-e2e-core",
+      "nextVersion": "0.5.0-alpha7.1"
+    },
+    {
+      "name": "enkhjile-srw-e2e-adapter",
+      "nextVersion": "0.2.2-alpha7.2"
+    }
+  ],
+  "phase": "alpha8-opt-in-dependent-sync"
 }
