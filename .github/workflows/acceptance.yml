@@ -22,6 +22,7 @@ jobs:
       - uses: actions/setup-node@v7.1.0
         with:
           node-version: 24.22.1
+          package-manager-cache: false
       - run: npm install --global npm@12.2.1
       - run: rustup toolchain install 1.99.1 --profile minimal
       - run: npm ci --ignore-scripts --no-audit --no-fund
