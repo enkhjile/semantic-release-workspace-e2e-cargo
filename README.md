@@ -1,11 +1,11 @@
-# Cargo consumer acceptance
+# Cargo alpha6 consumer acceptance
 
-This repository consumes the exact published `semantic-release-workspace@1.0.0-alpha.3` with `semantic-release@25.0.9`, native npm12.2.1, Node24.22.1, and Rust/Cargo1.99.1. Ordinary package-name configuration is used throughout the current lane.
+This harness installs the exact public `semantic-release-workspace@1.0.0-alpha.6` through npm and the checked-in lockfile with `semantic-release@25.0.9`. Primary tools are Node24.22.1, npm12.2.1, and Rust/Cargo1.99.1. It configures the documented package name and invokes the real semantic-release CLI.
 
-**Alpha.3 verdict: FAIL.** Two ordinary Cargo fixtures confirm that staging inserts a named `crates-io` dependency registry without configuring that name. The public core OIDC release succeeded; the adapter remains blocked at native packaging. See `evidence/alpha3/ordinary-default-registry-results.json` and `summary.json`.
+Run `npm ci --ignore-scripts --no-audit --no-fund`, `cargo test --workspace --locked`, `npm test`, and `node scripts/lifecycle.mjs`. Fixtures use disposable bare Git remotes, native Cargo metadata/test/package, loopback registries, and fresh native downstream consumers. Synthetic identity is controlled fixture evidence, not public OIDC provenance. No controlled test uploads to crates.io or npm.
 
-Run `npm ci --ignore-scripts`, `npm test`, and `node scripts/lifecycle.mjs`. Native buildable Cargo fixtures use disposable bare Git remotes and loopback registries with synthetic credentials. The actual semantic-release CLI performs releases; actual Cargo packages and fresh downstream binaries verify downloaded crates. The current evidence is under `evidence/alpha3/`; historical alpha.2 failures and retained Git bundles remain unchanged.
+The alpha6 additions exercise omitted private versionless dev edges, native normalized feature pruning and legacy aliases, retained shared runtime/versioned dev edges, stable/alpha/promotion/backmerge/next .1/.2 cycles, ordinary network clones, planning-only promotion rejection, frozen newer stable selection after generateNotes failure, and identity changelog relocation/overrides. Evidence defaults to `evidence/alpha6`; override output and scratch scopes with `CARGO_EVIDENCE_DIR` and `CARGO_SCRATCH_DIR`. `CARGO_SCENARIO_FILTER` selects lifecycle case IDs.
 
-The manual controlled Actions workflow exports disposable Git histories before runner teardown. The separate `live-release.yml` workflow requires the `cargo-live` environment and per-crate trusted publishers, uses plugin-owned OIDC, and has no native publication token.
+`acceptance.yml` is the controlled canonical workflow. It exports every disposable remote as a checksum-verified bundle, restores all refs in an independent mirror, runs fsck, and retains prepared source, notes and exact crate archives. Run `python3 scripts/export-alpha6-evidence.py` locally with the same evidence/scratch scope after testing.
 
-The two reviewed public test names are `enkhjile-srw-e2e-core` and `enkhjile-srw-e2e-adapter`. Their bootstrap is0.1.0 in dependency order, followed by exactly one plugin OIDC0.2.0-alpha.1 version each. Maximum public budget: four crate-version uploads. Controlled scenarios never publish to crates.io.
+Historical alpha2/3/4 refs, evidence, accepted public versions and pending batches remain preserved. The public publication budget is exhausted; do not dispatch live-release workflows. Existing public no-change observations are reported separately from controlled tests.

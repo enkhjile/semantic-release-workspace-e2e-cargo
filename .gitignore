@@ -13,3 +13,6 @@ evidence/alpha4/ref-backups/bundles/
 evidence/alpha4/ref-backups/exports/
 evidence/alpha4/hosted/
 evidence/alpha4/live/
+
+# Alpha6 acceptance retains generated evidence outside commits.
+evidence/alpha6/
