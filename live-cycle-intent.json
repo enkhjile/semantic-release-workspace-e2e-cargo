@@ -1,4 +1,13 @@
 {
-  "mode": "release",
-  "expected": []
+  "mode": "preview",
+  "expected": [
+    {
+      "name": "enkhjile-srw-e2e-core",
+      "nextVersion": "0.4.0-alpha7.1"
+    },
+    {
+      "name": "enkhjile-srw-e2e-adapter",
+      "nextVersion": "0.2.2-alpha7.1"
+    }
+  ]
 }
