@@ -1,1 +1,1 @@
-export default { branches:['main',{name:'alpha4-live',prerelease:'alpha4'}], tagFormat:'workspace-v${version}', plugins:[['semantic-release-workspace',{cargo:{trustedPublishing:true},changelog:true}]] };
+export {default} from './release.config.mjs';

@@ -1,11 +1,6 @@
-name: Cargo alpha.4 adapter-only live OIDC acceptance
+name: Alpha.6 exact required-OIDC preview (no publication)
 on:
   workflow_dispatch:
-    inputs:
-      publish:
-        description: Publish only adapter 0.2.0-alpha4.1 (one remaining accepted version)
-        type: boolean
-        default: false
 permissions:
   contents: write
   id-token: write
@@ -13,10 +8,10 @@ concurrency:
   group: workspace-release
   cancel-in-progress: false
 jobs:
-  release:
-    if: github.ref == 'refs/heads/alpha4-live'
-    runs-on: ubuntu-latest
+  required-oidc-preview:
+    if: github.ref == 'refs/heads/stable-alpha6-live'
     environment: cargo-live
+    runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
@@ -27,74 +22,25 @@ jobs:
       - uses: actions/setup-node@v7.1.0
         with:
           node-version: 24.22.1
-          cache: npm
       - run: npm install --global npm@12.2.1
-      - run: rustup toolchain install 1.99.1 --profile minimal
-      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+      - run: rustup toolchain install 1.99.1 --profile minimal --no-self-update
       - run: cargo test --workspace --locked
-      - name: Install native Cargo observation guard
+      - name: Validate exact preview guard and native executables
         run: |
-          actual_cargo="$(command -v cargo)"
-          mkdir -p "$RUNNER_TEMP/cargo-observe"
-          cat > "$RUNNER_TEMP/cargo-observe/cargo" <<SCRIPT
-          #!/bin/bash
-          for argument in "\$@"; do
-            if [ "\$argument" = publish ]; then exit 78; fi
-          done
-          printf '%s\\n' "\$PWD : \$*" >> "$GITHUB_WORKSPACE/evidence/alpha4/live/native-cargo-invocations.log"
-          exec "$actual_cargo" "\$@"
-          SCRIPT
-          chmod +x "$RUNNER_TEMP/cargo-observe/cargo"
-          echo "$RUNNER_TEMP/cargo-observe" >> "$GITHUB_PATH"
-      - name: Record source boundary
-        run: |
-          mkdir -p evidence/alpha4/live
-          git rev-parse HEAD > evidence/alpha4/live/source-before.txt
-          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
-          git status --porcelain > evidence/alpha4/live/status-before.txt
-          git ls-remote origin > evidence/alpha4/live/refs-before.txt
-          git ls-files -z | xargs -0 sha256sum > evidence/alpha4/live/source-hashes-before.txt
-          node -e "for(const k of ['CARGO_REGISTRY_TOKEN','CARGO_REGISTRIES_CRATES_IO_TOKEN'])require('node:assert/strict').ok(!process.env[k],k+' must be absent')"
-      - name: Required-OIDC dry run with real GitHub identity context
-        run: |
-          node scripts/live-guard-alpha4.mjs
-          git ls-remote origin > evidence/alpha4/live/refs-after-dryrun.txt
-          diff evidence/alpha4/live/refs-before.txt evidence/alpha4/live/refs-after-dryrun.txt
-          git ls-files -z | xargs -0 sha256sum > evidence/alpha4/live/source-hashes-after-dryrun.txt
-          diff evidence/alpha4/live/source-hashes-before.txt evidence/alpha4/live/source-hashes-after-dryrun.txt
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Plugin-owned Cargo OIDC release
-        if: inputs.publish
-        run: npm exec -- semantic-release --extends ./release.oidc.config.mjs | tee evidence/alpha4/live/release.log
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Verify restored source and published artifacts
-        if: inputs.publish
-        run: |
-          git rev-parse HEAD > evidence/alpha4/live/source-after.txt
-          git status --porcelain > evidence/alpha4/live/status-after.txt
-          diff evidence/alpha4/live/source-before.txt evidence/alpha4/live/source-after.txt
-          diff evidence/alpha4/live/status-before.txt evidence/alpha4/live/status-after.txt
-          git ls-files -z | xargs -0 sha256sum > evidence/alpha4/live/source-hashes-after.txt
-          diff evidence/alpha4/live/source-hashes-before.txt evidence/alpha4/live/source-hashes-after.txt
-          node scripts/live-proof-alpha4.mjs
-      - name: Ordinary fresh-clone completion without publication credentials
-        if: inputs.publish
-        run: node scripts/live-fresh-alpha4.mjs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: No-change release
-        if: inputs.publish
-        run: |
-          git ls-remote origin > evidence/alpha4/live/refs-complete.txt
-          npm exec -- semantic-release --extends ./release.oidc.config.mjs | tee evidence/alpha4/live/no-change.log
-          git ls-remote origin > evidence/alpha4/live/refs-rerun.txt
-          diff evidence/alpha4/live/refs-complete.txt evidence/alpha4/live/refs-rerun.txt
+          mkdir -p evidence/alpha6-preview
+          node --test scripts/preview-alpha6.test.mjs
+          node --version > evidence/alpha6-preview/tools.txt
+          command -v npm >> evidence/alpha6-preview/tools.txt
+          npm --version >> evidence/alpha6-preview/tools.txt
+          echo "ACCEPTANCE_NPM_PATH=$(dirname "$(command -v npm)")" >> "$GITHUB_ENV"
+      - name: Required-OIDC dry-run and immutable public/source/ref assertions
+        run: node scripts/preview-alpha6.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
-          name: cargo-live-alpha4
-          path: evidence/alpha4/live/
+          name: alpha6-preview-cargo
+          path: evidence/alpha6-preview/

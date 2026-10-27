@@ -11,3 +11,6 @@ evidence/alpha3/live/
 
 evidence/alpha4/live/
 evidence/candidate-product/
+
+.scratch-preview-*.npmrc
+evidence/alpha6-preview/
