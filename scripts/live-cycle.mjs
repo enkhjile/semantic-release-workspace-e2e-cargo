@@ -114,6 +114,7 @@ if (intent.mode === 'release') {
     proof.push({ name, version, checksum: row.checksum, bytes: bytes.length, trustpub: row.trustpub_data, packageTag: git('rev-parse', `refs/tags/cargo/${name}@${version}`).trim() });
   }
   const complete = await snapshot();
+  if (intent.expected.length === 0) assert.deepEqual(complete, before, 'No-release invocation changed source, refs or public inventory');
   const additions = [];
   for (const name of names) {
     for (const [version, value] of Object.entries(before.inventory[name])) assert.deepEqual(complete.inventory[name][version], value, 'Existing public version changed');
@@ -124,7 +125,9 @@ if (intent.mode === 'release') {
   save('published', { source: sha, run: process.env.GITHUB_RUN_ID, proof, additions });
   save('after-release', complete);
   run('no-change');
-  assert.deepEqual(await snapshot(), complete, 'No-change rerun changed source, refs or public versions');
+  const afterNoChange = await snapshot();
+  save('after-no-change', afterNoChange);
+  assert.deepEqual(afterNoChange, complete, 'No-change rerun changed source, refs or public versions');
   const adapter = intent.expected.find(p => p.name.endsWith('-adapter'));
   if (adapter) {
     const consumer = resolve('.scratch/live-alpha7-downstream');
