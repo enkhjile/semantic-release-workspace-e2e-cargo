@@ -1,4 +1,4 @@
-name: Cargo alpha.7 public consumer acceptance
+name: Cargo alpha.8 public consumer acceptance
 on:
   workflow_dispatch:
   pull_request:
@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       RUSTUP_TOOLCHAIN: 1.99.1
-      CARGO_EVIDENCE_DIR: evidence/alpha7/hosted
-      CARGO_SCRATCH_DIR: .scratch/alpha7-hosted
-      npm_config_cache: .scratch/alpha7-install-cache
+      CARGO_EVIDENCE_DIR: evidence/alpha8/hosted
+      CARGO_SCRATCH_DIR: .scratch/alpha8-hosted
+      npm_config_cache: .scratch/alpha8-install-cache
     steps:
       - uses: actions/checkout@v7.0.1
         with:
@@ -27,9 +27,10 @@ jobs:
       - run: rustup toolchain install 1.99.1 --profile minimal
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Frozen public CLI native Cargo acceptance and cleanup
-        run: node scripts/run-alpha7.mjs
+        run: node scripts/run-alpha8.mjs
       - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
           name: cargo-evidence
-          path: evidence/alpha7/
+          path: evidence/alpha8/
+          include-hidden-files: true
