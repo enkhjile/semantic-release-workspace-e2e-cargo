@@ -1,5 +1,5 @@
 {
-  "mode": "preview",
+  "mode": "release",
   "expected": [
     {
       "name": "enkhjile-srw-e2e-core",
