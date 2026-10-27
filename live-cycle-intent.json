@@ -1,13 +1,5 @@
 {
-  "mode": "release",
-  "expected": [
-    {
-      "name": "enkhjile-srw-e2e-core",
-      "nextVersion": "0.3.0"
-    },
-    {
-      "name": "enkhjile-srw-e2e-adapter",
-      "nextVersion": "0.2.1"
-    }
-  ]
+  "mode": "preview",
+  "expected": [],
+  "phase": "alpha8-default-setup"
 }

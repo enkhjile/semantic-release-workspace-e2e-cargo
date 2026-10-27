@@ -1,4 +1,4 @@
-name: Cargo alpha.7 push-triggered OIDC cycle
+name: Cargo alpha.8 push-triggered OIDC cycle
 on:
   push:
     branches: [main, alpha]
@@ -6,7 +6,7 @@ permissions:
   contents: write
   id-token: write
 concurrency:
-  group: workspace-release
+  group: cargo-live-alpha8
   cancel-in-progress: false
 defaults:
   run:
@@ -34,8 +34,8 @@ jobs:
       - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
-          name: cargo-live-alpha7-${{ github.run_id }}
-          path: evidence/live-alpha7/
+          name: cargo-live-alpha8-${{ github.run_id }}
+          path: evidence/live-alpha8/
           include-hidden-files: true
       - name: Remove generated installs, native targets and scratch
         if: always()
