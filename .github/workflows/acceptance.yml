@@ -1,4 +1,4 @@
-name: Cargo alpha.6 consumer acceptance
+name: Cargo alpha.6 settings consumer acceptance
 on:
   workflow_dispatch:
   pull_request:
@@ -11,8 +11,8 @@ jobs:
   controlled:
     runs-on: ubuntu-latest
     env:
-      CARGO_EVIDENCE_DIR: evidence/alpha6/hosted
-      CARGO_SCRATCH_DIR: .scratch/alpha6-hosted
+      CARGO_EVIDENCE_DIR: evidence/alpha6-settings/hosted
+      CARGO_SCRATCH_DIR: .scratch/alpha6-settings-hosted
     steps:
       - uses: actions/checkout@v7.0.1
         with:
@@ -24,6 +24,8 @@ jobs:
       - run: npm install --global npm@12.2.1
       - run: rustup toolchain install 1.99.1 --profile minimal
       - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Record actual tools and public package
+        run: node scripts/settings-tools.mjs
       - name: Native Cargo test
         run: cargo test --workspace --locked
       - name: Documented package-name contract
@@ -40,7 +42,7 @@ jobs:
         if: always()
         with:
           name: cargo-evidence
-          path: evidence/alpha6/
+          path: evidence/alpha6-settings/
       - name: Preserve alpha.6 contract verdict
         if: steps.documented.outcome != 'success'
         run: exit 1

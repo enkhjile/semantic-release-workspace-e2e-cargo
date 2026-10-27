@@ -16,3 +16,4 @@ evidence/alpha4/live/
 
 # Alpha6 acceptance retains generated evidence outside commits.
 evidence/alpha6/
+evidence/alpha6-settings/

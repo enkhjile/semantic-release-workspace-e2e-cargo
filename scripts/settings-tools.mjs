@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import {mkdir,readFile,readdir,writeFile} from 'node:fs/promises';
+import {resolve,join} from 'node:path';
+const root=resolve(import.meta.dirname,'..'),evidence=join(root,process.env.CARGO_EVIDENCE_DIR??'evidence/alpha6-settings');await mkdir(evidence,{recursive:true});
+const run=(cmd,args)=>execFileSync(cmd,args,{cwd:root,encoding:'utf8'}).trim();
+const folder=join(root,'node_modules/semantic-release-workspace'),files=[];
+async function walk(dir,relative=''){for(const entry of await readdir(dir,{withFileTypes:true})){const p=join(relative,entry.name);if(entry.isDirectory())await walk(join(dir,entry.name),p);else{const data=await readFile(join(dir,entry.name));files.push({path:p,bytes:data.length,sha256:createHash('sha256').update(data).digest('hex')});}}}await walk(folder);
+assert.equal(JSON.parse(await readFile(join(folder,'package.json'),'utf8')).version,'1.0.0-alpha.6');assert.equal(files.length,5);
+const lock=JSON.parse(await readFile(join(root,'package-lock.json'),'utf8')).packages['node_modules/semantic-release-workspace'];assert.equal(lock.version,'1.0.0-alpha.6');assert.match(lock.resolved,/registry\.npmjs\.org\/semantic-release-workspace\/.*alpha\.6/);
+const proof={generatedAt:new Date().toISOString(),source:run('git',['rev-parse','HEAD']),sourceTree:run('git',['rev-parse','HEAD^{tree}']),sourceStatus:run('git',['status','--porcelain']),node:{path:process.execPath,version:process.version},npm:{path:run('which',['npm']),version:run('npm',['--version'])},cargo:{path:run('which',['cargo']),version:run('cargo',['--version'])},rustc:{path:run('which',['rustc']),version:run('rustc',['--version'])},publicPackage:lock,files:files.sort((a,b)=>a.path.localeCompare(b.path))};await writeFile(join(evidence,'toolchain-public-artifact.json'),JSON.stringify(proof,null,2));console.log(JSON.stringify(proof,null,2));
