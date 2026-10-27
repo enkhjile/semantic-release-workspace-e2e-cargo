@@ -114,4 +114,5 @@ for(const variant of ['canonical-default','canonical-stale-alias','custom-crates
 await (await import('./alpha6-cases.mjs')).runAlpha6({scenario,withFixture,graph,pkg,core,ok,run,put,commit,config,release,success,snapshot,downstream,archivedPackage,root,evidence});
 await (await import('./alpha6-settings.mjs')).runSettings({scenario,withFixture,graph,pkg,core,ok,run,put,commit,config,release,success,snapshot,downstream,archivedPackage,root,evidence,startRegistry});
 await (await import('./alpha6-settings-cycles.mjs')).runSettingsCycles({scenario,withFixture,graph,pkg,ok,run,commit,success,snapshot,downstream,archivedPackage,root});
+await (await import('./alpha7-nested.mjs')).runNested({scenario,withFixture,ok,run,commit,release,success,snapshot,downstream,archivedPackage,root,evidence});
 console.log(JSON.stringify({total:results.length,pass:results.filter(x=>x.status==='PASS').length,fail:results.filter(x=>x.status==='FAIL').length}));process.exitCode=results.some(x=>x.status==='FAIL')?1:0;
