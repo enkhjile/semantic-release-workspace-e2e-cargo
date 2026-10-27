@@ -1,0 +1,44 @@
+FAIL package-name-cli-loading-1 orkspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4mresolve-from[24m/index.js:46:47)
+    at loadPlugin (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/lib/plugins/utils.js:59:54)
+    at file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/lib/plugins/index.js:18:43 {
+  code: [32m'ERR_PACKAGE_PATH_NOT_EXPORTED'[39m
+}
+
+1 !== 0
+
+FAIL package-name-cli-loading-2 orkspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4mresolve-from[24m/index.js:46:47)
+    at loadPlugin (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/lib/plugins/utils.js:59:54)
+    at file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/node_modules/[4msemantic-release[24m/lib/plugins/index.js:18:43 {
+  code: [32m'ERR_PACKAGE_PATH_NOT_EXPORTED'[39m
+}
+
+1 !== 0
+
+PASS virtual-workspace
+PASS default-members
+PASS root-workspace
+FAIL standalone-root k/Cargo.toml
+workspace: /Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/Cargo.toml
+
+this may be fixable by adding `.scratch/standalone-root-36COEZ/work` to the `workspace.members` array of the manifest located at: /Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/Cargo.toml
+Alternatively, to keep it out of the workspace, add the package to the `workspace.exclude` array, or add an empty `[workspace]` table to the package's manifest.
+
+
+101 !== 0
+
+PASS automatic-path-member
+PASS literal-exclusion
+PASS explicit-member-wins
+PASS private-false
+PASS private-empty
+PASS inherited-fields
+PASS duplicate-private-1
+PASS duplicate-private-2
+PASS nested-workspace-1
+PASS nested-workspace-2
+PASS missing-manifest-1
+PASS missing-manifest-2
+PASS unsafe-member-1
+PASS unsafe-member-2
+PASS native-core-adapter-build-test
+{"total":21,"pass":1,"fail":3,"blocked":17}

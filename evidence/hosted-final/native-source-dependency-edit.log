@@ -1,0 +1,41 @@
+   Packaging fixture-core v1.1.0 (/tmp/workspace-cargo-5OpLFb/source/crates/core)
+    Packaged 6 files, 1.4KiB (1.0KiB compressed)
+   Verifying fixture-core v1.1.0 (/tmp/workspace-cargo-5OpLFb/source/crates/core)
+   Compiling fixture-core v1.1.0 (/tmp/workspace-cargo-5OpLFb/target/package/fixture-core-1.1.0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.04s
+     Locking 1 package to highest compatible version
+    Updating fixture-core v1.0.0 (/tmp/workspace-cargo-46aOd9/source/crates/core) -> v1.1.0
+   Packaging fixture-adapter v1.1.0 (/tmp/workspace-cargo-46aOd9/source/crates/adapter)
+    Updating `fixture` index
+    Packaged 6 files, 1.8KiB (1.1KiB compressed)
+   Verifying fixture-adapter v1.1.0 (/tmp/workspace-cargo-46aOd9/source/crates/adapter)
+ Downloading crates ...
+  Downloaded fixture-core v1.1.0 (registry `fixture`)
+   Compiling fixture-core v1.1.0 (registry `fixture`)
+   Compiling fixture-adapter v1.1.0 (/tmp/workspace-cargo-46aOd9/target/package/fixture-adapter-1.1.0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.07s
+   Packaging fixture-core v2.0.0 (/tmp/workspace-cargo-8FR9BE/source/crates/core)
+    Packaged 6 files, 1.5KiB (1.0KiB compressed)
+   Verifying fixture-core v2.0.0 (/tmp/workspace-cargo-8FR9BE/source/crates/core)
+   Compiling fixture-core v2.0.0 (/tmp/workspace-cargo-8FR9BE/target/package/fixture-core-2.0.0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.04s
+     Locking 1 package to highest compatible version
+    Updating fixture-core v1.0.0 (/tmp/workspace-cargo-aWkEYg/source/crates/core) -> v2.0.0
+   Packaging fixture-adapter v1.1.1 (/tmp/workspace-cargo-aWkEYg/source/crates/adapter)
+    Updating `fixture` index
+    Packaged 6 files, 1.9KiB (1.2KiB compressed)
+   Verifying fixture-adapter v1.1.1 (/tmp/workspace-cargo-aWkEYg/source/crates/adapter)
+ Downloading crates ...
+  Downloaded fixture-core v2.0.0 (registry `fixture`)
+   Compiling fixture-core v2.0.0 (registry `fixture`)
+   Compiling fixture-adapter v1.1.1 (/tmp/workspace-cargo-aWkEYg/target/package/fixture-adapter-1.1.1)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.07s
+     Locking 1 package to highest compatible version
+    Updating fixture-core v1.0.0 (/tmp/workspace-cargo-YQnutO/source/crates/core) -> v2.0.0
+   Packaging fixture-adapter v1.1.2 (/tmp/workspace-cargo-YQnutO/source/crates/adapter)
+    Updating `fixture` index
+    Packaged 6 files, 2.1KiB (1.2KiB compressed)
+   Verifying fixture-adapter v1.1.2 (/tmp/workspace-cargo-YQnutO/source/crates/adapter)
+   Compiling fixture-core v2.0.0 (registry `fixture`)
+   Compiling fixture-adapter v1.1.2 (/tmp/workspace-cargo-YQnutO/target/package/fixture-adapter-1.1.2)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.11s

@@ -1,0 +1,13 @@
+    Updating `fixture` index
+   Packaging fixture-core v1.0.0 (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/.scratch/explicit-override-HbyBsf/work/crates/core)
+    Packaged 5 files, 1.2KiB (917B compressed)
+   Verifying fixture-core v1.0.0 (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/.scratch/explicit-override-HbyBsf/work/crates/core)
+   Compiling fixture-core v1.0.0 (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/.scratch/explicit-override-HbyBsf/work/target/package/fixture-core-1.0.0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.05s
+   Uploading fixture-core v1.0.0 (/home/runner/work/semantic-release-workspace-e2e-cargo/semantic-release-workspace-e2e-cargo/.scratch/explicit-override-HbyBsf/work/crates/core)
+warning: aborting upload due to dry run
+   Packaging fixture-core v1.1.0 (/tmp/workspace-cargo-bjxnr6/source/crates/core)
+    Packaged 6 files, 1.4KiB (1.0KiB compressed)
+   Verifying fixture-core v1.1.0 (/tmp/workspace-cargo-bjxnr6/source/crates/core)
+   Compiling fixture-core v1.1.0 (/tmp/workspace-cargo-bjxnr6/target/package/fixture-core-1.1.0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.04s

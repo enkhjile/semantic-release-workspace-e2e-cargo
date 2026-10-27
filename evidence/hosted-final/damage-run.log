@@ -1,0 +1,5 @@
+PASS retained-state-missing-artifact
+PASS retained-state-swapped-artifact
+PASS retained-state-corrupt-artifact
+PASS foreign-registry-version-rejected
+{"total":4,"pass":4,"fail":0}

@@ -1,0 +1,48 @@
+{
+  "generatedAt": "2026-10-25T13:48:05.159Z",
+  "node": "v24.22.1",
+  "results": [
+    {
+      "name": "recovery-reject",
+      "status": "FAIL",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 6319,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 2\n\n    at file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/scripts/lifecycle.mjs:30:586\n    at async withFixture (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/scripts/lifecycle.mjs:23:104)\n    at async scenario (file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/scripts/lifecycle.mjs:24:250)\n    at async file:///Users/enkhjilenkhbaatar/Documents/Codex/2026-10-23/https-github-com-pmowrer-semantic-release/semantic-release-workspace-acceptance/repos/semantic-release-workspace-e2e-cargo/scripts/lifecycle.mjs:30:61"
+    },
+    {
+      "name": "recovery-reject-second",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "retainedNativePackageCalls": 2,
+      "initialExit": 1,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "freshClone": true
+    },
+    {
+      "name": "recovery-once-drop",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "reconciledWithinInvocation": true,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ]
+    },
+    {
+      "name": "tag-push-rejection-recovery",
+      "status": "PASS",
+      "mode": "PUBLIC_ESM_RESOLUTION_WORKAROUND",
+      "ms": 0,
+      "uploads": [
+        "cargo:fixture-core@1.1.0",
+        "cargo:fixture-adapter@1.1.0"
+      ],
+      "freshClone": true
+    }
+  ]
+}

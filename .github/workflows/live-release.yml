@@ -1,17 +1,20 @@
-name: Cargo live OIDC acceptance
+name: Cargo alpha.7 push-triggered OIDC cycle
 on:
-  workflow_dispatch:
+  push:
+    branches: [main, alpha]
 permissions:
   contents: write
   id-token: write
 concurrency:
   group: workspace-release
   cancel-in-progress: false
+defaults:
+  run:
+    shell: bash
 jobs:
   release:
-    if: github.ref == 'refs/heads/alpha'
-    runs-on: ubuntu-latest
     environment: cargo-live
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7.0.1
         with:
@@ -19,12 +22,21 @@ jobs:
       - uses: actions/setup-node@v7.1.0
         with:
           node-version: 24.22.1
-          cache: npm
+          package-manager-cache: false
       - run: npm install --global npm@12.2.1
-      - run: rustup toolchain install 1.99.1 --profile minimal
+      - run: rustup toolchain install 1.99.1 --profile minimal --no-self-update
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: cargo test --workspace --locked
-      - name: Public ESM resolution diagnostic OIDC lane
-        run: npm exec -- semantic-release --extends ./release.oidc.config.mjs
+      - name: Guard exact preview, publish with OIDC and verify registry
+        run: node scripts/live-cycle.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: cargo-live-alpha7-${{ github.run_id }}
+          path: evidence/live-alpha7/
+          include-hidden-files: true
+      - name: Remove generated installs, native targets and scratch
+        if: always()
+        run: rm -rf node_modules target .scratch

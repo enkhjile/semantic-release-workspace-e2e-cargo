@@ -1,0 +1,6 @@
+[package]
+name = "srw-live-private-inner"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false

@@ -1,0 +1,348 @@
+{
+  "uploads": [
+    "cargo:fixture-core@1.1.0-alpha.1",
+    "cargo:fixture-adapter@1.1.0-alpha.1",
+    "cargo:fixture-core@1.1.0-alpha.2",
+    "cargo:fixture-core@1.1.0",
+    "cargo:fixture-adapter@1.1.0"
+  ],
+  "crates": {
+    "fixture-core": {
+      "1.1.0-alpha.1": {
+        "metadata": {
+          "name": "fixture-core",
+          "vers": "1.1.0-alpha.1",
+          "deps": [],
+          "features": {},
+          "authors": [],
+          "description": "Disposable semantic-release consumer acceptance fixture",
+          "documentation": null,
+          "homepage": null,
+          "keywords": [],
+          "categories": [],
+          "license": "MIT",
+          "license_file": null,
+          "repository": null,
+          "links": null,
+          "rust_version": null,
+          "readme_file": null,
+          "readme": null
+        },
+        "sha256": "40f92c93d71cb39da48b44a43d390b55db3f2e938dd5771b3112962a4242c540"
+      },
+      "1.1.0-alpha.2": {
+        "metadata": {
+          "name": "fixture-core",
+          "vers": "1.1.0-alpha.2",
+          "deps": [],
+          "features": {},
+          "authors": [],
+          "description": "Disposable semantic-release consumer acceptance fixture",
+          "documentation": null,
+          "homepage": null,
+          "keywords": [],
+          "categories": [],
+          "license": "MIT",
+          "license_file": null,
+          "repository": null,
+          "links": null,
+          "rust_version": null,
+          "readme_file": null,
+          "readme": null
+        },
+        "sha256": "d02f1b727229885994fa35b3ec711345b7a5e6c0cdd79a42bbb8f3f905a0ba1b"
+      },
+      "1.1.0": {
+        "metadata": {
+          "name": "fixture-core",
+          "vers": "1.1.0",
+          "deps": [],
+          "features": {},
+          "authors": [],
+          "description": "Disposable semantic-release consumer acceptance fixture",
+          "documentation": null,
+          "homepage": null,
+          "keywords": [],
+          "categories": [],
+          "license": "MIT",
+          "license_file": null,
+          "repository": null,
+          "links": null,
+          "rust_version": null,
+          "readme_file": null,
+          "readme": null
+        },
+        "sha256": "667aa5d7d93b2820528efaadd4259967d88378012e0298b79120b071f06a4150"
+      }
+    },
+    "fixture-adapter": {
+      "1.1.0-alpha.1": {
+        "metadata": {
+          "name": "fixture-adapter",
+          "vers": "1.1.0-alpha.1",
+          "deps": [
+            {
+              "name": "fixture-core",
+              "version_req": "^1.1.0-alpha.1",
+              "features": [],
+              "optional": false,
+              "default_features": true,
+              "target": null,
+              "kind": "normal",
+              "registry": null,
+              "explicit_name_in_toml": null
+            }
+          ],
+          "features": {},
+          "authors": [],
+          "description": "Disposable semantic-release consumer acceptance fixture",
+          "documentation": null,
+          "homepage": null,
+          "keywords": [],
+          "categories": [],
+          "license": "MIT",
+          "license_file": null,
+          "repository": null,
+          "links": null,
+          "rust_version": null,
+          "readme_file": null,
+          "readme": null
+        },
+        "sha256": "cd906d7fe687cb049ade875c1c2adbd2e39df61e3c08b224f05165bad81ebd65"
+      },
+      "1.1.0": {
+        "metadata": {
+          "name": "fixture-adapter",
+          "vers": "1.1.0",
+          "deps": [
+            {
+              "name": "fixture-core",
+              "version_req": "^1.0.0",
+              "features": [],
+              "optional": false,
+              "default_features": true,
+              "target": null,
+              "kind": "normal",
+              "registry": null,
+              "explicit_name_in_toml": null
+            }
+          ],
+          "features": {},
+          "authors": [],
+          "description": "Disposable semantic-release consumer acceptance fixture",
+          "documentation": null,
+          "homepage": null,
+          "keywords": [],
+          "categories": [],
+          "license": "MIT",
+          "license_file": null,
+          "repository": null,
+          "links": null,
+          "rust_version": null,
+          "readme_file": null,
+          "readme": null
+        },
+        "sha256": "b33f35d38fc5bb0096527bc6b61dd280893aef3e9d62bd2e70550d7c62ca7d45"
+      }
+    }
+  },
+  "exchangeCount": 0,
+  "revocationCount": 0,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-adapter",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "PUT",
+      "path": "/cargo/api/v1/crates/new",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/api/v1/crates/fixture-core/1.1.0-alpha.1/download",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-adapter",
+      "authorizationPresent": true
+    },
+    {
+      "method": "PUT",
+      "path": "/cargo/api/v1/crates/new",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-adapter",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "PUT",
+      "path": "/cargo/api/v1/crates/new",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-adapter",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "PUT",
+      "path": "/cargo/api/v1/crates/new",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/api/v1/crates/fixture-core/1.1.0/download",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-adapter",
+      "authorizationPresent": true
+    },
+    {
+      "method": "PUT",
+      "path": "/cargo/api/v1/crates/new",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-adapter",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-adapter",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/api/v1/crates/fixture-adapter/1.1.0/download",
+      "authorizationPresent": false
+    }
+  ]
+}

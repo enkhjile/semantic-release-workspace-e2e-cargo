@@ -1,0 +1,157 @@
+{
+  "uploads": [
+    "cargo:fixture-core@1.1.0",
+    "cargo:fixture-adapter@1.1.0"
+  ],
+  "crates": {
+    "fixture-core": {
+      "1.1.0": {
+        "metadata": {
+          "name": "fixture-core",
+          "vers": "1.1.0",
+          "deps": [],
+          "features": {},
+          "authors": [],
+          "description": "Disposable semantic-release consumer acceptance fixture",
+          "documentation": null,
+          "homepage": null,
+          "keywords": [],
+          "categories": [],
+          "license": "MIT",
+          "license_file": null,
+          "repository": null,
+          "links": null,
+          "rust_version": null,
+          "readme_file": null,
+          "readme": null
+        },
+        "sha256": "0f9dce66e4ac1ca20075cc566b810ef82d8bac4d29ad43d99ce36cc5f3c0f95d"
+      }
+    },
+    "fixture-adapter": {
+      "1.1.0": {
+        "metadata": {
+          "name": "fixture-adapter",
+          "vers": "1.1.0",
+          "deps": [
+            {
+              "name": "fixture-core",
+              "version_req": "^1.0.0",
+              "features": [],
+              "optional": false,
+              "default_features": true,
+              "target": null,
+              "kind": "normal",
+              "registry": null,
+              "explicit_name_in_toml": null
+            }
+          ],
+          "features": {},
+          "authors": [],
+          "description": "Disposable semantic-release consumer acceptance fixture",
+          "documentation": null,
+          "homepage": null,
+          "keywords": [],
+          "categories": [],
+          "license": "MIT",
+          "license_file": null,
+          "repository": null,
+          "links": null,
+          "rust_version": null,
+          "readme_file": null,
+          "readme": null
+        },
+        "sha256": "2848cb7e27190f5fe273486cd6c7a8efd6a8bf90da8eae0a061bd24e95913195"
+      }
+    }
+  },
+  "exchangeCount": 1,
+  "revocationCount": 1,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-adapter",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "POST",
+      "path": "/cargo/api/v1/trusted_publishing/tokens",
+      "authorizationPresent": false
+    },
+    {
+      "method": "PUT",
+      "path": "/cargo/api/v1/crates/new",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/config.json",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-core",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/api/v1/crates/fixture-core/1.1.0/download",
+      "authorizationPresent": false
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-adapter",
+      "authorizationPresent": true
+    },
+    {
+      "method": "PUT",
+      "path": "/cargo/api/v1/crates/new",
+      "authorizationPresent": true
+    },
+    {
+      "method": "GET",
+      "path": "/cargo/index/fi/xt/fixture-adapter",
+      "authorizationPresent": true
+    },
+    {
+      "method": "DELETE",
+      "path": "/cargo/api/v1/trusted_publishing/tokens",
+      "authorizationPresent": true
+    }
+  ]
+}
