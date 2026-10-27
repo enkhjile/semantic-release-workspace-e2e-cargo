@@ -4,7 +4,7 @@ import { execFileSync, spawnSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 
-const out = resolve('evidence/live-alpha7');
+const out = resolve('evidence/live-alpha8');
 mkdirSync(out, { recursive: true });
 const git = (...args) => execFileSync('git', args, { encoding: 'utf8' });
 const intent = JSON.parse(readFileSync('live-cycle-intent.json'));
@@ -17,13 +17,13 @@ assert.ok(['preview', 'release'].includes(intent.mode));
 for (const name of ['NPM_TOKEN', 'NODE_AUTH_TOKEN', 'CARGO_REGISTRY_TOKEN', 'CARGO_REGISTRIES_CRATES_IO_TOKEN']) {
   assert.ok(!process.env[name], `${name} must be absent`);
 }
-assert.equal(JSON.parse(readFileSync('node_modules/semantic-release-workspace/package.json')).version, '1.0.0-alpha.7');
+assert.equal(JSON.parse(readFileSync('node_modules/semantic-release-workspace/package.json')).version, '1.0.0-alpha.8');
 const binding = {
   'LICENSE': 'cbf03239029c49b8ed065c590b4e607b320056de4488b2b30be5054f58963ba9',
-  'package.json': 'fbc874d230cad66ca59b97114a9f02759b318f2c6a8127771fbf069d9278f5d5',
-  'README.md': 'af78840a89189c2d287c2d564b574c20376a768c6aea7f4b8b06e1c2e6783d45',
-  'dist/index.mjs': 'a4a2ced71b46895a5abc474f3f994a0437583b647aebda359d2e67e7e0499247',
-  'dist/index.d.mts': 'ec6b115780d7b69b87626843699ebec5817ccfb43f8c4bbfe416914aa57abd94',
+  'package.json': '69d5febdec2f99bdc2bb34df8d77e675451c9d04f4ef70d5e581bf8147ff341e',
+  'README.md': '6fabe34a436b7cefdff56238f75e89413ab2218c8d8e2aa03477882d93af6ba6',
+  'dist/index.mjs': 'd947b81548774898a4b24e94fbafef0582746e7a69b82a75a264635084ce8a36',
+  'dist/index.d.mts': 'bd901675972e58d3e06fe4906d31e69905b70b99f6c0ac8a3e7a8f576144be34',
 };
 for (const [path, hash] of Object.entries(binding)) {
   assert.equal(createHash('sha256').update(readFileSync(join('node_modules/semantic-release-workspace', path))).digest('hex'), hash);
@@ -61,7 +61,7 @@ function plan(output) {
   for (let start = output.lastIndexOf('{', key); start >= 0; start = output.lastIndexOf('{', start - 1)) {
     for (let end = start + 1; end < output.length; end++) {
       if (output[end] !== '}') continue;
-      try { const value = JSON.parse(output.slice(start, end + 1)); if (value.schemaVersion === 1 && Array.isArray(value.packages)) return value.packages.filter(p => !p.private).map(p => ({ name: p.name, nextVersion: p.nextVersion })).sort((a, b) => a.name.localeCompare(b.name)); } catch {}
+      try { const value = JSON.parse(output.slice(start, end + 1)); if (value.schemaVersion === 1 && Array.isArray(value.packages)) return value.packages.filter(p => !p.private && p.nextVersion).map(p => ({ name: p.name, nextVersion: p.nextVersion })).sort((a, b) => a.name.localeCompare(b.name)); } catch {}
     }
     if (start === 0) break;
   }
@@ -130,7 +130,7 @@ if (intent.mode === 'release') {
   assert.deepEqual(afterNoChange, complete, 'No-change rerun changed source, refs or public versions');
   const adapter = intent.expected.find(p => p.name.endsWith('-adapter'));
   if (adapter) {
-    const consumer = resolve('.scratch/live-alpha7-downstream');
+    const consumer = resolve('.scratch/live-alpha8-downstream');
     mkdirSync(join(consumer, 'src'), { recursive: true });
     writeFileSync(join(consumer, 'Cargo.toml'), `[package]\nname="srw-live-downstream"\nversion="0.1.0"\nedition="2024"\n[workspace]\n[dependencies]\nenkhjile-srw-e2e-adapter="=${adapter.nextVersion}"\n`);
     writeFileSync(join(consumer, 'src/main.rs'), 'fn main() { assert_eq!(enkhjile_srw_e2e_adapter::value(), 42); println!("42"); }\n');
