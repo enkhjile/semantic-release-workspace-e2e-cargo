@@ -26,7 +26,7 @@ assert.equal(product.name, binding.name);
 assert.equal(product.packageManager, binding.productPackageManager);
 assert.equal(product.devEngines?.runtime?.version, binding.productRuntime);
 assert.match(product.packageManager, /^pnpm@\d+\.\d+\.\d+$/);
-assert.equal(execFileSync('pnpm', ['--version'], {encoding: 'utf8'}).trim(), product.packageManager.slice(5));
+assert.equal(execFileSync('pnpm', ['--version'], {cwd: source, encoding: 'utf8'}).trim(), product.packageManager.slice(5));
 const lockBefore = readFileSync(join(source, 'pnpm-lock.yaml'));
 execFileSync('pnpm', ['install', '--frozen-lockfile', '--ignore-scripts', '--store-dir', join(process.env.RUNNER_TEMP, 'shared-version-pnpm-store')], {cwd: source, stdio: 'inherit'});
 assert.equal(execFileSync('pnpm', ['exec', 'node', '--version'], {cwd: source, encoding: 'utf8'}).trim(), 'v' + binding.productRuntime);
