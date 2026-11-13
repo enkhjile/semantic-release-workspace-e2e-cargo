@@ -1,6 +1,6 @@
 {
   "mode": "publish",
-  "phase": "dependent-fix",
+  "phase": "shared-retry",
   "branch": "alpha",
   "channel": "alpha",
   "candidateSha": "442b7b3ce5d576c0a6bec92a12031bfe1fd24c77",
@@ -8,16 +8,16 @@
   "expected": [
     {
       "name": "enkhjile-srw-e2e-core",
-      "version": "1.0.0-alpha.3"
+      "version": "1.0.0-alpha.4"
     },
     {
       "name": "enkhjile-srw-e2e-adapter",
-      "version": "1.0.0-alpha.3"
+      "version": "1.0.0-alpha.4"
     }
   ],
   "unchangedMembers": [
     "enkhjile-srw-e2e-core"
   ],
-  "version": "1.0.0-alpha.3",
-  "previousSourceSha": "a9e1f05063dce3225e6fa73094322c693a79c39c"
+  "version": "1.0.0-alpha.4",
+  "previousSourceSha": "f0b3c49da42e13eba31859b89882d36ca83a5dad"
 }
