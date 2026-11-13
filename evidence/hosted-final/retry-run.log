@@ -1,8 +1,0 @@
-FAIL recovery-reject Expected values to be strictly equal:
-
-1 !== 2
-
-PASS recovery-reject-second
-PASS recovery-once-drop
-PASS tag-push-rejection-recovery
-{"total":4,"pass":3,"fail":1}

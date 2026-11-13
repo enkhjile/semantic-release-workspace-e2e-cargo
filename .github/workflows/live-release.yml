@@ -18,10 +18,12 @@ jobs:
       run:
         shell: bash
     env:
-      npm_config_cache: ${{ runner.temp }}/shared-version-npm-cache
       RUSTUP_TOOLCHAIN: '1.99.1'
-      CARGO_TARGET_DIR: ${{ runner.temp }}/shared-version-cargo-target
     steps:
+      - name: Set job-owned cache paths
+        run: |
+          printf '%s\n' "npm_config_cache=$RUNNER_TEMP/shared-version-npm-cache" >> "$GITHUB_ENV"
+          printf '%s\n' "CARGO_TARGET_DIR=$RUNNER_TEMP/shared-version-cargo-target" >> "$GITHUB_ENV"
       - uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0

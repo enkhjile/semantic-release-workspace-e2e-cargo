@@ -1,7 +1,7 @@
 [workspace]
 resolver = "2"
 members = ["crates/core", "crates/outer", "crates/outer/inner", "crates/outer/inner/nested"]
-exclude = [".scratch", "bootstrap"]
+exclude = [".scratch"]
 
 [workspace.package]
 version = "0.0.0"
