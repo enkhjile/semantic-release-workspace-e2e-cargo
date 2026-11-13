@@ -1,2 +1,0 @@
-error: `fixture-core` cannot be published.
-The registry `fixture` is not listed in the `package.publish` value in Cargo.toml.
