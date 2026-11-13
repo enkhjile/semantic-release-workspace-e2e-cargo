@@ -9,3 +9,7 @@ evidence/ref-backups/exports/
 evidence/live-alpha7/
 
 evidence/live-alpha8/
+
+/vendor/shared-version-candidate.tgz
+
+/evidence/shared-version/

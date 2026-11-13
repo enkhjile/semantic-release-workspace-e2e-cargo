@@ -1,20 +1,26 @@
-name: Cargo alpha.8 push-triggered OIDC cycle
+name: Cargo shared-version alpha acceptance
 on:
   push:
-    branches: [main, alpha]
+    branches: [alpha]
 permissions:
   contents: write
   id-token: write
 concurrency:
   group: cargo-live-alpha8
   cancel-in-progress: false
-defaults:
-  run:
-    shell: bash
 jobs:
   release:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/alpha'
     environment: cargo-live
     runs-on: ubuntu-latest
+    timeout-minutes: 50
+    defaults:
+      run:
+        shell: bash
+    env:
+      npm_config_cache: ${{ runner.temp }}/shared-version-npm-cache
+      RUSTUP_TOOLCHAIN: '1.99.1'
+      CARGO_TARGET_DIR: ${{ runner.temp }}/shared-version-cargo-target
     steps:
       - uses: actions/checkout@v7.0.1
         with:
@@ -23,20 +29,27 @@ jobs:
         with:
           node-version: 24.22.1
           package-manager-cache: false
-      - run: npm install --global npm@12.2.1
-      - run: rustup toolchain install 1.99.1 --profile minimal --no-self-update
+      - run: npm install --global npm@12.2.1 pnpm@12.15.0
+      - run: echo "ACCEPTANCE_NPM_CLI=$(readlink -f "$(command -v npm)")" >> "$GITHUB_ENV"
+      - run: echo "ACCEPTANCE_NPM_PATH=$(dirname "$(command -v npm)")" >> "$GITHUB_ENV"
+      - name: Rebuild and verify pinned product PR candidate
+        run: node scripts/build-candidate.mjs
       - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: rustup toolchain install 1.99.1 --profile minimal --no-self-update
       - run: cargo test --workspace --locked
-      - name: Guard exact preview, publish with OIDC and verify registry
-        run: node scripts/live-cycle.mjs
+      - name: Additive guard regression checks
+        run: node --test scripts/shared-plan-guard.test.mjs scripts/candidate-helpers.test.mjs scripts/network-policy.test.mjs scripts/retry-boundary.test.mjs
+      - name: Exact alpha plan, OIDC publication, registry and fresh-source checks
+        run: node scripts/shared-cargo-cycle.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
-          name: cargo-live-alpha8-${{ github.run_id }}
-          path: evidence/live-alpha8/
+          name: shared-alpha-${{ github.run_id }}-${{ github.run_attempt }}
+          path: evidence/shared-version/
           include-hidden-files: true
-      - name: Remove generated installs, native targets and scratch
+          retention-days: 30
+      - name: Remove only job-owned downloads and installs
         if: always()
-        run: rm -rf node_modules target .scratch
+        run: rm -rf node_modules .yarn .pnp.cjs .pnp.loader.mjs vendor/shared-version-candidate.tgz "$RUNNER_TEMP/shared-version-candidate-source" "$RUNNER_TEMP/shared-version-npm-cache" "$RUNNER_TEMP/shared-version-pnpm-store" "$RUNNER_TEMP/shared-version-cargo-target"

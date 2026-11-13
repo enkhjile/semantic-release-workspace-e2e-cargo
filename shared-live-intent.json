@@ -1,0 +1,10 @@
+{
+  "mode": "preview",
+  "phase": "shared-setup",
+  "branch": "alpha",
+  "channel": "alpha",
+  "candidateSha": "442b7b3ce5d576c0a6bec92a12031bfe1fd24c77",
+  "budgetLimit": 12,
+  "expected": [],
+  "unchangedMembers": []
+}
