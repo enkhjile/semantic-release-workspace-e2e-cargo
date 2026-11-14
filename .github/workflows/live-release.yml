@@ -1,10 +1,9 @@
-name: Cargo shared-version alpha acceptance
+name: Cargo alpha10 completed native checks
 on:
   push:
     branches: [alpha]
 permissions:
-  contents: write
-  id-token: write
+  contents: read
 concurrency:
   group: cargo-live-alpha
   cancel-in-progress: false
@@ -37,17 +36,6 @@ jobs:
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: rustup toolchain install 1.99.1 --profile minimal --no-self-update
       - run: cargo test --workspace --locked
-      - name: Verify exact plan and publish alpha10 acceptance
-        run: node scripts/alpha10-cycle.mjs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/upload-artifact@v7.0.2
-        if: always()
-        with:
-          name: shared-alpha-${{ github.run_id }}-${{ github.run_attempt }}
-          path: evidence/alpha10/
-          include-hidden-files: true
-          retention-days: 30
       - name: Remove only job-owned downloads and installs
         if: always()
         run: rm -rf node_modules .yarn .pnp.cjs .pnp.loader.mjs vendor/shared-version-candidate.tgz "$RUNNER_TEMP/shared-version-candidate-source" "$RUNNER_TEMP/shared-version-npm-cache" "$RUNNER_TEMP/shared-version-pnpm-store" "$RUNNER_TEMP/shared-version-cargo-target"
