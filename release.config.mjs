@@ -1,1 +1,1 @@
-export default {branches: ['main', {name: 'alpha', prerelease: 'alpha', channel: 'alpha'}], tagFormat: 'workspace-v${version}', plugins: [['semantic-release-workspace', {publish: true, changelog: true, cargo: {trustedPublishing: true}}], "./scripts/retry-boundary.mjs"]};
+export default {branches: ['main', {name: 'alpha', prerelease: 'alpha', channel: 'alpha'}], tagFormat: 'workspace-v${version}', plugins: [['semantic-release-workspace', {publish: true, changelog: true, cargo: {trustedPublishing: true}}], '@semantic-release/github', './scripts/retry-boundary.mjs']};
