@@ -1,13 +1,9 @@
 {
-  "phase": "independent-baseline",
+  "phase": "core-only",
   "expected": [
     {
       "name": "enkhjile-srw-e2e-core",
-      "version": "1.0.0-alpha.5"
-    },
-    {
-      "name": "enkhjile-srw-e2e-adapter",
-      "version": "1.0.0-alpha.5"
+      "version": "1.0.0-alpha.6"
     }
   ],
   "adapterPin": "1.0.0-alpha.4",
