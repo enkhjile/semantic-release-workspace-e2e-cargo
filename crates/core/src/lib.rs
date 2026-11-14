@@ -7,5 +7,6 @@ pub fn shared_release_ready() -> bool { true }
 pub fn independent_release_ready() -> bool { true }
 #[test] fn independent_release_capability() { assert!(independent_release_ready()); }
 
+#[must_use = "use the stable cycle readiness result"]
 pub fn stable_cycle_ready() -> bool { true }
 #[test] fn stable_cycle_capability() { assert!(stable_cycle_ready()); }
