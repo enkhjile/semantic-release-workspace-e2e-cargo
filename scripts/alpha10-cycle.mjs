@@ -23,8 +23,8 @@ function run(label,dry=false,readonly=false){const audit=`${out}/${label}-http.j
 const before={inventory:await inventory(),refs:refs(),status:git('status','--porcelain')};assert.equal(before.status,'');save('before',before);
 const initial=JSON.parse(readFileSync('shared-public-baseline.json'));let count=0;for(const n of names)count+=Object.keys(before.inventory[n]).filter(v=>!(v in initial[n].versions)).length;
 const extra=intent.expected.filter(p=>!(p.version in before.inventory[p.name])).length;assert.ok(count+extra<=12);save('budget',{alreadyUploaded:count,plannedNewUploads:extra,limit:12});
-const frozen=journal();if(frozen)save('journal-before',frozen);
-const dry=run('dry-run',true,true);assert.equal(dry.code,0);const plan=dry.log.includes('"schemaVersion": 1')?parsePlan(dry.log):frozen?.planning.plan;assert.ok(plan);save('plan',plan);
+let frozen=journal();if(frozen)save('journal-before',frozen);
+const dry=run('dry-run',true,true);assert.equal(dry.code,0);frozen??=journal();if(frozen)save('journal-before',frozen);const plan=dry.log.includes('"schemaVersion": 1')?parsePlan(dry.log):frozen?.planning.plan;assert.ok(plan);save('plan',plan);
 assert.deepEqual(plan.packages.filter(p=>p.nextVersion&&!p.private).map(p=>({name:p.name,version:p.nextVersion})).sort((a,b)=>a.name.localeCompare(b.name)),[...intent.expected].sort((a,b)=>a.name.localeCompare(b.name)));
 assert.equal(plan.dependencyPolicy,'independent');assert.ok(plan.packages.every(p=>p.dependencyUpdates.length===0));
 assert.deepEqual(await inventory(),before.inventory);assert.deepEqual(refs(),before.refs);assert.equal(git('status','--porcelain'),'');
