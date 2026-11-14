@@ -10,8 +10,9 @@
     "release": "semantic-release"
   },
   "devDependencies": {
+    "@semantic-release/github": "12.0.11",
     "semantic-release": "25.0.9",
-    "semantic-release-workspace": "1.0.0-alpha.8"
+    "semantic-release-workspace": "1.0.0-alpha.10"
   },
   "packageManager": "npm@12.2.1"
 }

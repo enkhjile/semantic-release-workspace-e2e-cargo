@@ -1,0 +1,11 @@
+{
+  "phase": "manual-adapter-upgrade-retry",
+  "expected": [
+    {
+      "name": "enkhjile-srw-e2e-adapter",
+      "version": "1.0.0-alpha.6"
+    }
+  ],
+  "adapterPin": "=1.0.0-alpha.6",
+  "retry": true
+}

@@ -1,4 +1,4 @@
-name: Cargo alpha.8 push-triggered OIDC cycle
+name: Cargo alpha10 full branch cycle
 on:
   push:
     branches: [main, alpha]
@@ -6,16 +6,24 @@ permissions:
   contents: write
   id-token: write
 concurrency:
-  group: cargo-live-alpha8
+  group: cargo-live-repository
   cancel-in-progress: false
-defaults:
-  run:
-    shell: bash
 jobs:
   release:
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/alpha' || github.ref == 'refs/heads/main')
     environment: cargo-live
     runs-on: ubuntu-latest
+    timeout-minutes: 50
+    defaults:
+      run:
+        shell: bash
+    env:
+      RUSTUP_TOOLCHAIN: '1.99.1'
     steps:
+      - name: Set job-owned cache paths
+        run: |
+          printf '%s\n' "npm_config_cache=$RUNNER_TEMP/shared-version-npm-cache" >> "$GITHUB_ENV"
+          printf '%s\n' "CARGO_TARGET_DIR=$RUNNER_TEMP/shared-version-cargo-target" >> "$GITHUB_ENV"
       - uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
@@ -23,20 +31,23 @@ jobs:
         with:
           node-version: 24.22.1
           package-manager-cache: false
-      - run: npm install --global npm@12.2.1
-      - run: rustup toolchain install 1.99.1 --profile minimal --no-self-update
+      - run: npm install --global npm@12.2.1 pnpm@12.15.0
+      - run: echo "ACCEPTANCE_NPM_CLI=$(readlink -f "$(command -v npm)")" >> "$GITHUB_ENV"
+      - run: echo "ACCEPTANCE_NPM_PATH=$(dirname "$(command -v npm)")" >> "$GITHUB_ENV"
       - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: rustup toolchain install 1.99.1 --profile minimal --no-self-update
       - run: cargo test --workspace --locked
-      - name: Guard exact preview, publish with OIDC and verify registry
-        run: node scripts/live-cycle.mjs
+      - name: Exact bounded cycle through existing OIDC binding
+        run: node scripts/full-cycle.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
-          name: cargo-live-alpha8-${{ github.run_id }}
-          path: evidence/live-alpha8/
+          name: cargo-cycle-${{ github.run_id }}-${{ github.run_attempt }}
+          path: evidence/alpha10/
           include-hidden-files: true
-      - name: Remove generated installs, native targets and scratch
+          retention-days: 30
+      - name: Remove only job-owned downloads and installs
         if: always()
-        run: rm -rf node_modules target .scratch
+        run: rm -rf node_modules .yarn .pnp.cjs .pnp.loader.mjs vendor/shared-version-candidate.tgz "$RUNNER_TEMP/shared-version-candidate-source" "$RUNNER_TEMP/shared-version-npm-cache" "$RUNNER_TEMP/shared-version-pnpm-store" "$RUNNER_TEMP/shared-version-cargo-target"

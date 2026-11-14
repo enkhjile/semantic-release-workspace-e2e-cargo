@@ -1,6 +1,0 @@
-PASS inherited-single-crate-root-fields
-PASS dev-only-coordination-no-dependent-release
-PASS directory-move-shared-requirements
-PASS maintenance-major-bound
-PASS explicit-source-dependency-edit-wins
-{"total":5,"pass":5,"fail":0}

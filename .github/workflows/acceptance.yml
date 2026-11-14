@@ -1,4 +1,4 @@
-name: Cargo alpha.8 live branch checks
+name: Cargo shared-version native branch checks
 on:
   pull_request:
 permissions:
@@ -13,8 +13,9 @@ jobs:
           node-version: 24.22.1
           package-manager-cache: false
       - run: rustup toolchain install 1.99.1 --profile minimal --no-self-update
+      - run: npm install --global npm@12.2.1 pnpm@12.15.0
+      - run: echo "ACCEPTANCE_NPM_CLI=$(readlink -f "$(command -v npm)")" >> "$GITHUB_ENV"
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: cargo test --workspace --locked
-      - run: npm test
       - if: always()
-        run: rm -rf node_modules target .scratch
+        run: rm -rf node_modules target .scratch vendor/shared-version-candidate.tgz "$RUNNER_TEMP/shared-version-candidate-source" "$RUNNER_TEMP/shared-version-pnpm-store"
