@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {mkdirSync,writeFileSync,readFileSync} from 'node:fs';
+import {resolve} from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {assertReadOnlyNetwork,networkSummary} from './network-policy.mjs';
+const out=resolve('evidence/alpha10');mkdirSync(out,{recursive:true});
+const refs=()=>execFileSync('git',['ls-remote','--refs','origin'],{encoding:'utf8'});
+const inventory=async()=>{const result={};for(const n of ['enkhjile-srw-e2e-core','enkhjile-srw-e2e-adapter']){const r=await fetch('https://index.crates.io/en/kh/'+n);assert.equal(r.status,200);result[n]=await r.text();}return result;};
+const before={refs:refs(),inventory:await inventory()};const audit=out+'/preview-http.jsonl';writeFileSync(audit,'');
+const output=execFileSync('npm',['exec','--','semantic-release','--dry-run'],{encoding:'utf8',env:{...process.env,SRW_HTTP_AUDIT:audit,NODE_OPTIONS:'--import='+pathToFileURL(resolve('scripts/network-count.mjs')).href}});writeFileSync(out+'/preview.log',output);process.stdout.write(output);assert.match(output,/There are no relevant changes|There are no changes to release/);
+const calls=readFileSync(audit,'utf8').trim().split('\n').filter(Boolean).map(JSON.parse);assertReadOnlyNetwork(calls);assert.deepEqual({refs:refs(),inventory:await inventory()},before);writeFileSync(out+'/result.json',JSON.stringify({status:'PASS',mode:'preview-only',effects:0,network:networkSummary(calls)},null,2));
