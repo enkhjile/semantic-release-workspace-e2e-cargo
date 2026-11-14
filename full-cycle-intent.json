@@ -15,8 +15,13 @@
     "retry": false
   },
   "alpha": {
-    "mode": "nochange",
-    "expected": [],
+    "mode": "publish",
+    "expected": [
+      {
+        "name": "enkhjile-srw-e2e-core",
+        "version": "1.1.0-alpha.1"
+      }
+    ],
     "adapterPin": "=1.0.0-alpha.6",
     "retry": false
   }
