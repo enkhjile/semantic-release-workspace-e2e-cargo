@@ -4,19 +4,19 @@ version = 4
 
 [[package]]
 name = "enkhjile-srw-e2e-adapter"
-version = "0.0.0"
+version = "1.0.0-alpha.4"
 dependencies = [
  "enkhjile-srw-e2e-core",
 ]
 
 [[package]]
 name = "enkhjile-srw-e2e-core"
-version = "0.0.0"
+version = "1.0.0-alpha.4"
 
 [[package]]
 name = "srw-live-private-inner"
-version = "0.0.0"
+version = "1.0.0-alpha.4"
 
 [[package]]
 name = "srw-live-private-outer"
-version = "0.0.0"
+version = "1.0.0-alpha.4"

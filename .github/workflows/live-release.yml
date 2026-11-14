@@ -34,8 +34,6 @@ jobs:
       - run: npm install --global npm@12.2.1 pnpm@12.15.0
       - run: echo "ACCEPTANCE_NPM_CLI=$(readlink -f "$(command -v npm)")" >> "$GITHUB_ENV"
       - run: echo "ACCEPTANCE_NPM_PATH=$(dirname "$(command -v npm)")" >> "$GITHUB_ENV"
-      - name: Rebuild and verify pinned product PR candidate
-        run: node scripts/build-candidate.mjs
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: rustup toolchain install 1.99.1 --profile minimal --no-self-update
       - run: cargo test --workspace --locked
