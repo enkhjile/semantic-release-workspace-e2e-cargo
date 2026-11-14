@@ -37,10 +37,8 @@ jobs:
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: rustup toolchain install 1.99.1 --profile minimal --no-self-update
       - run: cargo test --workspace --locked
-      - name: Preview published alpha10
-        run: |
-          mkdir -p evidence/alpha10
-          npm exec -- semantic-release --dry-run 2>&1 | tee evidence/alpha10/dry-run.log
+      - name: Verify exact plan and publish alpha10 acceptance
+        run: node scripts/alpha10-cycle.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@v7.0.2
